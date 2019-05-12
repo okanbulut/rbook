@@ -13,3 +13,5 @@ This GitHub repo contains the materials for the training course titled "Statisti
 
 * **R Scripts for Activities:** <https://github.com/okanbulut/bigdata/tree/master/Cheat_sheets>
 
+![](https://github.com/okanbulut/rbook/blob/master/artem-sapegin-180146-unsplash.jpg)
+
