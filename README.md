@@ -1,3 +1,5 @@
+![](https://github.com/okanbulut/rbook/blob/master/cover.jpg)
+
 ## Statistical Analysis and Visualizations Using R
 
 This GitHub repo contains the materials for the training course titled "Statistical Analysis and Visualizations Using R" that I teach at the [Technology Training Centre](https://www.ualberta.ca/technology-training/) of [the University of Alberta](https://www.ualberta.ca/).  
@@ -12,6 +14,4 @@ This GitHub repo contains the materials for the training course titled "Statisti
 * **Cheat Sheets**: <https://github.com/okanbulut/bigdata/tree/master/Cheat_sheets>
 
 * **R Scripts for Activities:** <https://github.com/okanbulut/bigdata/tree/master/Cheat_sheets>
-
-![](https://github.com/okanbulut/rbook/blob/master/artem-sapegin-180146-unsplash.jpg)
 
