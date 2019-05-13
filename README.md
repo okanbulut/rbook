@@ -9,9 +9,9 @@ This GitHub repo contains the materials for the training course titled "Statisti
 
 * **Course notes (PDF)**: <https://okanbulut.github.io/bigdata/big-data-in-r.pdf>
 
-* **Datasets**: <https://github.com/okanbulut/bigdata/tree/master/dataset>
+* **Datasets**: <https://github.com/okanbulut/rbook/tree/master/datasets>
 
-* **Cheat Sheets**: <https://github.com/okanbulut/rbook/tree/master/cheatsheets>
+* **Cheatsheets**: <https://github.com/okanbulut/rbook/tree/master/cheatsheets>
 
-* **R Scripts for Activities:** <https://github.com/okanbulut/bigdata/tree/master/Cheat_sheets>
+* **R script:** <https://github.com/okanbulut/rbook/tree/master/R_scripts>
 
