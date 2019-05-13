@@ -11,7 +11,7 @@ This GitHub repo contains the materials for the training course titled "Statisti
 
 * **Datasets**: <https://github.com/okanbulut/bigdata/tree/master/dataset>
 
-* **Cheat Sheets**: <https://github.com/okanbulut/bigdata/tree/master/Cheat_sheets>
+* **Cheat Sheets**: <https://github.com/okanbulut/rbook/tree/master/cheatsheets>
 
 * **R Scripts for Activities:** <https://github.com/okanbulut/bigdata/tree/master/Cheat_sheets>
 
