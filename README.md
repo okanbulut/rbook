@@ -5,9 +5,9 @@
 This GitHub repo contains the materials for the training course titled "Statistical Analysis and Visualizations Using R" that I teach at the [Technology Training Centre](https://www.ualberta.ca/technology-training/) of [the University of Alberta](https://www.ualberta.ca/).  
 
 
-* **Course notes (html)**: <https://okanbulut.github.io/bigdata/>
+* **Course notes (html)**: <https://okanbulut.github.io/rbook/>
 
-* **Course notes (PDF)**: <https://okanbulut.github.io/bigdata/big-data-in-r.pdf>
+* **Course notes (PDF)**: <https://okanbulut.github.io/rbook/rbook.pdf>
 
 * **Datasets**: <https://github.com/okanbulut/rbook/tree/master/datasets>
 
