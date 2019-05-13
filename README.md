@@ -2,7 +2,7 @@
 
 ## Statistical Analysis and Visualizations Using R
 
-This GitHub repo contains the materials for the training course titled "Statistical Analysis and Visualizations Using R" that I teach at the [Technology Training Centre](https://www.ualberta.ca/technology-training/) of [the University of Alberta](https://www.ualberta.ca/).  
+This GitHub repo contains the materials for the training course titled **Statistical Analysis and Visualizations Using R** that I teach at the [Technology Training Centre](https://www.ualberta.ca/technology-training/) of [the University of Alberta](https://www.ualberta.ca/).  
 
 
 * **Course notes (html)**: <https://okanbulut.github.io/rbook/>
