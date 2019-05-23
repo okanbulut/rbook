@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Part 2 | Statistical Analysis and Visualizations Using R</title>
+  <title>3 Data Wrangling | Statistical Analysis and Visualizations Using R</title>
   <meta name="description" content="This book contains the materials for the R course at Techology Training Centre." />
   <meta name="generator" content="bookdown 0.10 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Part 2 | Statistical Analysis and Visualizations Using R" />
+  <meta property="og:title" content="3 Data Wrangling | Statistical Analysis and Visualizations Using R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="okanbulut/rbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Part 2 | Statistical Analysis and Visualizations Using R" />
+  <meta name="twitter:title" content="3 Data Wrangling | Statistical Analysis and Visualizations Using R" />
   
   <meta name="twitter:description" content="This book contains the materials for the R course at Techology Training Centre." />
   
@@ -24,7 +24,6 @@
 <meta name="author" content="Okan Bulut" />
 
 
-<meta name="date" content="2019-05-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,41 +49,67 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -100,17 +125,112 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Statistical Analysis and Visualizations Using R</a></li>
+<li><a href="https://www.ualberta.ca/technology-training/">Okan Bulut &copy;</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="part1.html"><a href="part1.html"><i class="fa fa-check"></i><b>2</b> Part 1</a></li>
-<li class="chapter" data-level="3" data-path="part2.html"><a href="part2.html"><i class="fa fa-check"></i><b>3</b> Part 2</a></li>
-<li class="chapter" data-level="4" data-path="part3.html"><a href="part3.html"><i class="fa fa-check"></i><b>4</b> Part 3</a></li>
-<li class="chapter" data-level="5" data-path="wrapup.html"><a href="wrapup.html"><i class="fa fa-check"></i><b>5</b> Wrap-Up</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#course-description"><i class="fa fa-check"></i><b>1.1</b> Course Description</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#course-objectives"><i class="fa fa-check"></i><b>1.2</b> Course Objectives</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#instructor-information"><i class="fa fa-check"></i><b>1.3</b> Instructor Information</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#course-structure"><i class="fa fa-check"></i><b>1.4</b> Course Structure</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#course-materials"><i class="fa fa-check"></i><b>1.5</b> Course Materials</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#learning-process"><i class="fa fa-check"></i><b>1.6</b> Learning Process</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#additional-resources"><i class="fa fa-check"></i><b>1.7</b> Additional Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="part1.html"><a href="part1.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="part1.html"><a href="part1.html#r-and-rstudio"><i class="fa fa-check"></i><b>2.1</b> R and RStudio</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="part1.html"><a href="part1.html#what-is-r"><i class="fa fa-check"></i><b>2.1.1</b> What is <strong>R</strong>?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="part1.html"><a href="part1.html#what-is-rstudio"><i class="fa fa-check"></i><b>2.1.2</b> What is RStudio?</a></li>
+<li class="chapter" data-level="2.1.3" data-path="part1.html"><a href="part1.html#download-and-install"><i class="fa fa-check"></i><b>2.1.3</b> Download and Install</a></li>
+<li class="chapter" data-level="2.1.4" data-path="part1.html"><a href="part1.html#preview-of-rstudio"><i class="fa fa-check"></i><b>2.1.4</b> Preview of RStudio</a></li>
+<li class="chapter" data-level="2.1.5" data-path="part1.html"><a href="part1.html#creating-a-new-script"><i class="fa fa-check"></i><b>2.1.5</b> Creating a New Script</a></li>
+<li class="chapter" data-level="2.1.6" data-path="part1.html"><a href="part1.html#working-directory"><i class="fa fa-check"></i><b>2.1.6</b> Working Directory</a></li>
+<li class="chapter" data-level="2.1.7" data-path="part1.html"><a href="part1.html#downloading-and-installing-r-packages"><i class="fa fa-check"></i><b>2.1.7</b> Downloading and Installing <strong>R</strong> Packages</a></li>
+<li class="chapter" data-level="2.1.8" data-path="part1.html"><a href="part1.html#your-turn"><i class="fa fa-check"></i><b>2.1.8</b> Your turn</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="part1.html"><a href="part1.html#basics-of-the-r-language"><i class="fa fa-check"></i><b>2.2</b> Basics of the R Language</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="part1.html"><a href="part1.html#r-as-a-calculator"><i class="fa fa-check"></i><b>2.2.1</b> R as a Calculator</a></li>
+<li class="chapter" data-level="2.2.2" data-path="part1.html"><a href="part1.html#creating-new-variables"><i class="fa fa-check"></i><b>2.2.2</b> Creating New Variables</a></li>
+<li class="chapter" data-level="2.2.3" data-path="part1.html"><a href="part1.html#important-rules-for-the-r-language"><i class="fa fa-check"></i><b>2.2.3</b> Important Rules for the <strong>R</strong> Language</a></li>
+<li class="chapter" data-level="2.2.4" data-path="part1.html"><a href="part1.html#a-few-shortcuts"><i class="fa fa-check"></i><b>2.2.4</b> A Few Shortcuts</a></li>
+<li class="chapter" data-level="2.2.5" data-path="part1.html"><a href="part1.html#self-help"><i class="fa fa-check"></i><b>2.2.5</b> Self-Help</a></li>
+<li class="chapter" data-level="2.2.6" data-path="part1.html"><a href="part1.html#your-turn-1"><i class="fa fa-check"></i><b>2.2.6</b> Your turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="part2.html"><a href="part2.html"><i class="fa fa-check"></i><b>3</b> Data Wrangling</a><ul>
+<li class="chapter" data-level="3.1" data-path="part2.html"><a href="part2.html#creating-data-in-r"><i class="fa fa-check"></i><b>3.1</b> Creating Data in <strong>R</strong></a></li>
+<li class="chapter" data-level="3.2" data-path="part2.html"><a href="part2.html#importing-data-into-r"><i class="fa fa-check"></i><b>3.2</b> Importing Data into <strong>R</strong></a><ul>
+<li class="chapter" data-level="3.2.1" data-path="part2.html"><a href="part2.html#method-1-using-rstudio"><i class="fa fa-check"></i><b>3.2.1</b> Method 1: Using <strong>RStudio</strong></a></li>
+<li class="chapter" data-level="3.2.2" data-path="part2.html"><a href="part2.html#method-2-using-r-commands"><i class="fa fa-check"></i><b>3.2.2</b> Method 2: Using <strong>R</strong> Commands</a></li>
+<li class="chapter" data-level="3.2.3" data-path="part2.html"><a href="part2.html#your-turn-2"><i class="fa fa-check"></i><b>3.2.3</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="part2.html"><a href="part2.html#understanding-the-data"><i class="fa fa-check"></i><b>3.3</b> Understanding the Data</a></li>
+<li class="chapter" data-level="3.4" data-path="part2.html"><a href="part2.html#indexing"><i class="fa fa-check"></i><b>3.4</b> Indexing</a></li>
+<li class="chapter" data-level="3.5" data-path="part2.html"><a href="part2.html#subsetting"><i class="fa fa-check"></i><b>3.5</b> Subsetting</a></li>
+<li class="chapter" data-level="3.6" data-path="part2.html"><a href="part2.html#other-data-manipulation-tools"><i class="fa fa-check"></i><b>3.6</b> Other Data Manipulation Tools</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="part2.html"><a href="part2.html#your-turn-3"><i class="fa fa-check"></i><b>3.6.1</b> Your Turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="part3.html"><a href="part3.html"><i class="fa fa-check"></i><b>4</b> Descriptive Statistics</a><ul>
+<li class="chapter" data-level="4.1" data-path="part3.html"><a href="part3.html#quick-summary"><i class="fa fa-check"></i><b>4.1</b> Quick Summary</a></li>
+<li class="chapter" data-level="4.2" data-path="part3.html"><a href="part3.html#frequency-tables"><i class="fa fa-check"></i><b>4.2</b> Frequency Tables</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="part3.html"><a href="part3.html#your-turn-4"><i class="fa fa-check"></i><b>4.2.1</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="part3.html"><a href="part3.html#central-tendency-and-dispersion"><i class="fa fa-check"></i><b>4.3</b> Central Tendency and Dispersion</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="part3.html"><a href="part3.html#your-turn-5"><i class="fa fa-check"></i><b>4.3.1</b> Your Turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="part4.html"><a href="part4.html"><i class="fa fa-check"></i><b>5</b> Data Visualizations in <strong>R</strong></a><ul>
+<li class="chapter" data-level="5.1" data-path="part4.html"><a href="part4.html#base-r-graphics"><i class="fa fa-check"></i><b>5.1</b> Base <strong>R</strong> Graphics</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="part4.html"><a href="part4.html#boxplots"><i class="fa fa-check"></i><b>5.1.1</b> Boxplots</a></li>
+<li class="chapter" data-level="5.1.2" data-path="part4.html"><a href="part4.html#histograms"><i class="fa fa-check"></i><b>5.1.2</b> Histograms</a></li>
+<li class="chapter" data-level="5.1.3" data-path="part4.html"><a href="part4.html#bar-graphs"><i class="fa fa-check"></i><b>5.1.3</b> Bar Graphs</a></li>
+<li class="chapter" data-level="5.1.4" data-path="part4.html"><a href="part4.html#scatterplots"><i class="fa fa-check"></i><b>5.1.4</b> Scatterplots</a></li>
+<li class="chapter" data-level="5.1.5" data-path="part4.html"><a href="part4.html#scatterplots-boxplots"><i class="fa fa-check"></i><b>5.1.5</b> Scatterplots + Boxplots</a></li>
+<li class="chapter" data-level="5.1.6" data-path="part4.html"><a href="part4.html#scatterplot-matrix"><i class="fa fa-check"></i><b>5.1.6</b> Scatterplot Matrix</a></li>
+<li class="chapter" data-level="5.1.7" data-path="part4.html"><a href="part4.html#saving-base-r-figures"><i class="fa fa-check"></i><b>5.1.7</b> Saving Base <strong>R</strong> Figures</a></li>
+<li class="chapter" data-level="5.1.8" data-path="part4.html"><a href="part4.html#your-turn-6"><i class="fa fa-check"></i><b>5.1.8</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="part4.html"><a href="part4.html#ggplot2-graphics"><i class="fa fa-check"></i><b>5.2</b> <code>ggplot2</code> Graphics</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="part4.html"><a href="part4.html#what-is-ggplot2"><i class="fa fa-check"></i><b>5.2.1</b> What is <code>ggplot2</code>?</a></li>
+<li class="chapter" data-level="5.2.2" data-path="part4.html"><a href="part4.html#how-ggplot2-works"><i class="fa fa-check"></i><b>5.2.2</b> How <code>ggplot2</code> works?</a></li>
+<li class="chapter" data-level="5.2.3" data-path="part4.html"><a href="part4.html#scatterplots-1"><i class="fa fa-check"></i><b>5.2.3</b> Scatterplots</a></li>
+<li class="chapter" data-level="5.2.4" data-path="part4.html"><a href="part4.html#boxplots-1"><i class="fa fa-check"></i><b>5.2.4</b> Boxplots</a></li>
+<li class="chapter" data-level="5.2.5" data-path="part4.html"><a href="part4.html#histograms-1"><i class="fa fa-check"></i><b>5.2.5</b> Histograms</a></li>
+<li class="chapter" data-level="5.2.6" data-path="part4.html"><a href="part4.html#bar-plots"><i class="fa fa-check"></i><b>5.2.6</b> Bar Plots</a></li>
+<li class="chapter" data-level="5.2.7" data-path="part4.html"><a href="part4.html#your-turn-7"><i class="fa fa-check"></i><b>5.2.7</b> Your Turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="part5.html"><a href="part5.html"><i class="fa fa-check"></i><b>6</b> Hypothesis Testing</a><ul>
+<li class="chapter" data-level="6.1" data-path="part5.html"><a href="part5.html#some-theory"><i class="fa fa-check"></i><b>6.1</b> Some Theory</a></li>
+<li class="chapter" data-level="6.2" data-path="part5.html"><a href="part5.html#types-of-inferential-statistics"><i class="fa fa-check"></i><b>6.2</b> Types of Inferential Statistics</a></li>
+<li class="chapter" data-level="6.3" data-path="part5.html"><a href="part5.html#one-sample-t-test"><i class="fa fa-check"></i><b>6.3</b> One-Sample <span class="math inline">\(t\)</span> Test</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="part5.html"><a href="part5.html#example"><i class="fa fa-check"></i><b>6.3.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="part5.html"><a href="part5.html#independent-samples-t-test"><i class="fa fa-check"></i><b>6.4</b> Independent-Samples <span class="math inline">\(t\)</span> Test</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="part5.html"><a href="part5.html#example-1"><i class="fa fa-check"></i><b>6.4.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="part5.html"><a href="part5.html#t-test-with-paired-data"><i class="fa fa-check"></i><b>6.5</b> <span class="math inline">\(t\)</span>-test with Paired Data</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="part5.html"><a href="part5.html#example-2"><i class="fa fa-check"></i><b>6.5.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="part5.html"><a href="part5.html#analysis-of-variance-anova"><i class="fa fa-check"></i><b>6.6</b> Analysis of Variance (ANOVA)</a><ul>
+<li class="chapter" data-level="6.6.1" data-path="part5.html"><a href="part5.html#example-3"><i class="fa fa-check"></i><b>6.6.1</b> Example</a></li>
+<li class="chapter" data-level="6.6.2" data-path="part5.html"><a href="part5.html#your-turn-8"><i class="fa fa-check"></i><b>6.6.2</b> Your Turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="part6.html"><a href="part6.html"><i class="fa fa-check"></i><b>7</b> Correlation and Regression</a><ul>
+<li class="chapter" data-level="7.1" data-path="part6.html"><a href="part6.html#correlation"><i class="fa fa-check"></i><b>7.1</b> Correlation</a></li>
+<li class="chapter" data-level="7.2" data-path="part6.html"><a href="part6.html#simple-linear-regression"><i class="fa fa-check"></i><b>7.2</b> Simple Linear Regression</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="part6.html"><a href="part6.html#example-4"><i class="fa fa-check"></i><b>7.2.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="part6.html"><a href="part6.html#multiple-regression"><i class="fa fa-check"></i><b>7.3</b> Multiple Regression</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="part6.html"><a href="part6.html#example-5"><i class="fa fa-check"></i><b>7.3.1</b> Example</a></li>
+<li class="chapter" data-level="7.3.2" data-path="part6.html"><a href="part6.html#your-turn-9"><i class="fa fa-check"></i><b>7.3.2</b> Your Turn</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
-<li><a href="https://github.com/okanbulut/rbook" target="blank">All rights reserved</a></li>
+<li><a href="https://github.com/okanbulut/rbook" target="blank">Published with GitHub</a></li>
 
 </ul>
 
@@ -130,9 +250,442 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="part2" class="section level1">
-<h1><span class="header-section-number">3</span> Part 2</h1>
-<p>Here is a review of existing methods.</p>
+<h1><span class="header-section-number">3</span> Data Wrangling</h1>
+<p>Nearly all datasets require some initial procedures (e.g., cleaning, reformatting, reshaping) to be applied before we start running any statistical analysis or creating visualizations. These procedures are often referred to as “data wrangling”. Here is a nice summary of the data wrangling process:</p>
+<div class="figure">
+<img src="figure/data-science-wrangle.png" alt="Data wrangling process [Source: Grolemund and Wickham (2018)]" />
+<p class="caption">Data wrangling process [<strong>Source:</strong> <a href="https://r4ds.had.co.nz/wrangle-intro.html">Grolemund and Wickham (2018)</a>]</p>
+</div>
+<p>In this section, we will follow the steps of data wrangling as shown above.</p>
+<div id="creating-data-in-r" class="section level2">
+<h2><span class="header-section-number">3.1</span> Creating Data in <strong>R</strong></h2>
+<p>There are multiple ways of creating datasets in R. We can create individual variables and combine them using the <code>cbind</code> (column bind) command:</p>
+<pre class="sourceCode r"><code class="sourceCode r">age &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">21</span>, <span class="dv">24</span>, <span class="dv">32</span>, <span class="dv">45</span>, <span class="dv">52</span>)
+salary &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">4500</span>, <span class="dv">3500</span>, <span class="dv">4100</span>, <span class="dv">4700</span>, <span class="dv">6000</span>)
+mydata &lt;-<span class="st"> </span><span class="kw">cbind</span>(age, salary)
+mydata</code></pre>
+<pre><code>     age salary
+[1,]  21   4500
+[2,]  24   3500
+[3,]  32   4100
+[4,]  45   4700
+[5,]  52   6000</code></pre>
+<p>We can also create individual rows and combine them using the <code>rbind</code> (row bind) command (not practical if there are many rows):</p>
+<pre class="sourceCode r"><code class="sourceCode r">person1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">21</span>, <span class="dv">4500</span>)
+person2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">24</span>, <span class="dv">3500</span>)
+person3 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">32</span>, <span class="dv">4100</span>)
+person4 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">45</span>, <span class="dv">4700</span>)
+person5 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">52</span>, <span class="dv">6000</span>)
 
+mydata &lt;-<span class="st"> </span><span class="kw">rbind</span>(person1, person2, person3, person4, person5)
+mydata</code></pre>
+<pre><code>        [,1] [,2]
+person1   21 4500
+person2   24 3500
+person3   32 4100
+person4   45 4700
+person5   52 6000</code></pre>
+<p>A better way to create datasets in <strong>R</strong> is to define variables within a data frame using the <code>data.frame</code> command.</p>
+<pre class="sourceCode r"><code class="sourceCode r">mydata &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">age =</span> <span class="kw">c</span>(<span class="dv">21</span>, <span class="dv">24</span>, <span class="dv">32</span>, <span class="dv">45</span>, <span class="dv">52</span>), 
+                     <span class="dt">salary =</span> <span class="kw">c</span>(<span class="dv">4500</span>, <span class="dv">3500</span>, <span class="dv">4100</span>, <span class="dv">4700</span>, <span class="dv">6000</span>))
+mydata</code></pre>
+<pre><code>  age salary
+1  21   4500
+2  24   3500
+3  32   4100
+4  45   4700
+5  52   6000</code></pre>
+<p>Data frames in <strong>R</strong> are very convenient because many mathematical operations can be directly applied to a data frame or some columns (or rows) of a data frame. Once a data frame is defined in <strong>R</strong>, we can see its content using the <code>View</code> command (which open the data window) or the <code>head</code> command (which prints the first six rows of the data):</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># To print the first six rows of a data frame</span>
+<span class="kw">head</span>(mydata)
+
+<span class="co"># To see the entire data in the view window</span>
+<span class="kw">View</span>(mydata)</code></pre>
+</div>
+<div id="importing-data-into-r" class="section level2">
+<h2><span class="header-section-number">3.2</span> Importing Data into <strong>R</strong></h2>
+<p>We often save our data sets in convenient data formats, such as Excel, SPSS, or text files (.txt, .csv, .dat, etc.). <strong>R</strong> is capable of importing (i.e., reading) various data formats.</p>
+<p>There are two ways to import a data set into <strong>R</strong>:</p>
+<ol style="list-style-type: decimal">
+<li>By using the “Import Dataset” menu option in <strong>RStudio</strong></li>
+<li>By using a particular <strong>R</strong> command</li>
+</ol>
+<div id="method-1-using-rstudio" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Method 1: Using <strong>RStudio</strong></h3>
+<div class="figure">
+<img src="figure/img8.png" alt="Importing a dataset using the RStudio menu" />
+<p class="caption">Importing a dataset using the <strong>RStudio</strong> menu</p>
+</div>
+<div id="importing-excel-files" class="section level4">
+<h4><span class="header-section-number">3.2.1.1</span> Importing Excel Files</h4>
+<ul>
+<li>Browse for the file that you want to import</li>
+<li>Give a name for the data set</li>
+<li>Choose the sheet to be imported</li>
+<li>“First Row as Names” if the variable names are in the first row of the file.</li>
+</ul>
+<div class="figure">
+<img src="figure/img9.png" alt="Importing Excel files" />
+<p class="caption">Importing Excel files</p>
+</div>
+</div>
+<div id="importing-spss-files" class="section level4">
+<h4><span class="header-section-number">3.2.1.2</span> Importing SPSS Files</h4>
+<ul>
+<li>Browse the file that you want to import</li>
+<li>Give a name for the data set</li>
+<li>Choose the SPSS data format (SAV)</li>
+</ul>
+<div class="figure">
+<img src="figure/img10.png" alt="Importing SPSS files" />
+<p class="caption">Importing SPSS files</p>
+</div>
+</div>
+</div>
+<div id="method-2-using-r-commands" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> Method 2: Using <strong>R</strong> Commands</h3>
+<p><strong>R</strong> has some built-in functions, such as <code>read.csv</code> and <code>read.table</code>. Also, there are <strong>R</strong> packages for importing specific data formats. For example, <code>foreign</code> for SPSS files and <code>xlsx</code> for Excel files. Here are some examples:</p>
+<p><strong>Excel Files:</strong></p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Install and activate the package first</span>
+<span class="kw">install.packages</span>(<span class="st">&quot;xlsx&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;xlsx&quot;</span>)
+
+<span class="co"># Use read.xlsx to import an Excel file</span>
+my_excel_file &lt;-<span class="st"> </span><span class="kw">read.xlsx</span>(<span class="st">&quot;path to the file/filename.xlsx&quot;</span>, <span class="dt">sheetName =</span> <span class="st">&quot;sheetname&quot;</span>)</code></pre>
+<p><strong>SPSS Files:</strong></p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Install and activate the package first</span>
+<span class="kw">install.packages</span>(<span class="st">&quot;foreign&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;foreign&quot;</span>)
+
+<span class="co"># Use read.xlsx to import an Excel file</span>
+my_spss_file &lt;-<span class="st"> </span><span class="kw">read.spss</span>(<span class="st">&quot;path to the file/filename.sav&quot;</span>, <span class="dt">to.data.frame =</span> <span class="ot">TRUE</span>)</code></pre>
+<p><strong>Text Files:</strong></p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># No need to install any packages</span>
+<span class="co"># R has many built-in functions already</span>
+
+<span class="co"># A comma-separated-values file with a .csv extension</span>
+my_csv_file &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;path to the file/filename.csv&quot;</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>)
+
+<span class="co"># A tab delimited text file with .txt extension</span>
+my_txt_file &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;path to the file/filename.txt&quot;</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>, <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</code></pre>
+<p>Here we should note that:</p>
+<ul>
+<li><code>header = TRUE</code> if the variable names are in the first row; otherwise, use <code>header = FALSE</code></li>
+<li><code>sep="\t"</code> for tab-separated files; <code>sep=","</code> for comma-separated files</li>
+</ul>
+</div>
+<div id="your-turn-2" class="section level3">
+<h3><span class="header-section-number">3.2.3</span> Your Turn</h3>
+<p>Now we will import the <code>medical</code> dataset into <strong>R</strong>. The dataset comes from a clinical study. Patients with no primary care physician were randomized to receive a multidisciplinary assessment and a brief motivational intervention, with the goal of linking them to primary medical care. You can find the details in “Codebook for the medical Dataset” in your folder.</p>
+<p>We have both Excel and text (with .csv extension) versions of the same file.</p>
+<ol style="list-style-type: decimal">
+<li><p>Import the file <code>medical_EXCEL</code> by using the “Import Dataset” menu option and name it as <code>medical</code> or import the file <code>medical_CSV</code> by using the <code>read.csv</code> command and name it as <code>medical</code></p></li>
+<li><p>Once the data file is successfully important, run the following code to see the first six rows of the data:</p></li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(medical)</code></pre>
+<p>You should be able to see the output below:</p>
+<pre><code>  id age    sex  race homeless substance avg_drinks max_drinks suicidal
+1  1  37   male black   housed   cocaine         13         26      yes
+2  2  37   male white homeless   alcohol         56         62      yes
+3  3  26   male black   housed    heroin          0          0       no
+4  4  39 female white   housed    heroin          5          5       no
+5  5  32   male black homeless   cocaine         10         13       no
+6  6  47 female black   housed   cocaine          4          4       no
+  treat physical1 mental1 depression1 physical2 mental2 depression2
+1   yes     58.41  25.112          49     54.23   52.23           7
+2   yes     36.04  26.670          30     59.56   41.73          11
+3    no     74.81   6.763          39     58.46   56.77          14
+4    no     61.93  43.968          15     46.61   14.66          44
+5    no     37.35  21.676          39     31.42   40.67          26
+6   yes     46.48  55.509           6     43.20   50.06          23</code></pre>
+</div>
+</div>
+<div id="understanding-the-data" class="section level2">
+<h2><span class="header-section-number">3.3</span> Understanding the Data</h2>
+<p>After we import a dataset into <strong>R</strong>, we can quickly check a few things to understand our dataset better:</p>
+<ul>
+<li>To see the number of rows in the data:</li>
+</ul>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">nrow</span>(medical)</code></pre>
+<pre><code>[1] 246</code></pre>
+<ul>
+<li>To see the number of columns in the data:</li>
+</ul>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ncol</span>(medical)</code></pre>
+<pre><code>[1] 16</code></pre>
+<ul>
+<li>To see its dimensions all together:</li>
+</ul>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dim</span>(medical)</code></pre>
+<pre><code>[1] 246  16</code></pre>
+<ul>
+<li>To see all of the variable names in the data:</li>
+</ul>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">names</span>(medical)</code></pre>
+<pre><code> [1] &quot;id&quot;          &quot;age&quot;         &quot;sex&quot;         &quot;race&quot;        &quot;homeless&quot;   
+ [6] &quot;substance&quot;   &quot;avg_drinks&quot;  &quot;max_drinks&quot;  &quot;suicidal&quot;    &quot;treat&quot;      
+[11] &quot;physical1&quot;   &quot;mental1&quot;     &quot;depression1&quot; &quot;physical2&quot;   &quot;mental2&quot;    
+[16] &quot;depression2&quot;</code></pre>
+<ul>
+<li>To see the structure of the entire dataset:</li>
+</ul>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(medical)</code></pre>
+<pre><code>&#39;data.frame&#39;:   246 obs. of  16 variables:
+ $ id         : int  1 2 3 4 5 6 8 9 10 12 ...
+ $ age        : int  37 37 26 39 32 47 28 50 39 58 ...
+ $ sex        : chr  &quot;male&quot; &quot;male&quot; &quot;male&quot; &quot;female&quot; ...
+ $ race       : chr  &quot;black&quot; &quot;white&quot; &quot;black&quot; &quot;white&quot; ...
+ $ homeless   : chr  &quot;housed&quot; &quot;homeless&quot; &quot;housed&quot; &quot;housed&quot; ...
+ $ substance  : chr  &quot;cocaine&quot; &quot;alcohol&quot; &quot;heroin&quot; &quot;heroin&quot; ...
+ $ avg_drinks : int  13 56 0 5 10 4 12 71 20 13 ...
+ $ max_drinks : int  26 62 0 5 13 4 24 129 27 13 ...
+ $ suicidal   : chr  &quot;yes&quot; &quot;yes&quot; &quot;no&quot; &quot;no&quot; ...
+ $ treat      : chr  &quot;yes&quot; &quot;yes&quot; &quot;no&quot; &quot;no&quot; ...
+ $ physical1  : num  58.4 36 74.8 61.9 37.3 ...
+ $ mental1    : num  25.11 26.67 6.76 43.97 21.68 ...
+ $ depression1: int  49 30 39 15 39 6 32 50 46 49 ...
+ $ physical2  : num  54.2 59.6 58.5 46.6 31.4 ...
+ $ mental2    : num  52.2 41.7 56.8 14.7 40.7 ...
+ $ depression2: int  7 11 14 44 26 23 18 33 37 8 ...</code></pre>
+</div>
+<div id="indexing" class="section level2">
+<h2><span class="header-section-number">3.4</span> Indexing</h2>
+<p>In <strong>R</strong>, each row and column is indexed by the position they appear in the data. <strong>R</strong> uses square brackets for indexing. Within the square brackets, the first number shows the row number(s) and the second number shows the column(s). To call a particular column (i.e., variables) or a particular row (i.e., persons), we can use the following structure: <code>data[row, col]</code></p>
+<p>For example, if we want to see the second variable for the fifth person in the <code>medical</code> dataset:</p>
+<pre class="sourceCode r"><code class="sourceCode r">medical[<span class="dv">5</span>, <span class="dv">2</span>]</code></pre>
+<pre><code>[1] 32</code></pre>
+<p>Or, if we want to see the first three variables for the first five persons:</p>
+<pre class="sourceCode r"><code class="sourceCode r">medical[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>]</code></pre>
+<pre><code>  id age    sex
+1  1  37   male
+2  2  37   male
+3  3  26   male
+4  4  39 female
+5  5  32   male</code></pre>
+<p>Instead of <code>medical[1:5, 1:3]</code>, we could also do:</p>
+<pre class="sourceCode r"><code class="sourceCode r">medical[<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>), <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)]</code></pre>
+<pre><code>  id age    sex
+1  1  37   male
+2  2  37   male
+3  3  26   male
+4  4  39 female
+5  5  32   male</code></pre>
+<p>or</p>
+<pre class="sourceCode r"><code class="sourceCode r">medical[<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>), <span class="kw">c</span>(<span class="st">&quot;id&quot;</span>, <span class="st">&quot;age&quot;</span>, <span class="st">&quot;sex&quot;</span>)]</code></pre>
+<pre><code>  id age    sex
+1  1  37   male
+2  2  37   male
+3  3  26   male
+4  4  39 female
+5  5  32   male</code></pre>
+<p>A common way of indexing variables (i.e., columns) in <strong>R</strong> is to use the dollar sign with a variable name from a data frame. For example, we can select the age variable as follows:</p>
+<pre class="sourceCode r"><code class="sourceCode r">medical<span class="op">$</span>age</code></pre>
+<p>This would print all the values for age in the <code>medical</code> dataset. We can also preview a particular variable using the <code>head</code> function.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(medical<span class="op">$</span>age)</code></pre>
+<pre><code>[1] 37 37 26 39 32 47</code></pre>
+<p>Using a particular variable, we can also see the values for some rows in the data. For example, let’s print the age variable for the 10th to 15th rows in the <code>medical</code> dataset.</p>
+<pre class="sourceCode r"><code class="sourceCode r">medical<span class="op">$</span>age[<span class="dv">10</span><span class="op">:</span><span class="dv">15</span>]
+
+<span class="co">#or</span>
+
+medical<span class="op">$</span>age[<span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="dv">14</span>, <span class="dv">15</span>)]</code></pre>
+<p>Note that now the brackets don’t need a comma inside as we had before. This is because we have already selected a variable (age) and so <strong>R</strong> knows that we now refer to rows when we type any values inside the brackets.</p>
+</div>
+<div id="subsetting" class="section level2">
+<h2><span class="header-section-number">3.5</span> Subsetting</h2>
+<p>Now assume that we want to create a new dataset with only females from the <code>medical</code> dataset. Although we can take this subset in many ways, the following three are the easiest ways:</p>
+<ol style="list-style-type: decimal">
+<li>Using the indexing idea to refer to certain variables:</li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r">medical_female &lt;-<span class="st"> </span>medical[medical<span class="op">$</span>sex <span class="op">==</span><span class="st"> &quot;female&quot;</span>, ]
+<span class="kw">head</span>(medical_female)</code></pre>
+<pre><code>   id age    sex     race homeless substance avg_drinks max_drinks
+4   4  39 female    white   housed    heroin          5          5
+6   6  47 female    black   housed   cocaine          4          4
+8   9  50 female    white homeless   alcohol         71        129
+10 12  58 female    black   housed   alcohol         13         13
+14 17  28 female hispanic homeless    heroin          0          0
+17 20  27 female    white   housed    heroin          9         24
+   suicidal treat physical1 mental1 depression1 physical2 mental2
+4        no    no     61.93   43.97          15     46.61   14.66
+6        no   yes     46.48   55.51           6     43.20   50.06
+8        no    no     38.27   22.03          50     45.56   28.88
+10       no    no     41.93   13.38          49     52.96   51.45
+14      yes   yes     44.78   29.80          35     52.69   46.59
+17      yes   yes     37.45   15.46          52     61.40   41.53
+   depression2
+4           44
+6           23
+8           33
+10           8
+14          19
+17          15</code></pre>
+<p>We set the criterion <code>medical$sex == "female"</code> before the comma to make a selection for rows and there is nothing after comma in the bracket because we want to keep all the variables in the dataset. This method is handy for simple selections but it gets complicated when we have multiple subsetting criteria. See the example below with two criteria:</p>
+<pre class="sourceCode r"><code class="sourceCode r">medical_female_<span class="dv">40</span> &lt;-<span class="st"> </span>medical[medical<span class="op">$</span>sex <span class="op">==</span><span class="st"> &quot;female&quot;</span> <span class="op">&amp;</span><span class="st"> </span>medical<span class="op">$</span>age <span class="op">&gt;</span><span class="st"> </span><span class="dv">40</span>, ]</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Using the <code>subset</code> function in base <strong>R</strong>:</li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r">medical_female &lt;-<span class="st"> </span><span class="kw">subset</span>(medical, sex <span class="op">==</span><span class="st"> &quot;female&quot;</span>)
+<span class="kw">head</span>(medical_female)</code></pre>
+<pre><code>   id age    sex     race homeless substance avg_drinks max_drinks
+4   4  39 female    white   housed    heroin          5          5
+6   6  47 female    black   housed   cocaine          4          4
+8   9  50 female    white homeless   alcohol         71        129
+10 12  58 female    black   housed   alcohol         13         13
+14 17  28 female hispanic homeless    heroin          0          0
+17 20  27 female    white   housed    heroin          9         24
+   suicidal treat physical1 mental1 depression1 physical2 mental2
+4        no    no     61.93   43.97          15     46.61   14.66
+6        no   yes     46.48   55.51           6     43.20   50.06
+8        no    no     38.27   22.03          50     45.56   28.88
+10       no    no     41.93   13.38          49     52.96   51.45
+14      yes   yes     44.78   29.80          35     52.69   46.59
+17      yes   yes     37.45   15.46          52     61.40   41.53
+   depression2
+4           44
+6           23
+8           33
+10           8
+14          19
+17          15</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Using the <code>filter</code> function from the <code>dplyr</code> package (an amazing package for data wrangling):</li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Install and activate the package first</span>
+<span class="kw">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;dplyr&quot;</span>)
+
+medical_female &lt;-<span class="st"> </span><span class="kw">filter</span>(medical, sex <span class="op">==</span><span class="st"> &quot;female&quot;</span>)
+
+<span class="kw">head</span>(medical_female)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(medical_female)</code></pre>
+<pre><code>  id age    sex     race homeless substance avg_drinks max_drinks suicidal
+1  4  39 female    white   housed    heroin          5          5       no
+2  6  47 female    black   housed   cocaine          4          4       no
+3  9  50 female    white homeless   alcohol         71        129       no
+4 12  58 female    black   housed   alcohol         13         13       no
+5 17  28 female hispanic homeless    heroin          0          0      yes
+6 20  27 female    white   housed    heroin          9         24      yes
+  treat physical1 mental1 depression1 physical2 mental2 depression2
+1    no     61.93   43.97          15     46.61   14.66          44
+2   yes     46.48   55.51           6     43.20   50.06          23
+3    no     38.27   22.03          50     45.56   28.88          33
+4    no     41.93   13.38          49     52.96   51.45           8
+5   yes     44.78   29.80          35     52.69   46.59          19
+6   yes     37.45   15.46          52     61.40   41.53          15</code></pre>
+<p>We can also create a new dataset by subsetting based on multiple criteria and selecting only some variables from our original data. Let’s assume that we want to select participants who are female and 40 years old or older. Also, we only want to keep the following variables in the dataset: id, age, sex, substance.</p>
+<ol style="list-style-type: decimal">
+<li>Using the <code>subset</code> function in base <strong>R</strong>:</li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r">medical_f40 &lt;-<span class="st"> </span><span class="kw">subset</span>(medical, sex <span class="op">==</span><span class="st"> &quot;female&quot;</span> <span class="op">&amp;</span><span class="st"> </span>age <span class="op">&gt;=</span><span class="st"> </span><span class="dv">40</span>, 
+                      <span class="dt">select =</span> <span class="kw">c</span>(<span class="st">&quot;id&quot;</span>, <span class="st">&quot;age&quot;</span>, <span class="st">&quot;sex&quot;</span>, <span class="st">&quot;substance&quot;</span>))
+
+<span class="kw">head</span>(medical_f40)</code></pre>
+<pre><code>   id age    sex substance
+6   6  47 female   cocaine
+8   9  50 female   alcohol
+10 12  58 female   alcohol
+21 27  48 female   cocaine
+51 65  41 female   alcohol
+56 71  40 female   alcohol</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Using the <code>filter</code> and <code>select</code> functions from the <code>dplyr</code> package</li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r">medical_f40 &lt;-<span class="st"> </span>medical <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;female&quot;</span>, age <span class="op">&gt;=</span><span class="st"> </span><span class="dv">40</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">select</span>(id, age, sex, substance)
+
+<span class="kw">head</span>(medical_f40)</code></pre>
+<pre><code>  id age    sex substance
+1  6  47 female   cocaine
+2  9  50 female   alcohol
+3 12  58 female   alcohol
+4 27  48 female   cocaine
+5 65  41 female   alcohol
+6 71  40 female   alcohol</code></pre>
+<p>Here I demonstrate the <code>%&gt;%</code> operator called the pipe. This operator forwards a value, or the result of an expression, into the next function call/expression. This way we can simplify the code without creating many intermediate datasets (see <a href="https://uc-r.github.io/pipe" class="uri">https://uc-r.github.io/pipe</a> for more details on the pipe).</p>
+<p>Here are most common operators for subsetting:</p>
+<ul>
+<li><code>&lt;</code> Less than</li>
+<li><code>&gt;</code> Greater than</li>
+<li><code>==</code> Equal to</li>
+<li><code>&lt;=</code> Less than or equal to</li>
+<li><code>&gt;=</code> Greater than or equal to</li>
+<li><code>!=</code> Not equal to</li>
+<li><code>%in%</code> Group membership</li>
+<li><code>&amp;</code> And</li>
+<li><code>|</code> Or</li>
+<li><code>is.na</code> Is missing (NA).</li>
+<li><code>!is.na</code> Is not missing (NA)</li>
+</ul>
+</div>
+<div id="other-data-manipulation-tools" class="section level2">
+<h2><span class="header-section-number">3.6</span> Other Data Manipulation Tools</h2>
+<p>Here I will mention the other key functions from the <code>dplyr</code> package. These functions solve the vast majority of data manipulation challenges:</p>
+<ul>
+<li><code>arrange</code>: Reorder data based on values of variables</li>
+<li><code>mutate</code>: Create new variables</li>
+<li><code>summarise</code>: Summarize data by functions of choice</li>
+</ul>
+<p><strong>Arrange:</strong></p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Reorder the data by age</span>
+medical_f40 &lt;-<span class="st"> </span><span class="kw">arrange</span>(medical_f40, age)
+
+<span class="co"># Let&#39;s see if the ordering worked</span>
+<span class="kw">head</span>(medical_f40)</code></pre>
+<pre><code>   id age    sex substance
+1  71  40 female   alcohol
+2  65  41 female   alcohol
+3  75  41 female    heroin
+4 121  42 female   cocaine
+5 465  42 female   alcohol
+6 364  43 female    heroin</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Reorder the data by age in descending order</span>
+medical_f40 &lt;-<span class="st"> </span><span class="kw">arrange</span>(medical_f40, <span class="kw">desc</span>(age))
+
+<span class="co"># Let&#39;s see if the ordering worked</span>
+<span class="kw">head</span>(medical_f40)</code></pre>
+<pre><code>   id age    sex substance
+1  12  58 female   alcohol
+2 181  57 female   alcohol
+3 264  55 female    heroin
+4   9  50 female   alcohol
+5 134  50 female   alcohol
+6  27  48 female   cocaine</code></pre>
+<p><strong>Mutate:</strong></p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Create a new variable based on age</span>
+medical_f40 &lt;-<span class="st"> </span>medical_f40 <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">age2 =</span> <span class="kw">ifelse</span>(age <span class="op">&lt;</span><span class="st"> </span><span class="dv">45</span>, <span class="st">&quot;Younger than 45&quot;</span>, <span class="st">&quot;45 or older&quot;</span>))
+
+<span class="co"># Let&#39;s see if the ordering worked</span>
+<span class="kw">head</span>(medical_f40)</code></pre>
+<pre><code>   id age    sex substance        age2
+1  12  58 female   alcohol 45 or older
+2 181  57 female   alcohol 45 or older
+3 264  55 female    heroin 45 or older
+4   9  50 female   alcohol 45 or older
+5 134  50 female   alcohol 45 or older
+6  27  48 female   cocaine 45 or older</code></pre>
+<p>We will use the <code>summarise</code> function in the next section.</p>
+<div id="your-turn-3" class="section level3">
+<h3><span class="header-section-number">3.6.1</span> Your Turn</h3>
+<ol style="list-style-type: decimal">
+<li><p>Using the medical data, create a subset where the patients:</p>
+<ul>
+<li>are older than 30 years old: <code>age &gt; 30</code></li>
+<li>are female: <code>sex == "female"</code></li>
+<li>are not homeless: <code>homeless != "homeless"</code></li>
+</ul></li>
+</ol>
+<p>and save this data as <code>medical_example</code>. You can use either <code>subset</code> or <code>filter</code> for this task.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Use the <code>dim</code> function to see how many rows you have in the new data</p></li>
+<li><p>Sort this new dataset by age in descending order</p></li>
+<li><p>Use the <code>head</code> function to preview the final dataset</p></li>
+</ol>
+
+</div>
+</div>
 </div>
             </section>
 
@@ -190,7 +743,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

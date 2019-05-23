@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6 Hypothesis Testing | Statistical Analysis and Visualizations Using R</title>
+  <meta name="description" content="This book contains the materials for the R course at Techology Training Centre." />
+  <meta name="generator" content="bookdown 0.10 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6 Hypothesis Testing | Statistical Analysis and Visualizations Using R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This book contains the materials for the R course at Techology Training Centre." />
+  <meta name="github-repo" content="okanbulut/rbook" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6 Hypothesis Testing | Statistical Analysis and Visualizations Using R" />
+  
+  <meta name="twitter:description" content="This book contains the materials for the R course at Techology Training Centre." />
+  
+
+<meta name="author" content="Okan Bulut" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="part4.html">
+<link rel="next" href="part6.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="https://www.ualberta.ca/technology-training/">Okan Bulut &copy;</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#course-description"><i class="fa fa-check"></i><b>1.1</b> Course Description</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#course-objectives"><i class="fa fa-check"></i><b>1.2</b> Course Objectives</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#instructor-information"><i class="fa fa-check"></i><b>1.3</b> Instructor Information</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#course-structure"><i class="fa fa-check"></i><b>1.4</b> Course Structure</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#course-materials"><i class="fa fa-check"></i><b>1.5</b> Course Materials</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#learning-process"><i class="fa fa-check"></i><b>1.6</b> Learning Process</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#additional-resources"><i class="fa fa-check"></i><b>1.7</b> Additional Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="part1.html"><a href="part1.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="part1.html"><a href="part1.html#r-and-rstudio"><i class="fa fa-check"></i><b>2.1</b> R and RStudio</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="part1.html"><a href="part1.html#what-is-r"><i class="fa fa-check"></i><b>2.1.1</b> What is <strong>R</strong>?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="part1.html"><a href="part1.html#what-is-rstudio"><i class="fa fa-check"></i><b>2.1.2</b> What is RStudio?</a></li>
+<li class="chapter" data-level="2.1.3" data-path="part1.html"><a href="part1.html#download-and-install"><i class="fa fa-check"></i><b>2.1.3</b> Download and Install</a></li>
+<li class="chapter" data-level="2.1.4" data-path="part1.html"><a href="part1.html#preview-of-rstudio"><i class="fa fa-check"></i><b>2.1.4</b> Preview of RStudio</a></li>
+<li class="chapter" data-level="2.1.5" data-path="part1.html"><a href="part1.html#creating-a-new-script"><i class="fa fa-check"></i><b>2.1.5</b> Creating a New Script</a></li>
+<li class="chapter" data-level="2.1.6" data-path="part1.html"><a href="part1.html#working-directory"><i class="fa fa-check"></i><b>2.1.6</b> Working Directory</a></li>
+<li class="chapter" data-level="2.1.7" data-path="part1.html"><a href="part1.html#downloading-and-installing-r-packages"><i class="fa fa-check"></i><b>2.1.7</b> Downloading and Installing <strong>R</strong> Packages</a></li>
+<li class="chapter" data-level="2.1.8" data-path="part1.html"><a href="part1.html#your-turn"><i class="fa fa-check"></i><b>2.1.8</b> Your turn</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="part1.html"><a href="part1.html#basics-of-the-r-language"><i class="fa fa-check"></i><b>2.2</b> Basics of the R Language</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="part1.html"><a href="part1.html#r-as-a-calculator"><i class="fa fa-check"></i><b>2.2.1</b> R as a Calculator</a></li>
+<li class="chapter" data-level="2.2.2" data-path="part1.html"><a href="part1.html#creating-new-variables"><i class="fa fa-check"></i><b>2.2.2</b> Creating New Variables</a></li>
+<li class="chapter" data-level="2.2.3" data-path="part1.html"><a href="part1.html#important-rules-for-the-r-language"><i class="fa fa-check"></i><b>2.2.3</b> Important Rules for the <strong>R</strong> Language</a></li>
+<li class="chapter" data-level="2.2.4" data-path="part1.html"><a href="part1.html#a-few-shortcuts"><i class="fa fa-check"></i><b>2.2.4</b> A Few Shortcuts</a></li>
+<li class="chapter" data-level="2.2.5" data-path="part1.html"><a href="part1.html#self-help"><i class="fa fa-check"></i><b>2.2.5</b> Self-Help</a></li>
+<li class="chapter" data-level="2.2.6" data-path="part1.html"><a href="part1.html#your-turn-1"><i class="fa fa-check"></i><b>2.2.6</b> Your turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="part2.html"><a href="part2.html"><i class="fa fa-check"></i><b>3</b> Data Wrangling</a><ul>
+<li class="chapter" data-level="3.1" data-path="part2.html"><a href="part2.html#creating-data-in-r"><i class="fa fa-check"></i><b>3.1</b> Creating Data in <strong>R</strong></a></li>
+<li class="chapter" data-level="3.2" data-path="part2.html"><a href="part2.html#importing-data-into-r"><i class="fa fa-check"></i><b>3.2</b> Importing Data into <strong>R</strong></a><ul>
+<li class="chapter" data-level="3.2.1" data-path="part2.html"><a href="part2.html#method-1-using-rstudio"><i class="fa fa-check"></i><b>3.2.1</b> Method 1: Using <strong>RStudio</strong></a></li>
+<li class="chapter" data-level="3.2.2" data-path="part2.html"><a href="part2.html#method-2-using-r-commands"><i class="fa fa-check"></i><b>3.2.2</b> Method 2: Using <strong>R</strong> Commands</a></li>
+<li class="chapter" data-level="3.2.3" data-path="part2.html"><a href="part2.html#your-turn-2"><i class="fa fa-check"></i><b>3.2.3</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="part2.html"><a href="part2.html#understanding-the-data"><i class="fa fa-check"></i><b>3.3</b> Understanding the Data</a></li>
+<li class="chapter" data-level="3.4" data-path="part2.html"><a href="part2.html#indexing"><i class="fa fa-check"></i><b>3.4</b> Indexing</a></li>
+<li class="chapter" data-level="3.5" data-path="part2.html"><a href="part2.html#subsetting"><i class="fa fa-check"></i><b>3.5</b> Subsetting</a></li>
+<li class="chapter" data-level="3.6" data-path="part2.html"><a href="part2.html#other-data-manipulation-tools"><i class="fa fa-check"></i><b>3.6</b> Other Data Manipulation Tools</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="part2.html"><a href="part2.html#your-turn-3"><i class="fa fa-check"></i><b>3.6.1</b> Your Turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="part3.html"><a href="part3.html"><i class="fa fa-check"></i><b>4</b> Descriptive Statistics</a><ul>
+<li class="chapter" data-level="4.1" data-path="part3.html"><a href="part3.html#quick-summary"><i class="fa fa-check"></i><b>4.1</b> Quick Summary</a></li>
+<li class="chapter" data-level="4.2" data-path="part3.html"><a href="part3.html#frequency-tables"><i class="fa fa-check"></i><b>4.2</b> Frequency Tables</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="part3.html"><a href="part3.html#your-turn-4"><i class="fa fa-check"></i><b>4.2.1</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="part3.html"><a href="part3.html#central-tendency-and-dispersion"><i class="fa fa-check"></i><b>4.3</b> Central Tendency and Dispersion</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="part3.html"><a href="part3.html#your-turn-5"><i class="fa fa-check"></i><b>4.3.1</b> Your Turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="part4.html"><a href="part4.html"><i class="fa fa-check"></i><b>5</b> Data Visualizations in <strong>R</strong></a><ul>
+<li class="chapter" data-level="5.1" data-path="part4.html"><a href="part4.html#base-r-graphics"><i class="fa fa-check"></i><b>5.1</b> Base <strong>R</strong> Graphics</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="part4.html"><a href="part4.html#boxplots"><i class="fa fa-check"></i><b>5.1.1</b> Boxplots</a></li>
+<li class="chapter" data-level="5.1.2" data-path="part4.html"><a href="part4.html#histograms"><i class="fa fa-check"></i><b>5.1.2</b> Histograms</a></li>
+<li class="chapter" data-level="5.1.3" data-path="part4.html"><a href="part4.html#bar-graphs"><i class="fa fa-check"></i><b>5.1.3</b> Bar Graphs</a></li>
+<li class="chapter" data-level="5.1.4" data-path="part4.html"><a href="part4.html#scatterplots"><i class="fa fa-check"></i><b>5.1.4</b> Scatterplots</a></li>
+<li class="chapter" data-level="5.1.5" data-path="part4.html"><a href="part4.html#scatterplots-boxplots"><i class="fa fa-check"></i><b>5.1.5</b> Scatterplots + Boxplots</a></li>
+<li class="chapter" data-level="5.1.6" data-path="part4.html"><a href="part4.html#scatterplot-matrix"><i class="fa fa-check"></i><b>5.1.6</b> Scatterplot Matrix</a></li>
+<li class="chapter" data-level="5.1.7" data-path="part4.html"><a href="part4.html#saving-base-r-figures"><i class="fa fa-check"></i><b>5.1.7</b> Saving Base <strong>R</strong> Figures</a></li>
+<li class="chapter" data-level="5.1.8" data-path="part4.html"><a href="part4.html#your-turn-6"><i class="fa fa-check"></i><b>5.1.8</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="part4.html"><a href="part4.html#ggplot2-graphics"><i class="fa fa-check"></i><b>5.2</b> <code>ggplot2</code> Graphics</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="part4.html"><a href="part4.html#what-is-ggplot2"><i class="fa fa-check"></i><b>5.2.1</b> What is <code>ggplot2</code>?</a></li>
+<li class="chapter" data-level="5.2.2" data-path="part4.html"><a href="part4.html#how-ggplot2-works"><i class="fa fa-check"></i><b>5.2.2</b> How <code>ggplot2</code> works?</a></li>
+<li class="chapter" data-level="5.2.3" data-path="part4.html"><a href="part4.html#scatterplots-1"><i class="fa fa-check"></i><b>5.2.3</b> Scatterplots</a></li>
+<li class="chapter" data-level="5.2.4" data-path="part4.html"><a href="part4.html#boxplots-1"><i class="fa fa-check"></i><b>5.2.4</b> Boxplots</a></li>
+<li class="chapter" data-level="5.2.5" data-path="part4.html"><a href="part4.html#histograms-1"><i class="fa fa-check"></i><b>5.2.5</b> Histograms</a></li>
+<li class="chapter" data-level="5.2.6" data-path="part4.html"><a href="part4.html#bar-plots"><i class="fa fa-check"></i><b>5.2.6</b> Bar Plots</a></li>
+<li class="chapter" data-level="5.2.7" data-path="part4.html"><a href="part4.html#your-turn-7"><i class="fa fa-check"></i><b>5.2.7</b> Your Turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="part5.html"><a href="part5.html"><i class="fa fa-check"></i><b>6</b> Hypothesis Testing</a><ul>
+<li class="chapter" data-level="6.1" data-path="part5.html"><a href="part5.html#some-theory"><i class="fa fa-check"></i><b>6.1</b> Some Theory</a></li>
+<li class="chapter" data-level="6.2" data-path="part5.html"><a href="part5.html#types-of-inferential-statistics"><i class="fa fa-check"></i><b>6.2</b> Types of Inferential Statistics</a></li>
+<li class="chapter" data-level="6.3" data-path="part5.html"><a href="part5.html#one-sample-t-test"><i class="fa fa-check"></i><b>6.3</b> One-Sample <span class="math inline">\(t\)</span> Test</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="part5.html"><a href="part5.html#example"><i class="fa fa-check"></i><b>6.3.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="part5.html"><a href="part5.html#independent-samples-t-test"><i class="fa fa-check"></i><b>6.4</b> Independent-Samples <span class="math inline">\(t\)</span> Test</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="part5.html"><a href="part5.html#example-1"><i class="fa fa-check"></i><b>6.4.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="part5.html"><a href="part5.html#t-test-with-paired-data"><i class="fa fa-check"></i><b>6.5</b> <span class="math inline">\(t\)</span>-test with Paired Data</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="part5.html"><a href="part5.html#example-2"><i class="fa fa-check"></i><b>6.5.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="part5.html"><a href="part5.html#analysis-of-variance-anova"><i class="fa fa-check"></i><b>6.6</b> Analysis of Variance (ANOVA)</a><ul>
+<li class="chapter" data-level="6.6.1" data-path="part5.html"><a href="part5.html#example-3"><i class="fa fa-check"></i><b>6.6.1</b> Example</a></li>
+<li class="chapter" data-level="6.6.2" data-path="part5.html"><a href="part5.html#your-turn-8"><i class="fa fa-check"></i><b>6.6.2</b> Your Turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="part6.html"><a href="part6.html"><i class="fa fa-check"></i><b>7</b> Correlation and Regression</a><ul>
+<li class="chapter" data-level="7.1" data-path="part6.html"><a href="part6.html#correlation"><i class="fa fa-check"></i><b>7.1</b> Correlation</a></li>
+<li class="chapter" data-level="7.2" data-path="part6.html"><a href="part6.html#simple-linear-regression"><i class="fa fa-check"></i><b>7.2</b> Simple Linear Regression</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="part6.html"><a href="part6.html#example-4"><i class="fa fa-check"></i><b>7.2.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="part6.html"><a href="part6.html#multiple-regression"><i class="fa fa-check"></i><b>7.3</b> Multiple Regression</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="part6.html"><a href="part6.html#example-5"><i class="fa fa-check"></i><b>7.3.1</b> Example</a></li>
+<li class="chapter" data-level="7.3.2" data-path="part6.html"><a href="part6.html#your-turn-9"><i class="fa fa-check"></i><b>7.3.2</b> Your Turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/okanbulut/rbook" target="blank">Published with GitHub</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Analysis and Visualizations Using R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="part5" class="section level1">
+<h1><span class="header-section-number">6</span> Hypothesis Testing</h1>
+<div id="some-theory" class="section level2">
+<h2><span class="header-section-number">6.1</span> Some Theory</h2>
+<blockquote>
+<p>Statistics cannot prove anything with certainty. Instead, the power of statistical inference derives from observing some pattern or outcome and then using probability to determine the most likely explanation for that outcome.<span class="citation">(Wheelan <a href="#ref-Wheelan">2013</a>)</span></p>
+</blockquote>
+<p>In its most abstract form, hypothesis testing really a very simple idea: the researcher has some theory about the world, and wants to determine whether or not the data actually support that theory. However, the details are messy, and most people find the theory of hypothesis testing to be the most frustrating part of statistics. In hypothesis testing, we want to:</p>
+<ul>
+<li>explore whether parameters in a model take specified values or fall in certain ranges</li>
+<li>detect significant differences, or differences that did not occur by random chance</li>
+</ul>
+<p>To address these goals, we will use data from a sample to help us decide between two competing hypotheses about a population. These two completing hypotheses are:</p>
+<ul>
+<li><strong>a null hypothesis</strong> (<span class="math inline">\(H_0\)</span>) that corresponds to the exact opposite of what we want to prove</li>
+<li><strong>an alternative hypothesis</strong> (<span class="math inline">\(H_1\)</span>) that represents what we actually believe.</li>
+</ul>
+<p>The claim for which we seek significant evidence is assigned to the alternative hypothesis. The alternative is usually what the experimenter or researcher wants to establish or find evidence for. Usually, the null hypothesis is a claim that there really is “no effect” or “no difference”. In many cases, the null hypothesis represents the status quo or that nothing interesting is happening.</p>
+<p>For example, we can think of hypothesis testing in the same context as a criminal trial in the United States. A criminal trial in the United States is a familiar situation in which a choice between two contradictory claims must be made.</p>
+<ul>
+<li>The accuser of the crime must be judged either guilty or not guilty.</li>
+<li>Under the U.S. system of justice, the individual on trial is initially presumed not guilty.</li>
+<li>Only <em>strong evidence</em> to the contrary causes the not guilty claim to be rejected in favor of a guilty verdict.</li>
+</ul>
+<p>The phrase “beyond a reasonable doubt” is often used to set the cutoff value for when enough evidence has been given to convict. Theoretically, we should never say “The person is innocent” but instead “There is not sufficient evidence to show that the person is guilty”. That is, technically it is <strong>not</strong> correct to say that we accept the null hypothesis. Accepting the null hypothesis is the same as saying that a person is innocent. We cannot show that a person is innocent; we can only say that there was not enough substantial evidence to find the person guilty.</p>
+</div>
+<div id="types-of-inferential-statistics" class="section level2">
+<h2><span class="header-section-number">6.2</span> Types of Inferential Statistics</h2>
+<p>We assess the strength of evidence by assuming the null hypothesis is true and determining how unlikely it would be to see sample statistics as extreme (or more extreme) as those in the original sample. Using inferential statistics allows us to make predictions or inferences about a population from observations based on a sample. We can calculate several inferential statistics:</p>
+<ol style="list-style-type: decimal">
+<li>Whether a sample mean is equal to a particular value:
+<ul>
+<li>One sample t-test (<span class="math inline">\(H_0: \mu=\text{value}\)</span>)</li>
+</ul></li>
+<li>Whether two sample means are equal:
+<ul>
+<li>Independent samples t-test (<span class="math inline">\(H_0: \mu_1=\mu_2\)</span> or <span class="math inline">\(H_0: \mu_1-\mu_2=0\)</span>)</li>
+<li>Repeated measures t-test (<span class="math inline">\(H_0: \mu_D=0\)</span> or <span class="math inline">\(H_0: \mu_1-\mu_2=0\)</span>)</li>
+</ul></li>
+<li>Whether three or more groups have equal means:
+<ul>
+<li>ANOVA (<span class="math inline">\(H_0: \mu_1=\mu_2=\mu_3=\dots=\mu_k\)</span>)</li>
+</ul></li>
+</ol>
+</div>
+<div id="one-sample-t-test" class="section level2">
+<h2><span class="header-section-number">6.3</span> One-Sample <span class="math inline">\(t\)</span> Test</h2>
+<p>Suppose we wish to test for the population mean (<span class="math inline">\(\mu\)</span>) using a dataset of size (<span class="math inline">\(n\)</span>), and the population standard deviation (<span class="math inline">\(\sigma\)</span>) is not known. We want to test the null hypothesis <span class="math inline">\(H_0:\mu = \mu_0\)</span> against some alternative hypothesis, with (<span class="math inline">\(\alpha\)</span>) level of significance.</p>
+<p>The test statistic will be:</p>
+<p><span class="math display">\[t = \frac{\bar{x} - \mu_0}{\frac{S}{\sqrt{n}}}\]</span></p>
+<p>with <span class="math inline">\(df = n - 1\)</span> degrees of freedom. In the formula:</p>
+<ul>
+<li><span class="math inline">\(\bar{x}\)</span> is the sample mean</li>
+<li><span class="math inline">\(\mu_0\)</span> is the population mean that we are comparing against our sample mean</li>
+<li><span class="math inline">\(S\)</span> is the sample standard deviation</li>
+<li><span class="math inline">\(n\)</span> is the sample size</li>
+</ul>
+<p>If <span class="math inline">\(t &gt; t_{critical}\)</span> at the <span class="math inline">\(\alpha\)</span> level of significance, we reject the null hypothesis; otherwise we <em>retain</em> the null hypothesis.</p>
+<div id="example" class="section level3">
+<h3><span class="header-section-number">6.3.1</span> Example</h3>
+<p>Let’s see one-sample t-test in action. All the patients in the <code>medical</code> dataset received a mental test at the baseline (when they were accepted to the study). The researcher who created the mental test reported that the mean score on this test for people with no mental issues should be around 35. Now we want to know whether the mean mental test for our sample of patients differs from the mean mental test score for the general population. Our hypotheses are:</p>
+<ul>
+<li><span class="math inline">\(H_0: \mu = 35\)</span></li>
+<li><span class="math inline">\(H_1: \mu \neq 35\)</span></li>
+</ul>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Let&#39;s see the mean for mental1 in the data</span>
+<span class="kw">mean</span>(medical<span class="op">$</span>mental1) <span class="co"># it is 31.68</span></code></pre>
+<pre><code>[1] 31.68</code></pre>
+<p>It looks like our sample mean is less than the population mean of 35. But, the question is whether it is small enough to conclude that there is a statistically significant difference between the sample mean (i.e., 31.68) and the population mean (i.e., 35).</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">t.test</span>(medical<span class="op">$</span>mental1, <span class="dt">mu =</span> <span class="dv">35</span>, <span class="dt">conf.level =</span> <span class="fl">0.95</span>, <span class="dt">alternative =</span> <span class="st">&quot;two.sided&quot;</span>)</code></pre>
+<pre><code>
+    One Sample t-test
+
+data:  medical$mental1
+t = -4.2, df = 240, p-value = 4e-05
+alternative hypothesis: true mean is not equal to 35
+95 percent confidence interval:
+ 30.11 33.25
+sample estimates:
+mean of x 
+    31.68 </code></pre>
+<p>The <code>lsr</code> package <span class="citation">(Navarro <a href="#ref-R-lsr">2015</a>)</span> does the same analysis and it provides more organized output:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Install the activate the package</span>
+<span class="kw">install.packages</span>(<span class="st">&quot;lsr&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;lsr&quot;</span>)
+
+<span class="co"># Run one-sample t test</span>
+<span class="kw">oneSampleTTest</span>(<span class="dt">x=</span>medical<span class="op">$</span>mental1, <span class="dt">mu=</span><span class="dv">35</span>, <span class="dt">conf.level=</span><span class="fl">0.95</span>, <span class="dt">one.sided=</span><span class="ot">FALSE</span>)</code></pre>
+<pre><code>
+   One sample t-test 
+
+Data variable:   medical$mental1 
+
+Descriptive statistics: 
+            mental1
+   mean      31.680
+   std dev.  12.486
+
+Hypotheses: 
+   null:        population mean equals 35 
+   alternative: population mean not equal to 35 
+
+Test results: 
+   t-statistic:  -4.17 
+   degrees of freedom:  245 
+   p-value:  &lt;.001 
+
+Other information: 
+   two-sided 95% confidence interval:  [30.112, 33.248] 
+   estimated effect size (Cohen&#39;s d):  0.266 </code></pre>
+<p><strong>Conclusion:</strong> With the significance level of <span class="math inline">\(\alpha=.05\)</span>, we reject the null hypothesis that the average mental score in the <code>medical</code> dataset is the same as the average mental score in the population, <span class="math inline">\(t(240)=-4.2\)</span>, <span class="math inline">\(p &lt; .001\)</span>, <span class="math inline">\(CI_{95}=[30.11, 33.25]\)</span>.</p>
+</div>
+</div>
+<div id="independent-samples-t-test" class="section level2">
+<h2><span class="header-section-number">6.4</span> Independent-Samples <span class="math inline">\(t\)</span> Test</h2>
+<p>Suppose we have data from two independent populations, <span class="math inline">\(x_1 \sim N(\mu_{x_1}, \sigma_{x_1})\)</span> and <span class="math inline">\(x_2 \sim N(\mu_{x_2}, \sigma_{x_2})\)</span>. We wish to determine whether the two population means, <span class="math inline">\(\mu_{x_1}\)</span> and <span class="math inline">\(\mu_{x_2}\)</span>, are the same or different. We want to test the null hypothesis <span class="math inline">\(H_0: \mu_{X_1} = \mu_{X_2}\)</span> against some alternative hypothesis, with <span class="math inline">\(\alpha\)</span> level of significance. The test statistic will be:</p>
+<p><span class="math display">\[t =\dfrac{ (\bar{x}_1 - \bar{x}_2)}{ \sqrt{\dfrac{{S_p}^2}{n_1} + \dfrac{{S_p}^2}{n_2}}  }\]</span></p>
+<p>and</p>
+<p><span class="math display">\[S_p = \frac{(n_1-1)S_1^2 + (n_2-1)S_2^2}{n_1+n_2-2}\]</span></p>
+<p>with <span class="math inline">\(df = n_1 + n_2 - 2\)</span> degrees of freedom. In the formula:</p>
+<ul>
+<li><span class="math inline">\(\bar{x}_1\)</span> is the sample mean response of the first group</li>
+<li><span class="math inline">\(\bar{x}_2\)</span> is the sample mean response of the second group</li>
+<li><span class="math inline">\(S_1^2\)</span> is the sample variance of the response of the first group</li>
+<li><span class="math inline">\(S_2^2\)</span> is the sample variance of the response of the second group</li>
+<li><span class="math inline">\(S_p\)</span> is the pooled variance</li>
+<li><span class="math inline">\(n_1\)</span> is the sample size of the first group</li>
+<li><span class="math inline">\(n_2\)</span> is the sample size of the second group</li>
+</ul>
+<p>If <span class="math inline">\(t &gt; t_{critical}\)</span> at the <span class="math inline">\(\alpha\)</span> level of significance, we reject the null hypothesis; otherwise we <em>retain</em> the null hypothesis.</p>
+<div id="example-1" class="section level3">
+<h3><span class="header-section-number">6.4.1</span> Example</h3>
+<p>Using the <code>medical</code> dataset, we want to know whether there was a significant difference between male and female patients’ depression levels at the baseline. We will use <code>sex</code> and <code>depression1</code> to investigate this question. Before we test this question, let’s see the boxplot for these two groups:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>(<span class="dt">formula =</span> depression1 <span class="op">~</span><span class="st"> </span>sex,
+        <span class="dt">data =</span> medical,
+        <span class="dt">main =</span> <span class="st">&quot;Depression Scores by Sex&quot;</span>,
+        <span class="dt">ylab =</span> <span class="st">&quot;Depression at the baseline&quot;</span>,
+        <span class="dt">names =</span> <span class="kw">c</span>(<span class="st">&quot;Female&quot;</span>, <span class="st">&quot;Male&quot;</span>))</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:boxplot5"></span>
+<img src="rbook_files/figure-html/boxplot5-1.png" alt="Boxplot of depression scores by sex" width="768" />
+<p class="caption">
+Figure 6.1: Boxplot of depression scores by sex
+</p>
+</div>
+<p>It seems that female patients have higher levels of depression on average, compared to male patients. Next, we will create two new small datasets (<code>male</code> and <code>female</code>) that consist of only depression scores for each gender group.</p>
+<pre class="sourceCode r"><code class="sourceCode r">male &lt;-<span class="st"> </span><span class="kw">subset</span>(medical, sex <span class="op">==</span><span class="st"> &quot;male&quot;</span>, <span class="dt">select =</span> <span class="st">&quot;depression1&quot;</span>)
+female &lt;-<span class="st"> </span><span class="kw">subset</span>(medical, sex <span class="op">==</span><span class="st"> &quot;female&quot;</span>, <span class="dt">select =</span> <span class="st">&quot;depression1&quot;</span>)
+<span class="kw">t.test</span>(male, female, <span class="dt">conf.level =</span> <span class="fl">0.95</span>, <span class="dt">alternative =</span> <span class="st">&quot;two.sided&quot;</span>)</code></pre>
+<pre><code>
+    Welch Two Sample t-test
+
+data:  male and female
+t = -2.5, df = 87, p-value = 0.02
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -8.418 -0.928
+sample estimates:
+mean of x mean of y 
+    31.50     36.18 </code></pre>
+<p>We can again use the <code>lsr</code> package to get a better output. <code>independentSamplesTTest</code> function does not require us to separate the dataset for each group. We only need to specify the group variable, which is <code>sex</code> in our example. The only thing we need to make sure that the group variable is a factor.</p>
+<pre class="sourceCode r"><code class="sourceCode r">medical<span class="op">$</span>sex &lt;-<span class="st"> </span><span class="kw">as.factor</span>(medical<span class="op">$</span>sex)
+
+<span class="kw">independentSamplesTTest</span>(<span class="dt">formula =</span> depression1 <span class="op">~</span><span class="st"> </span>sex, 
+                        <span class="dt">conf.level =</span> <span class="fl">0.95</span>,
+                        <span class="dt">one.sided =</span> <span class="ot">FALSE</span>, 
+                        <span class="dt">data =</span> medical)</code></pre>
+<pre><code>
+   Welch&#39;s independent samples t-test 
+
+Outcome variable:   depression1 
+Grouping variable:  sex 
+
+Descriptive statistics: 
+            female   male
+   mean     36.175 31.503
+   std dev. 12.675 11.758
+
+Hypotheses: 
+   null:        population means equal for both groups
+   alternative: different population means in each group
+
+Test results: 
+   t-statistic:  2.48 
+   degrees of freedom:  87.09 
+   p-value:  0.015 
+
+Other information: 
+   two-sided 95% confidence interval:  [0.928, 8.418] 
+   estimated effect size (Cohen&#39;s d):  0.382 </code></pre>
+<p><strong>Conclusion:</strong> With the significance level of <span class="math inline">\(\alpha=.05\)</span>, we reject the null hypothesis that the average depression score for male and female patients is the same in the population, <span class="math inline">\(t(87)=-2.5\)</span>, <span class="math inline">\(p &lt; .05\)</span>, <span class="math inline">\(CI_{95}=[-8.42, -0.93]\)</span>.</p>
+</div>
+</div>
+<div id="t-test-with-paired-data" class="section level2">
+<h2><span class="header-section-number">6.5</span> <span class="math inline">\(t\)</span>-test with Paired Data</h2>
+<p>Suppose we have paired data, <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> with <span class="math inline">\(D=X_1-X_2 \sim N(\mu_D, \sigma)\)</span>. We wish to determine whether the two population means (or a single population across two time points), <span class="math inline">\(\mu_{X_1}\)</span> and <span class="math inline">\(\mu_{X_2}\)</span>, are the same (i.e., <span class="math inline">\(\mu_D = 0\)</span>) or different (i.e., <span class="math inline">\(\mu_D \neq 0\)</span>). We test the null hypothesis <span class="math inline">\(H_0: \mu_X = \mu_Y\)</span> against some alternative hypothesis, with <span class="math inline">\(\alpha\)</span> level of significance. The test statistic will be:</p>
+<p><span class="math display">\[t = \frac{\bar{D}}{\frac{S_D}{\sqrt{n}}}\]</span></p>
+<p>with <span class="math inline">\(df = n -1\)</span> degrees of freedom. In the formula:</p>
+<ul>
+<li><span class="math inline">\(D\)</span> is the difference between two populations (or two time points)</li>
+<li><span class="math inline">\(S_D\)</span> is the sample standard deviation of the difference</li>
+<li><span class="math inline">\(n\)</span> is the sample size of the second group</li>
+</ul>
+<p>If <span class="math inline">\(t &gt; t_{critical}\)</span> at the <span class="math inline">\(\alpha\)</span> level of significance, we reject the null hypothesis; otherwise we <em>retain</em> the null hypothesis.</p>
+<div id="example-2" class="section level3">
+<h3><span class="header-section-number">6.5.1</span> Example</h3>
+<p>Using the <code>medical</code> dataset, this time we want to know whether patients’ depression scores at the baseline (<code>depression1</code>) are the same as their depression scores after 6 months (<code>depression2</code>). First, let’s see the means for the two variables.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(medical<span class="op">$</span>depression1)</code></pre>
+<pre><code>[1] 32.59</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(medical<span class="op">$</span>depression2)</code></pre>
+<pre><code>[1] 22.72</code></pre>
+<p>It seems that the scores at month 6 are much lower. Let’s see if the difference is statistically significant.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">t.test</span>(medical<span class="op">$</span>depression1, medical<span class="op">$</span>depression2, 
+       <span class="dt">paired =</span> <span class="ot">TRUE</span>, <span class="dt">alternative =</span> <span class="st">&quot;two.sided&quot;</span>,
+       <span class="dt">conf.level =</span> <span class="fl">0.95</span>)</code></pre>
+<pre><code>
+    Paired t-test
+
+data:  medical$depression1 and medical$depression2
+t = 11, df = 240, p-value &lt;2e-16
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+  8.021 11.719
+sample estimates:
+mean of the differences 
+                   9.87 </code></pre>
+<p>Let’s repeat the same analysis with the <code>lsr</code> package.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pairedSamplesTTest</span>(<span class="dt">formula =</span> <span class="op">~</span><span class="st"> </span>depression1 <span class="op">+</span><span class="st"> </span>depression2,
+                   <span class="dt">conf.level =</span> <span class="fl">0.95</span>,
+                   <span class="dt">one.sided =</span> <span class="ot">FALSE</span>, 
+                   <span class="dt">data =</span> medical)</code></pre>
+<pre><code>
+   Paired samples t-test 
+
+Variables:  depression1 , depression2 
+
+Descriptive statistics: 
+            depression1 depression2 difference
+   mean          32.585      22.715      9.870
+   std dev.      12.112      14.287     14.727
+
+Hypotheses: 
+   null:        population means equal for both measurements
+   alternative: different population means for each measurement
+
+Test results: 
+   t-statistic:  10.51 
+   degrees of freedom:  245 
+   p-value:  &lt;.001 
+
+Other information: 
+   two-sided 95% confidence interval:  [8.021, 11.719] 
+   estimated effect size (Cohen&#39;s d):  0.67 </code></pre>
+<p><strong>Conclusion:</strong> With the significance level of <span class="math inline">\(\alpha=.05\)</span>, we reject the null hypothesis that the average depression scores for the baseline and 6th month are the same in the population, <span class="math inline">\(t(245)=10.51\)</span>, <span class="math inline">\(p &lt; .001\)</span>, <span class="math inline">\(CI_{95}=[8.02, 11.72]\)</span>.</p>
+</div>
+</div>
+<div id="analysis-of-variance-anova" class="section level2">
+<h2><span class="header-section-number">6.6</span> Analysis of Variance (ANOVA)</h2>
+<p>Independent-samples <span class="math inline">\(t\)</span>-test that we have seen earlier is suitable for comparing the means of two independent groups. But, what if there are more than two groups to compare? One could suggest that we run multiple <span class="math inline">\(t\)</span>-tests to compare all possible pairs and make a decision at the end. However, each statistical test that we run involves a certain level of error (known as Type I error) that leads to incorrect conclusions on the results. Repeating several <span class="math inline">\(t\)</span>-tests to compare the groups would increase the likelihood of making incorrect conclusions. Therefore, when there are three or more groups to be compared, we follow a procedure called Analysis of Variance – or shortly ANOVA.</p>
+<p>Suppose we have <span class="math inline">\(K\)</span> number of populations. Collect a random sample of size <span class="math inline">\(n_1\)</span> from population 1, <span class="math inline">\(n_2\)</span> from population 2, …, <span class="math inline">\(n_K\)</span> from population <span class="math inline">\(k\)</span>. We assume all populations have the same standard deviation (and they are normally distributed). We wish to test the following null hypothesis:</p>
+<p><span class="math display">\[H_0: \mu_1=\mu_2=\mu_3=\dots=\mu_K\]</span>
+against</p>
+<p><span class="math display">\[H_1: H_0 \text{ is false}\]</span></p>
+<p>which means that all of the groups would have equal means in their populations. If at least one of the groups has a significantly different mean, then we would reject the null hypothesis and run post-hoc tests to find out which group(s) are different.</p>
+<p>Let <span class="math inline">\(N = \sum_{k = 1}^{K} n_k\)</span> be the grand total, <span class="math inline">\((\overline{x}_k = \frac{1}{n_k} \sum_{i = 1}^{n_k} x_{ki}\)</span>) be the sample mean for sample <span class="math inline">\(k\)</span>, and <span class="math inline">\(\overline{x}_{\cdot} = \frac{1}{N} \sum_{k = 1}^{K} \sum_{i = 1}^{n_k} x_{ki}\)</span> be the grand mean. Then, the <span class="math inline">\(F\)</span>-statistic is</p>
+<p><span class="math display">\[F = \frac{\sum_{k = 1}^{K}\left(\overline{x}_k - \overline{x}_{\cdot}\right)^2/(K - 1)}{\sum_{k = 1}^{K} \sum_{i = 1}^{n_k} \left(x_{ki} - \overline{x}_k\right)^2/(N - K)}\]</span></p>
+<p>with degrees of freedom of <span class="math inline">\(df_1 = K - 1\)</span> and <span class="math inline">\(df_2 = N - K\)</span>.</p>
+<p>If <span class="math inline">\(F &gt; F_{critical}\)</span> at the <span class="math inline">\(\alpha\)</span> level of significance, we reject the null hypothesis; otherwise we <em>retain</em> the null hypothesis.</p>
+<div id="example-3" class="section level3">
+<h3><span class="header-section-number">6.6.1</span> Example</h3>
+<p>Using the <code>medical</code> dataset, we want to investigate whether patients with different types of substance addition had the same level of depression at the baseline. We will use <code>depression1</code> and <code>substance</code> for this analysis. Before we begin the analysis, let’s visualize the distribution of <code>depression1</code> by <code>substance</code> to get a sense of potential group differences.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>(<span class="dt">formula =</span> depression1 <span class="op">~</span><span class="st"> </span>substance,
+        <span class="dt">data =</span> medical,
+        <span class="dt">main =</span> <span class="st">&quot;Depression Scores by Substance Type&quot;</span>,
+        <span class="dt">ylab =</span> <span class="st">&quot;Depression at the baseline&quot;</span>)</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:boxplot6"></span>
+<img src="rbook_files/figure-html/boxplot6-1.png" alt="Boxplot of depression scores by substance type" width="768" />
+<p class="caption">
+Figure 6.2: Boxplot of depression scores by substance type
+</p>
+</div>
+<p>The boxplot shows that the means are close across the three groups but we cannot tell for sure if the differences are negligible to ignore. We will use the <code>aov</code> function – which is part of base <strong>R</strong>.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Compute the analysis of variance</span>
+aov_model1 &lt;-<span class="st"> </span><span class="kw">aov</span>(depression1 <span class="op">~</span><span class="st"> </span>substance, <span class="dt">data =</span> medical)
+
+<span class="co"># Summary of the analysis</span>
+<span class="kw">summary</span>(aov_model1)</code></pre>
+<pre><code>             Df Sum Sq Mean Sq F value Pr(&gt;F)  
+substance     2   1209     605    4.23  0.016 *
+Residuals   243  34733     143                 
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p><strong>Conclusion:</strong> With the significance level of <span class="math inline">\(\alpha=.05\)</span>, the output shows that <span class="math inline">\(F(2, 243) = 4.23, p &lt; .05\)</span>, indicating that the test is statistically significant and thus we need to reject the null hypothesis of equal group means. This finding also suggests that at least one of the groups is different from the others.</p>
+<p>As the ANOVA test is significant, now we can compute Tukey HSD (Tukey Honest Significant Differences) for performing multiple pairwise-comparison between the means of groups. The function <code>TukeyHD()</code> takes the fitted ANOVA as an argument and gives us the pairwise-comparison results.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">TukeyHSD</span>(aov_model1)</code></pre>
+<pre><code>  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = depression1 ~ substance, data = medical)
+
+$substance
+                    diff     lwr     upr  p adj
+cocaine-alcohol -4.62684 -8.7730 -0.4807 0.0245
+heroin-alcohol  -0.08964 -4.7249  4.5456 0.9989
+heroin-cocaine   4.53720 -0.1281  9.2025 0.0586</code></pre>
+<p>In the output above,</p>
+<ul>
+<li><strong>diff:</strong> difference between means of the two groups</li>
+<li><strong>lwr, upr:</strong> the lower and the upper end point of the confidence interval at 95%</li>
+<li><strong>p adj:</strong> p-value after adjustment for the multiple comparisons</li>
+</ul>
+<p>It can be seen from the output that only the difference between cocaine and alcohol is significant with an adjusted p-value of 0.0245.</p>
+<p>We can add other variables into the ANOVA model and continue testing. Let’s include <code>sex</code> as a second variable.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Substance + Sex</span>
+aov_model2 &lt;-<span class="st"> </span><span class="kw">aov</span>(depression1 <span class="op">~</span><span class="st"> </span>substance <span class="op">+</span><span class="st"> </span>sex, <span class="dt">data =</span> medical)
+<span class="kw">summary</span>(aov_model2)</code></pre>
+<pre><code>             Df Sum Sq Mean Sq F value Pr(&gt;F)   
+substance     2   1209     605    4.36 0.0138 * 
+sex           1   1199    1199    8.65 0.0036 **
+Residuals   242  33534     139                  
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Substance + Sex + Substance x Sex</span>
+aov_model3 &lt;-<span class="st"> </span><span class="kw">aov</span>(depression1 <span class="op">~</span><span class="st"> </span>substance<span class="op">*</span>sex, <span class="dt">data =</span> medical)
+<span class="kw">summary</span>(aov_model3)</code></pre>
+<pre><code>               Df Sum Sq Mean Sq F value Pr(&gt;F)   
+substance       2   1209     605    4.38 0.0135 * 
+sex             1   1199    1199    8.69 0.0035 **
+substance:sex   2    435     218    1.58 0.2083   
+Residuals     240  33098     138                  
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>The output shows that <code>sex</code> is also statistically significant in the model; but the interaction of <code>sex</code> and <code>substance</code> is not statisticall significant.</p>
+</div>
+<div id="your-turn-8" class="section level3">
+<h3><span class="header-section-number">6.6.2</span> Your Turn</h3>
+<p>Now you will run several hypothesis tests using the variables in the <code>medical</code> dataset:</p>
+<ol style="list-style-type: decimal">
+<li><p>Run an independent-samples <span class="math inline">\(t\)</span>-test where you will investigate whether the average depression scores at the baseline (i.e., <code>depression1</code>) are the same for suicidal patients (i.e., <code>suicial == "yes"</code>) and non-suicidal patients (i.e., <code>suicial == "no"</code>).</p></li>
+<li><p>You will conduct a paired <span class="math inline">\(t\)</span>-test to investigate whether patients’ average mental scores at the baseline (i.e., <code>mental1</code>) and their mental scores after 6 months (i.e., <code>mental2</code>) are the same.</p></li>
+<li><p>You will conduct an ANOVA analysis to investigate whether the patients’ physical scores at the baseline (i.e., <code>physical1</code>) differ depending on their race (i.e., <code>race</code>).</p></li>
+</ol>
+<p><strong>Note:</strong> For the first and third hypothesis tests, draw a boxplot to identify potential mean differences before you begin your analysis.</p>
+
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-R-lsr">
+<p>Navarro, Daniel. 2015. <em>Lsr: Companion to "Learning Statistics with R"</em>. <a href="https://CRAN.R-project.org/package=lsr">https://CRAN.R-project.org/package=lsr</a>.</p>
+</div>
+<div id="ref-Wheelan">
+<p>Wheelan, Charles. 2013. <em>Naked Statistics: Stripping the Dread from Data</em>. New York, NY: Norton; Company.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="part4.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="part6.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/okanbulut/rbook/tree/master/05-part5.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["rbook.pdf", "rbook.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

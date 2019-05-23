@@ -24,7 +24,6 @@
 <meta name="author" content="Okan Bulut" />
 
 
-<meta name="date" content="2019-05-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,41 +49,67 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -100,17 +125,112 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Statistical Analysis and Visualizations Using R</a></li>
+<li><a href="https://www.ualberta.ca/technology-training/">Okan Bulut &copy;</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="part1.html"><a href="part1.html"><i class="fa fa-check"></i><b>2</b> Part 1</a></li>
-<li class="chapter" data-level="3" data-path="part2.html"><a href="part2.html"><i class="fa fa-check"></i><b>3</b> Part 2</a></li>
-<li class="chapter" data-level="4" data-path="part3.html"><a href="part3.html"><i class="fa fa-check"></i><b>4</b> Part 3</a></li>
-<li class="chapter" data-level="5" data-path="wrapup.html"><a href="wrapup.html"><i class="fa fa-check"></i><b>5</b> Wrap-Up</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#course-description"><i class="fa fa-check"></i><b>1.1</b> Course Description</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#course-objectives"><i class="fa fa-check"></i><b>1.2</b> Course Objectives</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#instructor-information"><i class="fa fa-check"></i><b>1.3</b> Instructor Information</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#course-structure"><i class="fa fa-check"></i><b>1.4</b> Course Structure</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#course-materials"><i class="fa fa-check"></i><b>1.5</b> Course Materials</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#learning-process"><i class="fa fa-check"></i><b>1.6</b> Learning Process</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#additional-resources"><i class="fa fa-check"></i><b>1.7</b> Additional Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="part1.html"><a href="part1.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="part1.html"><a href="part1.html#r-and-rstudio"><i class="fa fa-check"></i><b>2.1</b> R and RStudio</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="part1.html"><a href="part1.html#what-is-r"><i class="fa fa-check"></i><b>2.1.1</b> What is <strong>R</strong>?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="part1.html"><a href="part1.html#what-is-rstudio"><i class="fa fa-check"></i><b>2.1.2</b> What is RStudio?</a></li>
+<li class="chapter" data-level="2.1.3" data-path="part1.html"><a href="part1.html#download-and-install"><i class="fa fa-check"></i><b>2.1.3</b> Download and Install</a></li>
+<li class="chapter" data-level="2.1.4" data-path="part1.html"><a href="part1.html#preview-of-rstudio"><i class="fa fa-check"></i><b>2.1.4</b> Preview of RStudio</a></li>
+<li class="chapter" data-level="2.1.5" data-path="part1.html"><a href="part1.html#creating-a-new-script"><i class="fa fa-check"></i><b>2.1.5</b> Creating a New Script</a></li>
+<li class="chapter" data-level="2.1.6" data-path="part1.html"><a href="part1.html#working-directory"><i class="fa fa-check"></i><b>2.1.6</b> Working Directory</a></li>
+<li class="chapter" data-level="2.1.7" data-path="part1.html"><a href="part1.html#downloading-and-installing-r-packages"><i class="fa fa-check"></i><b>2.1.7</b> Downloading and Installing <strong>R</strong> Packages</a></li>
+<li class="chapter" data-level="2.1.8" data-path="part1.html"><a href="part1.html#your-turn"><i class="fa fa-check"></i><b>2.1.8</b> Your turn</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="part1.html"><a href="part1.html#basics-of-the-r-language"><i class="fa fa-check"></i><b>2.2</b> Basics of the R Language</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="part1.html"><a href="part1.html#r-as-a-calculator"><i class="fa fa-check"></i><b>2.2.1</b> R as a Calculator</a></li>
+<li class="chapter" data-level="2.2.2" data-path="part1.html"><a href="part1.html#creating-new-variables"><i class="fa fa-check"></i><b>2.2.2</b> Creating New Variables</a></li>
+<li class="chapter" data-level="2.2.3" data-path="part1.html"><a href="part1.html#important-rules-for-the-r-language"><i class="fa fa-check"></i><b>2.2.3</b> Important Rules for the <strong>R</strong> Language</a></li>
+<li class="chapter" data-level="2.2.4" data-path="part1.html"><a href="part1.html#a-few-shortcuts"><i class="fa fa-check"></i><b>2.2.4</b> A Few Shortcuts</a></li>
+<li class="chapter" data-level="2.2.5" data-path="part1.html"><a href="part1.html#self-help"><i class="fa fa-check"></i><b>2.2.5</b> Self-Help</a></li>
+<li class="chapter" data-level="2.2.6" data-path="part1.html"><a href="part1.html#your-turn-1"><i class="fa fa-check"></i><b>2.2.6</b> Your turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="part2.html"><a href="part2.html"><i class="fa fa-check"></i><b>3</b> Data Wrangling</a><ul>
+<li class="chapter" data-level="3.1" data-path="part2.html"><a href="part2.html#creating-data-in-r"><i class="fa fa-check"></i><b>3.1</b> Creating Data in <strong>R</strong></a></li>
+<li class="chapter" data-level="3.2" data-path="part2.html"><a href="part2.html#importing-data-into-r"><i class="fa fa-check"></i><b>3.2</b> Importing Data into <strong>R</strong></a><ul>
+<li class="chapter" data-level="3.2.1" data-path="part2.html"><a href="part2.html#method-1-using-rstudio"><i class="fa fa-check"></i><b>3.2.1</b> Method 1: Using <strong>RStudio</strong></a></li>
+<li class="chapter" data-level="3.2.2" data-path="part2.html"><a href="part2.html#method-2-using-r-commands"><i class="fa fa-check"></i><b>3.2.2</b> Method 2: Using <strong>R</strong> Commands</a></li>
+<li class="chapter" data-level="3.2.3" data-path="part2.html"><a href="part2.html#your-turn-2"><i class="fa fa-check"></i><b>3.2.3</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="part2.html"><a href="part2.html#understanding-the-data"><i class="fa fa-check"></i><b>3.3</b> Understanding the Data</a></li>
+<li class="chapter" data-level="3.4" data-path="part2.html"><a href="part2.html#indexing"><i class="fa fa-check"></i><b>3.4</b> Indexing</a></li>
+<li class="chapter" data-level="3.5" data-path="part2.html"><a href="part2.html#subsetting"><i class="fa fa-check"></i><b>3.5</b> Subsetting</a></li>
+<li class="chapter" data-level="3.6" data-path="part2.html"><a href="part2.html#other-data-manipulation-tools"><i class="fa fa-check"></i><b>3.6</b> Other Data Manipulation Tools</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="part2.html"><a href="part2.html#your-turn-3"><i class="fa fa-check"></i><b>3.6.1</b> Your Turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="part3.html"><a href="part3.html"><i class="fa fa-check"></i><b>4</b> Descriptive Statistics</a><ul>
+<li class="chapter" data-level="4.1" data-path="part3.html"><a href="part3.html#quick-summary"><i class="fa fa-check"></i><b>4.1</b> Quick Summary</a></li>
+<li class="chapter" data-level="4.2" data-path="part3.html"><a href="part3.html#frequency-tables"><i class="fa fa-check"></i><b>4.2</b> Frequency Tables</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="part3.html"><a href="part3.html#your-turn-4"><i class="fa fa-check"></i><b>4.2.1</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="part3.html"><a href="part3.html#central-tendency-and-dispersion"><i class="fa fa-check"></i><b>4.3</b> Central Tendency and Dispersion</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="part3.html"><a href="part3.html#your-turn-5"><i class="fa fa-check"></i><b>4.3.1</b> Your Turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="part4.html"><a href="part4.html"><i class="fa fa-check"></i><b>5</b> Data Visualizations in <strong>R</strong></a><ul>
+<li class="chapter" data-level="5.1" data-path="part4.html"><a href="part4.html#base-r-graphics"><i class="fa fa-check"></i><b>5.1</b> Base <strong>R</strong> Graphics</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="part4.html"><a href="part4.html#boxplots"><i class="fa fa-check"></i><b>5.1.1</b> Boxplots</a></li>
+<li class="chapter" data-level="5.1.2" data-path="part4.html"><a href="part4.html#histograms"><i class="fa fa-check"></i><b>5.1.2</b> Histograms</a></li>
+<li class="chapter" data-level="5.1.3" data-path="part4.html"><a href="part4.html#bar-graphs"><i class="fa fa-check"></i><b>5.1.3</b> Bar Graphs</a></li>
+<li class="chapter" data-level="5.1.4" data-path="part4.html"><a href="part4.html#scatterplots"><i class="fa fa-check"></i><b>5.1.4</b> Scatterplots</a></li>
+<li class="chapter" data-level="5.1.5" data-path="part4.html"><a href="part4.html#scatterplots-boxplots"><i class="fa fa-check"></i><b>5.1.5</b> Scatterplots + Boxplots</a></li>
+<li class="chapter" data-level="5.1.6" data-path="part4.html"><a href="part4.html#scatterplot-matrix"><i class="fa fa-check"></i><b>5.1.6</b> Scatterplot Matrix</a></li>
+<li class="chapter" data-level="5.1.7" data-path="part4.html"><a href="part4.html#saving-base-r-figures"><i class="fa fa-check"></i><b>5.1.7</b> Saving Base <strong>R</strong> Figures</a></li>
+<li class="chapter" data-level="5.1.8" data-path="part4.html"><a href="part4.html#your-turn-6"><i class="fa fa-check"></i><b>5.1.8</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="part4.html"><a href="part4.html#ggplot2-graphics"><i class="fa fa-check"></i><b>5.2</b> <code>ggplot2</code> Graphics</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="part4.html"><a href="part4.html#what-is-ggplot2"><i class="fa fa-check"></i><b>5.2.1</b> What is <code>ggplot2</code>?</a></li>
+<li class="chapter" data-level="5.2.2" data-path="part4.html"><a href="part4.html#how-ggplot2-works"><i class="fa fa-check"></i><b>5.2.2</b> How <code>ggplot2</code> works?</a></li>
+<li class="chapter" data-level="5.2.3" data-path="part4.html"><a href="part4.html#scatterplots-1"><i class="fa fa-check"></i><b>5.2.3</b> Scatterplots</a></li>
+<li class="chapter" data-level="5.2.4" data-path="part4.html"><a href="part4.html#boxplots-1"><i class="fa fa-check"></i><b>5.2.4</b> Boxplots</a></li>
+<li class="chapter" data-level="5.2.5" data-path="part4.html"><a href="part4.html#histograms-1"><i class="fa fa-check"></i><b>5.2.5</b> Histograms</a></li>
+<li class="chapter" data-level="5.2.6" data-path="part4.html"><a href="part4.html#bar-plots"><i class="fa fa-check"></i><b>5.2.6</b> Bar Plots</a></li>
+<li class="chapter" data-level="5.2.7" data-path="part4.html"><a href="part4.html#your-turn-7"><i class="fa fa-check"></i><b>5.2.7</b> Your Turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="part5.html"><a href="part5.html"><i class="fa fa-check"></i><b>6</b> Hypothesis Testing</a><ul>
+<li class="chapter" data-level="6.1" data-path="part5.html"><a href="part5.html#some-theory"><i class="fa fa-check"></i><b>6.1</b> Some Theory</a></li>
+<li class="chapter" data-level="6.2" data-path="part5.html"><a href="part5.html#types-of-inferential-statistics"><i class="fa fa-check"></i><b>6.2</b> Types of Inferential Statistics</a></li>
+<li class="chapter" data-level="6.3" data-path="part5.html"><a href="part5.html#one-sample-t-test"><i class="fa fa-check"></i><b>6.3</b> One-Sample <span class="math inline">\(t\)</span> Test</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="part5.html"><a href="part5.html#example"><i class="fa fa-check"></i><b>6.3.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="part5.html"><a href="part5.html#independent-samples-t-test"><i class="fa fa-check"></i><b>6.4</b> Independent-Samples <span class="math inline">\(t\)</span> Test</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="part5.html"><a href="part5.html#example-1"><i class="fa fa-check"></i><b>6.4.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="part5.html"><a href="part5.html#t-test-with-paired-data"><i class="fa fa-check"></i><b>6.5</b> <span class="math inline">\(t\)</span>-test with Paired Data</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="part5.html"><a href="part5.html#example-2"><i class="fa fa-check"></i><b>6.5.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="part5.html"><a href="part5.html#analysis-of-variance-anova"><i class="fa fa-check"></i><b>6.6</b> Analysis of Variance (ANOVA)</a><ul>
+<li class="chapter" data-level="6.6.1" data-path="part5.html"><a href="part5.html#example-3"><i class="fa fa-check"></i><b>6.6.1</b> Example</a></li>
+<li class="chapter" data-level="6.6.2" data-path="part5.html"><a href="part5.html#your-turn-8"><i class="fa fa-check"></i><b>6.6.2</b> Your Turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="part6.html"><a href="part6.html"><i class="fa fa-check"></i><b>7</b> Correlation and Regression</a><ul>
+<li class="chapter" data-level="7.1" data-path="part6.html"><a href="part6.html#correlation"><i class="fa fa-check"></i><b>7.1</b> Correlation</a></li>
+<li class="chapter" data-level="7.2" data-path="part6.html"><a href="part6.html#simple-linear-regression"><i class="fa fa-check"></i><b>7.2</b> Simple Linear Regression</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="part6.html"><a href="part6.html#example-4"><i class="fa fa-check"></i><b>7.2.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="part6.html"><a href="part6.html#multiple-regression"><i class="fa fa-check"></i><b>7.3</b> Multiple Regression</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="part6.html"><a href="part6.html#example-5"><i class="fa fa-check"></i><b>7.3.1</b> Example</a></li>
+<li class="chapter" data-level="7.3.2" data-path="part6.html"><a href="part6.html#your-turn-9"><i class="fa fa-check"></i><b>7.3.2</b> Your Turn</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
-<li><a href="https://github.com/okanbulut/rbook" target="blank">All rights reserved</a></li>
+<li><a href="https://github.com/okanbulut/rbook" target="blank">Published with GitHub</a></li>
 
 </ul>
 
@@ -132,18 +252,207 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="header">
 <h1 class="title">Statistical Analysis and Visualizations Using R</h1>
 <p class="author"><em>Okan Bulut</em></p>
-<p class="date"><em>2019-05-12</em></p>
+<p class="date"><em>University of Alberta</em></p>
 </div>
-<div id="introduction" class="section level1">
-<h1><span class="header-section-number">1</span> Introduction</h1>
-<p>This is a <em>sample</em> book written in <strong>Markdown</strong>. You can use anything that Pandoc’s Markdown supports, e.g., a math equation <span class="math inline">\(a^2 + b^2 = c^2\)</span>.</p>
-<p>The <strong>bookdown</strong> package can be installed from CRAN or Github:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)
-<span class="co"># or the development version</span>
-<span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></code></pre></div>
-<p>Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
-<p>To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <a href="https://yihui.name/tinytex/" class="uri">https://yihui.name/tinytex/</a>.</p>
+<div id="overview" class="section level1">
+<h1><span class="header-section-number">1</span> Overview</h1>
+<center>
+<div class="figure" style="text-align: center"><span id="fig:start"></span>
+<img src="figure/artem-sapegin-180146-unsplash_sm.jpg" alt="Source: https://unsplash.com/photos/DErxVSSQNdM" width="60%" />
+<p class="caption">
+Figure 1.1: Source: <a href="https://unsplash.com/photos/DErxVSSQNdM" class="uri">https://unsplash.com/photos/DErxVSSQNdM</a>
+</p>
+</div>
+</center>
+<div id="course-description" class="section level2">
+<h2><span class="header-section-number">1.1</span> Course Description</h2>
+<p>Welcome to our course <a href="https://ttc-events.azurewebsites.net/#!/courseInfo/3522459e3a0746daa29e49f77c27f041"><strong>Statistical Analysis and Visualizations Using R</strong></a> at the <a href="https://www.ualberta.ca/technology-training/"><strong>Technology Training Centre</strong></a>. This full-day course is intended to provide participants with a hands-on training in exploring, visualizing, and analyzing data using <a href="https://www.r-project.org/"><strong>the R programming language</strong></a>.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p><strong>R</strong> <span class="citation">(R Core Team <a href="#ref-R-base">2018</a>)</span> is a free and open-source programming language that allows its users to access a wide range of statistical and graphical tools. Over the last decade, <strong>R</strong> has become one of the most widely used statistical software programs among researchers and practitioners around the world due to its growing capabilities for statistical data analysis through user-created, free packages. To control <strong>R</strong>, participants will use <a href="https://www.rstudio.com/"><strong>RStudio</strong></a>, which is a free, user-friendly program with a console, syntax-highlighting editor that supports direct code execution, and a variety of robust tools for plotting.</p>
+</div>
+<div id="course-objectives" class="section level2">
+<h2><span class="header-section-number">1.2</span> Course Objectives</h2>
+<p>Upon successfully completing this course, participants will be able to:</p>
+<ul>
+<li>understand the basics of the R programming language</li>
+<li>perform steps to manage different types of data</li>
+<li>execute data preparation steps</li>
+<li>visualize data with various types of variables</li>
+<li>compute descriptive statistics</li>
+<li>compute inferential statistics using <strong>R</strong></li>
+</ul>
+</div>
+<div id="instructor-information" class="section level2">
+<h2><span class="header-section-number">1.3</span> Instructor Information</h2>
+<p><strong>Okan Bulut – University of Alberta</strong></p>
+<ul>
+<li>Associate Professor of educational measurement and psychometrics at the University of Alberta</li>
+<li>10+ years using <strong>R</strong> for statistical data analysis and visualization</li>
+<li>Specialized in the analysis and visualization of big data (mostly from large-scale assessments)</li>
+<li>6+ years teaching courses and workshops on statistics, psychometrics, and programming with R</li>
+<li><strong>Website:</strong> <a href="https://sites.ualberta.ca/~bulut/"><strong>https://sites.ualberta.ca/~bulut/</strong></a></li>
+<li><strong>E-mail:</strong> <strong><a href="mailto:bulut@ualberta.ca" class="email">bulut@ualberta.ca</a></strong>
+<br/></li>
+</ul>
+<p>I also co-authored:</p>
+<ul>
+<li>Three <strong>R</strong> packages:
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/profileR/index.html"><strong>profileR</strong></a> for profile analysis of multivariate data</li>
+<li><a href="https://github.com/cddesja/hemp"><strong>hemp</strong></a> for psychometric analysis of assessment data</li>
+<li><a href="https://github.com/okanbulut/eirm"><strong>eirm</strong></a> for explanatory item response modeling</li>
+</ul></li>
+<li>A recent book titled <a href="https://www.crcpress.com/Handbook-of-Educational-Measurement-and-Psychometrics-Using-R/Desjardins-Bulut/p/book/9781498770132"><strong>Handbook of Educational Measurement and Psychometrics Using R</strong></a></li>
+</ul>
+</div>
+<div id="course-structure" class="section level2">
+<h2><span class="header-section-number">1.4</span> Course Structure</h2>
+<p>This course will introduce participants to statistical and data science procedures widely used in social sciences, public health, and other similar areas. Four aspects of statistical reasoning will be emphasized:</p>
+<ol style="list-style-type: decimal">
+<li>data wrangling</li>
+<li>data visualization</li>
+<li>univariate statistical methods</li>
+<li>computer applications using <strong>R</strong></li>
+</ol>
+<p>During the course, we will use the following schedule:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Part</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>1</strong></td>
+<td align="left"><strong>Introduction (9:00-9:30)</strong>   </td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">Overview of R and RStudio</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Basics of R language</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>2</strong></td>
+<td align="left"><strong>Data Wrangling (9:30-10:30)</strong>   </td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Creating/importing and managing data</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">Data manipulation</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>3</strong></td>
+<td align="left"><strong>Descriptive Statistics (10:30-12:00)</strong>   </td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">Frequency distributions, Graphical tools</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Central tendency and dispersion</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Break (12:00-13:00)</strong></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>4</strong></td>
+<td align="left"><strong>Hypothesis Testing (13:00-14:30)</strong>   </td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">Overview of hypothesis testing, t-tests</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Analysis of variance (ANOVA)</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>5</strong></td>
+<td align="left"><strong>Correlation and Regression (14:30-16:00)</strong>   </td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Correlations for different types of variables</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">Simple and multiple linear regression</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="course-materials" class="section level2">
+<h2><span class="header-section-number">1.5</span> Course Materials</h2>
+<p>Participants will find copies of the course materials in the computers that they will be using. In addition, participants can access these materials online:</p>
+<ul>
+<li>To view the online course notes: <a href="https://okanbulut.github.io/rbook/"><strong>https://okanbulut.github.io/rbook/</strong></a></li>
+<li>To view and download other course materials (e.g., datasets, cheatsheets): <a href="http://bit.ly/statswithr2019"><strong>http://bit.ly/statswithr2019</strong></a></li>
+</ul>
+</div>
+<div id="learning-process" class="section level2">
+<h2><span class="header-section-number">1.6</span> Learning Process</h2>
+<p><span style="color:blue"> Learning how to use <strong>R</strong> is just like learning a new language to speak… So, you might be overwhelmed!</span>. Therefore, please feel free to ask your questions as we go over today’s materials. Collaboration between the training participants is also highly encouraged!</p>
+</div>
+<div id="additional-resources" class="section level2">
+<h2><span class="header-section-number">1.7</span> Additional Resources</h2>
+<p>There are <strong>MANY</strong> resources (e.g., websites and books) on statistical data analysis using <strong>R</strong> on the Internet. A brief list of such resources are shown below:</p>
+<p><strong>Websites:</strong></p>
+<ul>
+<li>An Introduction to R: <a href="https://cran.r-project.org/doc/manuals/R-intro.pdf" class="uri">https://cran.r-project.org/doc/manuals/R-intro.pdf</a><br />
+</li>
+<li>Using R for Introductory Statistics: <a href="https://goo.gl/owJbLg" class="uri">https://goo.gl/owJbLg</a><br />
+</li>
+<li>Quick R: <a href="http://www.statmethods.net/index.html" class="uri">http://www.statmethods.net/index.html</a><br />
+</li>
+<li>R Cookbook: <a href="http://www.cookbook-r.com/" class="uri">http://www.cookbook-r.com/</a></li>
+</ul>
+<p><strong>Online training:</strong></p>
+<ul>
+<li>Coursera: <a href="https://www.coursera.org/learn/r-programming" class="uri">https://www.coursera.org/learn/r-programming</a><br />
+</li>
+<li>DataCamp: <a href="https://www.datacamp.com/courses/free-introduction-to-r" class="uri">https://www.datacamp.com/courses/free-introduction-to-r</a><br />
+</li>
+<li>And tons of free videos on <a href="https://www.youtube.com/">YouTube</a>!!!</li>
+</ul>
+<p><strong>Books:</strong></p>
+<center>
+<div class="figure" style="text-align: center"><span id="fig:book1"></span>
+<img src="figure/book1v2.jpg" alt="https://goo.gl/zt7wc7 (Available for purchase online)" width="100" />
+<p class="caption">
+Figure 1.2: <a href="https://goo.gl/zt7wc7" class="uri">https://goo.gl/zt7wc7</a> (Available for purchase online)
+</p>
+</div>
+</center>
+<center>
+<div class="figure" style="text-align: center"><span id="fig:book2"></span>
+<img src="figure/openintro.v2.png" alt="https://www.openintro.org/stat/os4.php (Free!!!)" width="100" />
+<p class="caption">
+Figure 1.3: <a href="https://www.openintro.org/stat/os4.php" class="uri">https://www.openintro.org/stat/os4.php</a> (Free!!!)
+</p>
+</div>
+</center>
 
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-R-base">
+<p>R Core Team. 2018. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>These training materials were created using the <code>bookdown</code> <span class="citation">(Xie <a href="#ref-R-bookdown">2019</a><a href="#ref-R-bookdown">a</a>)</span> and <code>knitr</code> <span class="citation">(Xie <a href="#ref-R-knitr">2019</a><a href="#ref-R-knitr">b</a>)</span> packages.<a href="index.html#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
 </div>
             </section>
 
@@ -201,7 +510,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

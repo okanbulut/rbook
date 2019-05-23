@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Part 1 | Statistical Analysis and Visualizations Using R</title>
+  <title>2 Introduction | Statistical Analysis and Visualizations Using R</title>
   <meta name="description" content="This book contains the materials for the R course at Techology Training Centre." />
   <meta name="generator" content="bookdown 0.10 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Part 1 | Statistical Analysis and Visualizations Using R" />
+  <meta property="og:title" content="2 Introduction | Statistical Analysis and Visualizations Using R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="okanbulut/rbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Part 1 | Statistical Analysis and Visualizations Using R" />
+  <meta name="twitter:title" content="2 Introduction | Statistical Analysis and Visualizations Using R" />
   
   <meta name="twitter:description" content="This book contains the materials for the R course at Techology Training Centre." />
   
@@ -24,7 +24,6 @@
 <meta name="author" content="Okan Bulut" />
 
 
-<meta name="date" content="2019-05-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,41 +49,67 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -100,17 +125,112 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Statistical Analysis and Visualizations Using R</a></li>
+<li><a href="https://www.ualberta.ca/technology-training/">Okan Bulut &copy;</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="part1.html"><a href="part1.html"><i class="fa fa-check"></i><b>2</b> Part 1</a></li>
-<li class="chapter" data-level="3" data-path="part2.html"><a href="part2.html"><i class="fa fa-check"></i><b>3</b> Part 2</a></li>
-<li class="chapter" data-level="4" data-path="part3.html"><a href="part3.html"><i class="fa fa-check"></i><b>4</b> Part 3</a></li>
-<li class="chapter" data-level="5" data-path="wrapup.html"><a href="wrapup.html"><i class="fa fa-check"></i><b>5</b> Wrap-Up</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#course-description"><i class="fa fa-check"></i><b>1.1</b> Course Description</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#course-objectives"><i class="fa fa-check"></i><b>1.2</b> Course Objectives</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#instructor-information"><i class="fa fa-check"></i><b>1.3</b> Instructor Information</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#course-structure"><i class="fa fa-check"></i><b>1.4</b> Course Structure</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#course-materials"><i class="fa fa-check"></i><b>1.5</b> Course Materials</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#learning-process"><i class="fa fa-check"></i><b>1.6</b> Learning Process</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#additional-resources"><i class="fa fa-check"></i><b>1.7</b> Additional Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="part1.html"><a href="part1.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="part1.html"><a href="part1.html#r-and-rstudio"><i class="fa fa-check"></i><b>2.1</b> R and RStudio</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="part1.html"><a href="part1.html#what-is-r"><i class="fa fa-check"></i><b>2.1.1</b> What is <strong>R</strong>?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="part1.html"><a href="part1.html#what-is-rstudio"><i class="fa fa-check"></i><b>2.1.2</b> What is RStudio?</a></li>
+<li class="chapter" data-level="2.1.3" data-path="part1.html"><a href="part1.html#download-and-install"><i class="fa fa-check"></i><b>2.1.3</b> Download and Install</a></li>
+<li class="chapter" data-level="2.1.4" data-path="part1.html"><a href="part1.html#preview-of-rstudio"><i class="fa fa-check"></i><b>2.1.4</b> Preview of RStudio</a></li>
+<li class="chapter" data-level="2.1.5" data-path="part1.html"><a href="part1.html#creating-a-new-script"><i class="fa fa-check"></i><b>2.1.5</b> Creating a New Script</a></li>
+<li class="chapter" data-level="2.1.6" data-path="part1.html"><a href="part1.html#working-directory"><i class="fa fa-check"></i><b>2.1.6</b> Working Directory</a></li>
+<li class="chapter" data-level="2.1.7" data-path="part1.html"><a href="part1.html#downloading-and-installing-r-packages"><i class="fa fa-check"></i><b>2.1.7</b> Downloading and Installing <strong>R</strong> Packages</a></li>
+<li class="chapter" data-level="2.1.8" data-path="part1.html"><a href="part1.html#your-turn"><i class="fa fa-check"></i><b>2.1.8</b> Your turn</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="part1.html"><a href="part1.html#basics-of-the-r-language"><i class="fa fa-check"></i><b>2.2</b> Basics of the R Language</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="part1.html"><a href="part1.html#r-as-a-calculator"><i class="fa fa-check"></i><b>2.2.1</b> R as a Calculator</a></li>
+<li class="chapter" data-level="2.2.2" data-path="part1.html"><a href="part1.html#creating-new-variables"><i class="fa fa-check"></i><b>2.2.2</b> Creating New Variables</a></li>
+<li class="chapter" data-level="2.2.3" data-path="part1.html"><a href="part1.html#important-rules-for-the-r-language"><i class="fa fa-check"></i><b>2.2.3</b> Important Rules for the <strong>R</strong> Language</a></li>
+<li class="chapter" data-level="2.2.4" data-path="part1.html"><a href="part1.html#a-few-shortcuts"><i class="fa fa-check"></i><b>2.2.4</b> A Few Shortcuts</a></li>
+<li class="chapter" data-level="2.2.5" data-path="part1.html"><a href="part1.html#self-help"><i class="fa fa-check"></i><b>2.2.5</b> Self-Help</a></li>
+<li class="chapter" data-level="2.2.6" data-path="part1.html"><a href="part1.html#your-turn-1"><i class="fa fa-check"></i><b>2.2.6</b> Your turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="part2.html"><a href="part2.html"><i class="fa fa-check"></i><b>3</b> Data Wrangling</a><ul>
+<li class="chapter" data-level="3.1" data-path="part2.html"><a href="part2.html#creating-data-in-r"><i class="fa fa-check"></i><b>3.1</b> Creating Data in <strong>R</strong></a></li>
+<li class="chapter" data-level="3.2" data-path="part2.html"><a href="part2.html#importing-data-into-r"><i class="fa fa-check"></i><b>3.2</b> Importing Data into <strong>R</strong></a><ul>
+<li class="chapter" data-level="3.2.1" data-path="part2.html"><a href="part2.html#method-1-using-rstudio"><i class="fa fa-check"></i><b>3.2.1</b> Method 1: Using <strong>RStudio</strong></a></li>
+<li class="chapter" data-level="3.2.2" data-path="part2.html"><a href="part2.html#method-2-using-r-commands"><i class="fa fa-check"></i><b>3.2.2</b> Method 2: Using <strong>R</strong> Commands</a></li>
+<li class="chapter" data-level="3.2.3" data-path="part2.html"><a href="part2.html#your-turn-2"><i class="fa fa-check"></i><b>3.2.3</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="part2.html"><a href="part2.html#understanding-the-data"><i class="fa fa-check"></i><b>3.3</b> Understanding the Data</a></li>
+<li class="chapter" data-level="3.4" data-path="part2.html"><a href="part2.html#indexing"><i class="fa fa-check"></i><b>3.4</b> Indexing</a></li>
+<li class="chapter" data-level="3.5" data-path="part2.html"><a href="part2.html#subsetting"><i class="fa fa-check"></i><b>3.5</b> Subsetting</a></li>
+<li class="chapter" data-level="3.6" data-path="part2.html"><a href="part2.html#other-data-manipulation-tools"><i class="fa fa-check"></i><b>3.6</b> Other Data Manipulation Tools</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="part2.html"><a href="part2.html#your-turn-3"><i class="fa fa-check"></i><b>3.6.1</b> Your Turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="part3.html"><a href="part3.html"><i class="fa fa-check"></i><b>4</b> Descriptive Statistics</a><ul>
+<li class="chapter" data-level="4.1" data-path="part3.html"><a href="part3.html#quick-summary"><i class="fa fa-check"></i><b>4.1</b> Quick Summary</a></li>
+<li class="chapter" data-level="4.2" data-path="part3.html"><a href="part3.html#frequency-tables"><i class="fa fa-check"></i><b>4.2</b> Frequency Tables</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="part3.html"><a href="part3.html#your-turn-4"><i class="fa fa-check"></i><b>4.2.1</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="part3.html"><a href="part3.html#central-tendency-and-dispersion"><i class="fa fa-check"></i><b>4.3</b> Central Tendency and Dispersion</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="part3.html"><a href="part3.html#your-turn-5"><i class="fa fa-check"></i><b>4.3.1</b> Your Turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="part4.html"><a href="part4.html"><i class="fa fa-check"></i><b>5</b> Data Visualizations in <strong>R</strong></a><ul>
+<li class="chapter" data-level="5.1" data-path="part4.html"><a href="part4.html#base-r-graphics"><i class="fa fa-check"></i><b>5.1</b> Base <strong>R</strong> Graphics</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="part4.html"><a href="part4.html#boxplots"><i class="fa fa-check"></i><b>5.1.1</b> Boxplots</a></li>
+<li class="chapter" data-level="5.1.2" data-path="part4.html"><a href="part4.html#histograms"><i class="fa fa-check"></i><b>5.1.2</b> Histograms</a></li>
+<li class="chapter" data-level="5.1.3" data-path="part4.html"><a href="part4.html#bar-graphs"><i class="fa fa-check"></i><b>5.1.3</b> Bar Graphs</a></li>
+<li class="chapter" data-level="5.1.4" data-path="part4.html"><a href="part4.html#scatterplots"><i class="fa fa-check"></i><b>5.1.4</b> Scatterplots</a></li>
+<li class="chapter" data-level="5.1.5" data-path="part4.html"><a href="part4.html#scatterplots-boxplots"><i class="fa fa-check"></i><b>5.1.5</b> Scatterplots + Boxplots</a></li>
+<li class="chapter" data-level="5.1.6" data-path="part4.html"><a href="part4.html#scatterplot-matrix"><i class="fa fa-check"></i><b>5.1.6</b> Scatterplot Matrix</a></li>
+<li class="chapter" data-level="5.1.7" data-path="part4.html"><a href="part4.html#saving-base-r-figures"><i class="fa fa-check"></i><b>5.1.7</b> Saving Base <strong>R</strong> Figures</a></li>
+<li class="chapter" data-level="5.1.8" data-path="part4.html"><a href="part4.html#your-turn-6"><i class="fa fa-check"></i><b>5.1.8</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="part4.html"><a href="part4.html#ggplot2-graphics"><i class="fa fa-check"></i><b>5.2</b> <code>ggplot2</code> Graphics</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="part4.html"><a href="part4.html#what-is-ggplot2"><i class="fa fa-check"></i><b>5.2.1</b> What is <code>ggplot2</code>?</a></li>
+<li class="chapter" data-level="5.2.2" data-path="part4.html"><a href="part4.html#how-ggplot2-works"><i class="fa fa-check"></i><b>5.2.2</b> How <code>ggplot2</code> works?</a></li>
+<li class="chapter" data-level="5.2.3" data-path="part4.html"><a href="part4.html#scatterplots-1"><i class="fa fa-check"></i><b>5.2.3</b> Scatterplots</a></li>
+<li class="chapter" data-level="5.2.4" data-path="part4.html"><a href="part4.html#boxplots-1"><i class="fa fa-check"></i><b>5.2.4</b> Boxplots</a></li>
+<li class="chapter" data-level="5.2.5" data-path="part4.html"><a href="part4.html#histograms-1"><i class="fa fa-check"></i><b>5.2.5</b> Histograms</a></li>
+<li class="chapter" data-level="5.2.6" data-path="part4.html"><a href="part4.html#bar-plots"><i class="fa fa-check"></i><b>5.2.6</b> Bar Plots</a></li>
+<li class="chapter" data-level="5.2.7" data-path="part4.html"><a href="part4.html#your-turn-7"><i class="fa fa-check"></i><b>5.2.7</b> Your Turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="part5.html"><a href="part5.html"><i class="fa fa-check"></i><b>6</b> Hypothesis Testing</a><ul>
+<li class="chapter" data-level="6.1" data-path="part5.html"><a href="part5.html#some-theory"><i class="fa fa-check"></i><b>6.1</b> Some Theory</a></li>
+<li class="chapter" data-level="6.2" data-path="part5.html"><a href="part5.html#types-of-inferential-statistics"><i class="fa fa-check"></i><b>6.2</b> Types of Inferential Statistics</a></li>
+<li class="chapter" data-level="6.3" data-path="part5.html"><a href="part5.html#one-sample-t-test"><i class="fa fa-check"></i><b>6.3</b> One-Sample <span class="math inline">\(t\)</span> Test</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="part5.html"><a href="part5.html#example"><i class="fa fa-check"></i><b>6.3.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="part5.html"><a href="part5.html#independent-samples-t-test"><i class="fa fa-check"></i><b>6.4</b> Independent-Samples <span class="math inline">\(t\)</span> Test</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="part5.html"><a href="part5.html#example-1"><i class="fa fa-check"></i><b>6.4.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="part5.html"><a href="part5.html#t-test-with-paired-data"><i class="fa fa-check"></i><b>6.5</b> <span class="math inline">\(t\)</span>-test with Paired Data</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="part5.html"><a href="part5.html#example-2"><i class="fa fa-check"></i><b>6.5.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="part5.html"><a href="part5.html#analysis-of-variance-anova"><i class="fa fa-check"></i><b>6.6</b> Analysis of Variance (ANOVA)</a><ul>
+<li class="chapter" data-level="6.6.1" data-path="part5.html"><a href="part5.html#example-3"><i class="fa fa-check"></i><b>6.6.1</b> Example</a></li>
+<li class="chapter" data-level="6.6.2" data-path="part5.html"><a href="part5.html#your-turn-8"><i class="fa fa-check"></i><b>6.6.2</b> Your Turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="part6.html"><a href="part6.html"><i class="fa fa-check"></i><b>7</b> Correlation and Regression</a><ul>
+<li class="chapter" data-level="7.1" data-path="part6.html"><a href="part6.html#correlation"><i class="fa fa-check"></i><b>7.1</b> Correlation</a></li>
+<li class="chapter" data-level="7.2" data-path="part6.html"><a href="part6.html#simple-linear-regression"><i class="fa fa-check"></i><b>7.2</b> Simple Linear Regression</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="part6.html"><a href="part6.html#example-4"><i class="fa fa-check"></i><b>7.2.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="part6.html"><a href="part6.html#multiple-regression"><i class="fa fa-check"></i><b>7.3</b> Multiple Regression</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="part6.html"><a href="part6.html#example-5"><i class="fa fa-check"></i><b>7.3.1</b> Example</a></li>
+<li class="chapter" data-level="7.3.2" data-path="part6.html"><a href="part6.html#your-turn-9"><i class="fa fa-check"></i><b>7.3.2</b> Your Turn</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
-<li><a href="https://github.com/okanbulut/rbook" target="blank">All rights reserved</a></li>
+<li><a href="https://github.com/okanbulut/rbook" target="blank">Published with GitHub</a></li>
 
 </ul>
 
@@ -130,186 +250,288 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="part1" class="section level1">
-<h1><span class="header-section-number">2</span> Part 1</h1>
-<p>You can label chapter and section titles using <code>{#label}</code> after them, e.g., we can reference Chapter <a href="part1.html#part1">2</a>. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter <a href="part1.html#part1">2</a>.</p>
-<p>Figures and tables with captions will be placed in <code>figure</code> and <code>table</code> environments, respectively.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, .<span class="dv">1</span>, .<span class="dv">1</span>))
-<span class="kw">plot</span>(pressure, <span class="dt">type =</span> <span class="st">&#39;b&#39;</span>, <span class="dt">pch =</span> <span class="dv">19</span>)</code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:nice-fig"></span>
-<img src="rbook_files/figure-html/nice-fig-1.png" alt="Here is a nice figure!" width="80%" />
-<p class="caption">
-Figure 2.1: Here is a nice figure!
-</p>
+<h1><span class="header-section-number">2</span> Introduction</h1>
+<div id="r-and-rstudio" class="section level2">
+<h2><span class="header-section-number">2.1</span> R and RStudio</h2>
+<p><img src="figure/r_and_rstudio.png" /></p>
+<div id="what-is-r" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> What is <strong>R</strong>?</h3>
+<p><strong>R</strong> …</p>
+<ul>
+<li>is a free, open source program for statistical computing and data visualization.</li>
+<li>is cross-platform (e.g., available on Windows, Mac OS, and Linux).</li>
+<li>is maintained and reguarly updated by the Comprehensive R Archive Network (<a href="https://cran.r-project.org/">CRAN</a>.</li>
+<li>is capable of running all types of statistical analyses.</li>
+<li>has amazing visualization capabilities (high-quality, customizable figures).</li>
+<li>enables reproducible research.</li>
+<li>has many other capablities, such as web programming.</li>
+<li>supports user-created packages (currently, more than 10,000)</li>
+</ul>
 </div>
-<p>Reference a figure by its code chunk label with the <code>fig:</code> prefix, e.g., see Figure <a href="part1.html#fig:nice-fig">2.1</a>. Similarly, you can reference tables generated from <code>knitr::kable()</code>, e.g., see Table <a href="part1.html#tab:nice-tab">2.1</a>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr<span class="op">::</span><span class="kw">kable</span>(
-  <span class="kw">head</span>(iris, <span class="dv">20</span>), <span class="dt">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,
-  <span class="dt">booktabs =</span> <span class="ot">TRUE</span>
-)</code></pre></div>
-<table>
-<caption><span id="tab:nice-tab">Table 2.1: </span>Here is a nice table!</caption>
-<thead>
-<tr class="header">
-<th align="right">Sepal.Length</th>
-<th align="right">Sepal.Width</th>
-<th align="right">Petal.Length</th>
-<th align="right">Petal.Width</th>
-<th align="left">Species</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">5.1</td>
-<td align="right">3.5</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.9</td>
-<td align="right">3.0</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.7</td>
-<td align="right">3.2</td>
-<td align="right">1.3</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.6</td>
-<td align="right">3.1</td>
-<td align="right">1.5</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.0</td>
-<td align="right">3.6</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.4</td>
-<td align="right">3.9</td>
-<td align="right">1.7</td>
-<td align="right">0.4</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.6</td>
-<td align="right">3.4</td>
-<td align="right">1.4</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.0</td>
-<td align="right">3.4</td>
-<td align="right">1.5</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.4</td>
-<td align="right">2.9</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.9</td>
-<td align="right">3.1</td>
-<td align="right">1.5</td>
-<td align="right">0.1</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.4</td>
-<td align="right">3.7</td>
-<td align="right">1.5</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.8</td>
-<td align="right">3.4</td>
-<td align="right">1.6</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.8</td>
-<td align="right">3.0</td>
-<td align="right">1.4</td>
-<td align="right">0.1</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.3</td>
-<td align="right">3.0</td>
-<td align="right">1.1</td>
-<td align="right">0.1</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.8</td>
-<td align="right">4.0</td>
-<td align="right">1.2</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.7</td>
-<td align="right">4.4</td>
-<td align="right">1.5</td>
-<td align="right">0.4</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.4</td>
-<td align="right">3.9</td>
-<td align="right">1.3</td>
-<td align="right">0.4</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.1</td>
-<td align="right">3.5</td>
-<td align="right">1.4</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.7</td>
-<td align="right">3.8</td>
-<td align="right">1.7</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.1</td>
-<td align="right">3.8</td>
-<td align="right">1.5</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-</tbody>
-</table>
-<p>You can write citations, too. For example, we are using the <strong>bookdown</strong> package <span class="citation">(Xie <a href="#ref-R-bookdown">2019</a>)</span> in this sample book, which was built on top of R Markdown and <strong>knitr</strong> <span class="citation">(Xie <a href="#ref-xie2015">2015</a>)</span>.</p>
+<div id="what-is-rstudio" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> What is RStudio?</h3>
+<p><strong>RStudio</strong> …</p>
+<ul>
+<li>is a free program available to control <strong>R</strong></li>
+<li>provides a more user-friendly interface for .</li>
+<li>includes a set of tools to help you be more productive with , such as:
+<ul>
+<li>A syntax-highlighting editor for highlighting your  codes</li>
+<li>Functions for helping you type the  codes (auto-completion)</li>
+<li>A variety of tools for creating and saving various plots (e.g., histograms, scatterplot)</li>
+<li>A workspace management tool for importing or exporting data</li>
+</ul></li>
+</ul>
+</div>
+<div id="download-and-install" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Download and Install</h3>
+<p>To benefit from <strong>RStudio</strong>, both <strong>R</strong> and <strong>RStudio</strong> should be installed in your computer. <strong>R</strong> and <strong>RStudio</strong> are freely available from the following websites:</p>
+<p>To download and install <strong>R</strong>:</p>
+<ol style="list-style-type: decimal">
+<li>Go to <a href="https://cran.r-project.org/"><strong>https://cran.r-project.org/</strong></a></li>
+<li>Click “Download R for Mac/Windows”"</li>
+<li>Download the appropriate file:
+• Windows users click Base, and download the installer for the latest R version
+• Mac users select the file R-3.X.X.pkg that aligns with your OS version</li>
+<li>Follow the instructions of the installer.</li>
+</ol>
+<p>To download and install <strong>RStudio</strong>:</p>
+<ol style="list-style-type: decimal">
+<li>Go to <a href="https://www.rstudio.com/products/rstudio/download/"><strong>https://www.rstudio.com/products/rstudio/download/</strong></a></li>
+<li>Click “Download” under <em>RStudio Desktop - Open Source License</em></li>
+<li>Select the install file for your OS</li>
+<li>Follow the instructions of the installer.</li>
+</ol>
+</div>
+<div id="preview-of-rstudio" class="section level3">
+<h3><span class="header-section-number">2.1.4</span> Preview of RStudio</h3>
+<p>After you open RStudio, you should see the following screen:</p>
+<div class="figure">
+<img src="figure/img1.png" alt="Opening screen of RStudio" />
+<p class="caption">Opening screen of RStudio</p>
+</div>
+<p><br/></p>
+<p>I personally prefer console on the top-left, source on the top-right, files on the bottom-left, and environment on the bottom-right. The pane layout can be updated using <em>Global Options</em> under <em>Tools</em>.</p>
+<div class="figure">
+<img src="figure/img2.png" alt="Step 1: Click Tools and then select Global Options" />
+<p class="caption"><strong>Step 1:</strong> Click Tools and then select Global Options</p>
+</div>
+<p><br/></p>
+<div class="figure">
+<img src="figure/img3.png" alt="Step 2: Select console, source, environment, or files for each pane" />
+<p class="caption"><strong>Step 2:</strong> Select console, source, environment, or files for each pane</p>
+</div>
+<p><br/></p>
+<p>We can also change the appearance (e.g., code highlighting, font type, font size, etc.):</p>
+<div class="figure">
+<img src="figure/img4.png" alt="Step 2: Change the Appearance Settings, as you wish" />
+<p class="caption"><strong>Step 2:</strong> Change the Appearance Settings, as you wish</p>
+</div>
+<p><br/></p>
+<p><strong>Note:</strong> To get yourself more familiar with <strong>RStudio</strong>, I recommend you to check out the <strong>RStudio</strong> <a href="https://github.com/okanbulut/rbook/blob/master/cheatsheets/rstudio-ide.pdf"><strong>cheatsheet</strong></a> and Oscar Torres-Reyna’s nice <a href="https://github.com/okanbulut/rbook/blob/master/cheatsheets/rstudio_tutorial.pdf"><strong>tutorial</strong></a> (<em>Note:</em> You can click on these links to open and download the documents or see <a href="https://github.com/okanbulut/rbook/tree/master/cheatsheets" class="uri">https://github.com/okanbulut/rbook/tree/master/cheatsheets</a>).</p>
+</div>
+<div id="creating-a-new-script" class="section level3">
+<h3><span class="header-section-number">2.1.5</span> Creating a New Script</h3>
+<p>In <strong>R</strong>, we can type our commands in the console; but once we close <strong>R</strong>, everything we have typed will be gone. Therefore, we should create an empty script, write the codes in the script, and save it for future use. We can replicate the exact same analysis and results by running the script again later on. The <strong>R</strong> script file has the .R extension, but it is essentially a text file. Thus, any text editor (e.g., Microsoft Word, Notepad, TextPad) can be used to open a script file for editing outside of the <strong>R</strong> environment.</p>
+<p>We can create a new script file in <strong>R</strong> as follows:</p>
+<div class="figure">
+<img src="figure/img5.png" alt="Creating a new script in R (using RStudio)" />
+<p class="caption">Creating a new script in <strong>R</strong> (using <strong>RStudio</strong>)</p>
+</div>
+<p><br/></p>
+<p>When we type some codes in the script, we can select the lines we want to run and then hit the run button. Alternatively, we can bring the cursor at the beginning of the line and hit the run button which runs one line at a time and moves to the next line.</p>
+<div class="figure">
+<img src="figure/img7.png" alt="Running R codes from a script file" />
+<p class="caption">Running <strong>R</strong> codes from a script file</p>
+</div>
+</div>
+<div id="working-directory" class="section level3">
+<h3><span class="header-section-number">2.1.6</span> Working Directory</h3>
+<p>An important feature of <strong>R</strong> is “working directory”, which refers to a location or a folder in your computer where you keep your <strong>R</strong> script, your data files, etc. Once we define a working directory in <strong>R</strong>, any data file or script within that directory can be easily imported into <strong>R</strong> without specifying where the file is located. By default, <strong>R</strong> chooses a particular location in your computer (typically Desktop or Documents) as your working director. To see our current working director, we need to run a <code>getwd()</code> command in the <strong>R</strong> console:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">getwd</span>()</code></pre>
+<p>This will return a path like this:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">## [1] &quot;C:/Users/bulut/Desktop&quot;</span></code></pre>
+<p>Once we decide to change the current working direcory into a different location, we can do it in two ways:</p>
+<p><strong>Method 1:</strong> Using the “Session” options menu in <strong>RStudio</strong></p>
+<p>We can select Session &gt; Set Working Directory &gt; Choose Directory to find a folder or location that we want to set as our current working directory.</p>
+<p><br/></p>
+<div class="figure">
+<img src="figure/img6.png" alt="Method 1: Setting the working directory in R" />
+<p class="caption"><strong>Method 1:</strong> Setting the working directory in <strong>R</strong></p>
+</div>
+<p><br/></p>
+<p><strong>Method 2:</strong> Using the <code>setwd</code> command in the console</p>
+<p>Tpying the following code in the console will set the “R workshop” folder on my desktop as the working directory. If the folder path is correct, <strong>R</strong> changes the working directory without giving any error messages in the console.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">setwd</span>(<span class="st">&quot;C:/Users/bulut/Desktop/R workshop&quot;</span>)</code></pre>
+<p>To ensure that the working directory is properly set, we can use the <code>getwd()</code> command again:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">getwd</span>()
+<span class="co">## [1] &quot;C:/Users/bulut/Desktop/R workshop&quot;</span></code></pre>
+<p><strong>IMPORTANT:</strong> <strong>R</strong> does not accept any backslashes in the file path. Instead of a backslash, we need to use a frontslash. This is particulary important for Windows computers since the file paths involve backslashes (Mac OS X doesn’t have this problem).</p>
+</div>
+<div id="downloading-and-installing-r-packages" class="section level3">
+<h3><span class="header-section-number">2.1.7</span> Downloading and Installing <strong>R</strong> Packages</h3>
+<p>The base <strong>R</strong> program comes with many built-in functions to compute a variety of statistics and to create graphics (e.g., histograms, scatterplots, etc.). However, what makes <strong>R</strong> more powerful than other software programs is that <strong>R</strong> users can write their own functions, put them in a package, and share it with other <strong>R</strong> users via the <a href="https://cran.r-project.org/web/packages/index.html">CRAN</a> website.</p>
+<p>For example, <code>ggplot2</code> <span class="citation">(Wickham et al. <a href="#ref-R-ggplot2">2018</a>)</span> is a well-known <strong>R</strong> package, created by Hadley Wickham and Winston Chang. This package allows <strong>R</strong> users to create elegant data visualizations. To download and install the <code>ggplot2</code> package, we need to use the <code>install.packages</code> command. Note that your computer has to be connected to the internet to be able to connect to the CRAN website and download the package.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)</code></pre>
+<p>Once a package is downloaded and installed, it is permanently in your <strong>R</strong> folder. That is, there is no need to re-install it, unless you remove the package or install a new version of R. These downloaded packages are not directly accessible until we activate them in your <strong>R</strong> session. Whenever we need to access a package in <strong>R</strong>, we need to use the <code>library</code> command to activate it. For example, to access the <code>ggplot2</code> package, we would use:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</code></pre>
+<p>To get help on installed packages (e.g., what’s inside this package):</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># To get details regarding contents of a package</span>
+<span class="kw">help</span>(<span class="dt">package =</span> <span class="st">&quot;ggplot2&quot;</span>)
 
+<span class="co"># To list vignettes available for a specific package</span>
+<span class="kw">vignette</span>(<span class="dt">package =</span> <span class="st">&quot;ggplot2&quot;</span>)
+
+<span class="co"># To view specific vignette</span>
+<span class="kw">vignette</span>(<span class="st">&quot;ggplot2-specs&quot;</span>)</code></pre>
+</div>
+<div id="your-turn" class="section level3">
+<h3><span class="header-section-number">2.1.8</span> Your turn</h3>
+<ol style="list-style-type: decimal">
+<li>Open <strong>RStudio</strong> and find the Global Settings option and change the pane layout as you like. I recommend putting the console on the top-left corner.</li>
+<li>Set the folder that you have the training materials (it’s called <em>rtraining</em>) as your working directory using either the <code>setwd</code> command or the Session options menu in **RStudio*.</li>
+<li>Create a new script and click the save button – which will ask you to save it. Name it as “mysyntax.R” and save it in the same folder (rtraining).<br />
+</li>
+<li>Install and activate the <code>lattice</code> package using the <code>install.packages</code> and <code>library</code> commands. The <code>lattice</code> package <span class="citation">(Sarkar <a href="#ref-R-lattice">2017</a>)</span> is another well-known package for data visualization in <strong>R</strong>. You should type the following in your script file, choose all the lines, and hit the run button.</li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;lattice&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;lattice&quot;</span>)</code></pre>
+</div>
+</div>
+<div id="basics-of-the-r-language" class="section level2">
+<h2><span class="header-section-number">2.2</span> Basics of the R Language</h2>
+<div id="r-as-a-calculator" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> R as a Calculator</h3>
+<p><strong>R</strong> can be used like a calculator to do addition, subtraction, multiplication, and division. For example, if you type the following in the console, you should see the results in the same window.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">20</span> <span class="op">+</span><span class="st"> </span>(<span class="dv">30</span> <span class="op">*</span><span class="st"> </span><span class="dv">3</span>)</code></pre>
+<pre><code>[1] 110</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">(<span class="dv">144</span><span class="op">/</span><span class="dv">12</span>) <span class="op">-</span><span class="st"> </span>(<span class="dv">20</span><span class="op">/</span><span class="dv">5</span>)</code></pre>
+<pre><code>[1] 8</code></pre>
+<p>More complex calculations are also possible in <strong>R</strong>.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">10</span><span class="op">^</span><span class="dv">2</span></code></pre>
+<pre><code>[1] 100</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sqrt</span>(<span class="dv">81</span>)</code></pre>
+<pre><code>[1] 9</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">log</span>(<span class="dv">5</span>)</code></pre>
+<pre><code>[1] 1.609</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">exp</span>(<span class="fl">1.5</span>)</code></pre>
+<pre><code>[1] 4.482</code></pre>
+</div>
+<div id="creating-new-variables" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Creating New Variables</h3>
+<p>To create a new variable in R, we use the assignment operator, <code>&lt;-</code>. To create a variable <code>x</code> that equals 25, we need to type:</p>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">25</span></code></pre>
+<p>If we want to print <code>x</code>, we just type <code>x</code> in the console and hit enter. <strong>R</strong> returns the value assigned to <code>x</code>.</p>
+<pre class="sourceCode r"><code class="sourceCode r">x</code></pre>
+<pre><code>[1] 25</code></pre>
+<p>We can also create a variable that holds multiple values in it, using the <code>c</code> command (<code>c</code> standards for <em>combine</em>).</p>
+<pre class="sourceCode r"><code class="sourceCode r">weight &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">60</span>, <span class="dv">72</span>, <span class="dv">80</span>, <span class="dv">84</span>, <span class="dv">56</span>)
+weight</code></pre>
+<pre><code>[1] 60 72 80 84 56</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">height &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">1.7</span>, <span class="fl">1.75</span>, <span class="fl">1.8</span>, <span class="fl">1.9</span>, <span class="fl">1.6</span>)
+height</code></pre>
+<pre><code>[1] 1.70 1.75 1.80 1.90 1.60</code></pre>
+<p>Once we create a variable, we can do further calculations with it. Let’s say we want to transform the <code>weight</code> variable (in kg) to a new variable called weight2 (in lbs).</p>
+<pre class="sourceCode r"><code class="sourceCode r">weight2 &lt;-<span class="st"> </span>weight <span class="op">*</span><span class="st"> </span><span class="fl">2.20462</span>
+weight2</code></pre>
+<pre><code>[1] 132.3 158.7 176.4 185.2 123.5</code></pre>
+<p>Note that we named the variable as <code>weight2</code>. So, both <code>weight</code> and <code>weight2</code> exist in the active <strong>R</strong> session now. If we used the following, this would overwrite the existing <code>weight</code> variable.</p>
+<pre class="sourceCode r"><code class="sourceCode r">weight &lt;-<span class="st"> </span>weight <span class="op">*</span><span class="st"> </span><span class="fl">2.20462</span></code></pre>
+<p>We can also define a new variable based on existing variables.</p>
+<pre class="sourceCode r"><code class="sourceCode r">reading &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">80</span>, <span class="dv">75</span>, <span class="dv">50</span>, <span class="dv">44</span>, <span class="dv">65</span>)
+math &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">90</span>, <span class="dv">65</span>, <span class="dv">60</span>, <span class="dv">38</span>, <span class="dv">70</span>)
+total &lt;-<span class="st"> </span>reading <span class="op">+</span><span class="st"> </span>math
+total</code></pre>
+<pre><code>[1] 170 140 110  82 135</code></pre>
+<p>Sometimes we need a variable that holds character strings rather than numerical values. If a value is not numerical, we need to use double quotation marks. In the example below, we create a new variable called <code>cities</code> that has four city names in it. Each city name is written with double quotation marks.</p>
+<pre class="sourceCode r"><code class="sourceCode r">cities &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Edmonton&quot;</span>, <span class="st">&quot;Calgary&quot;</span>, <span class="st">&quot;Red Deer&quot;</span>, <span class="st">&quot;Spruce Grove&quot;</span>)
+cities</code></pre>
+<pre><code>[1] &quot;Edmonton&quot;     &quot;Calgary&quot;      &quot;Red Deer&quot;     &quot;Spruce Grove&quot;</code></pre>
+<p>We can also treat numerical values as character strings. For example, assume that we have a <code>gender</code> variable where 1=Male and 2=Female. We want R to know that these values are not actual numbers; instead, they are just numerical labels for gender groups.</p>
+<pre class="sourceCode r"><code class="sourceCode r">gender &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;1&quot;</span>, <span class="st">&quot;2&quot;</span>, <span class="st">&quot;2&quot;</span>, <span class="st">&quot;1&quot;</span>, <span class="st">&quot;2&quot;</span>)
+gender</code></pre>
+<pre><code>[1] &quot;1&quot; &quot;2&quot; &quot;2&quot; &quot;1&quot; &quot;2&quot;</code></pre>
+</div>
+<div id="important-rules-for-the-r-language" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Important Rules for the <strong>R</strong> Language</h3>
+<p>Here is a list of important rules for using the <strong>R</strong> language more effectively:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Case-sensitivity:</strong> <strong>R</strong> codes written in lowercase would NOT refer to the same codes written in uppercase.</li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r">cities &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Edmonton&quot;</span>, <span class="st">&quot;Calgary&quot;</span>, <span class="st">&quot;Red Deer&quot;</span>, <span class="st">&quot;Spruce Grove&quot;</span>)
+Cities
+CITIES
+
+Error<span class="op">:</span><span class="st"> </span>object <span class="st">&#39;Cities&#39;</span> not found
+Error<span class="op">:</span><span class="st"> </span>object <span class="st">&#39;CITIES&#39;</span> not found</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Variable names:</strong> A variable name <strong>cannot</strong> begin with a number or include a space.</li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r">4cities &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Edmonton&quot;</span>, <span class="st">&quot;Calgary&quot;</span>, <span class="st">&quot;Red Deer&quot;</span>, <span class="st">&quot;Spruce Grove&quot;</span>)
+my cities &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Edmonton&quot;</span>, <span class="st">&quot;Calgary&quot;</span>, <span class="st">&quot;Red Deer&quot;</span>, <span class="st">&quot;Spruce Grove&quot;</span>)
+
+Error<span class="op">:</span><span class="st"> </span>unexpected symbol <span class="cf">in</span> <span class="st">&quot;4cities&quot;</span>
+Error<span class="op">:</span><span class="st"> </span>unexpected symbol <span class="cf">in</span> <span class="st">&quot;my cities&quot;</span></code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li><p><strong>Naming conventions:</strong> Not to create messy codes that are difficult to read and understand, I recommend using consistent and clear naming conventions. I personally prefer all lowercase with underscore (e.g., <code>my_variable</code>). The other naming conventions are:</p>
+<ul>
+<li>All lowercase: e.g. <code>mycities</code></li>
+<li>Period.separated: e.g. <code>my.cities</code></li>
+<li>Underscore_separated: e.g. <code>my_cities</code></li>
+<li>Numbers at the end: e.g. <code>mycities2018</code></li>
+<li>Combination of some of these rules: <code>my.cities.2018</code></li>
+</ul></li>
+<li><p><strong>Commenting:</strong> The hashtag symbol (#) is used for commenting in R. Any words, codes, etc. coming after a hashtag are just ignored. I strongly recommend using comments throughout your codes. These annotations would remind you what you did and why you did it that way. You can easily comment out a line without having to remove it from your codes.</p></li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Here I define four cities in Alberta</span>
+cities &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Edmonton&quot;</span>, <span class="st">&quot;Calgary&quot;</span>, <span class="st">&quot;Red Deer&quot;</span>, <span class="st">&quot;Spruce Grove&quot;</span>)</code></pre>
+</div>
+<div id="a-few-shortcuts" class="section level3">
+<h3><span class="header-section-number">2.2.4</span> A Few Shortcuts</h3>
+<ul>
+<li><p>To list all objects (e.g., variables, results, etc.): <code>ls()</code></p></li>
+<li><p>To list and describe all objects: <code>ls.str()</code></p></li>
+<li>To remove a defined variable or data from the <strong>R</strong> environment: <code>rm()</code>
+<ul>
+<li>For example, we can remove the <code>age</code> variable as <code>rm(age)</code></li>
+</ul></li>
+<li><p>To remove everything in the working environment: <code>rm(list = ls())</code></p></li>
+</ul>
+</div>
+<div id="self-help" class="section level3">
+<h3><span class="header-section-number">2.2.5</span> Self-Help</h3>
+<p>In the spirit of open-source, <strong>R</strong> is very much a self-guided tool. We can look for solutions to <strong>R</strong>-related problems in multiple ways:</p>
+<ol style="list-style-type: decimal">
+<li><p>Use the <code>?</code> to open help pages for functions or packages (e.g., try <code>?summary</code> in the console to see how the <code>summary</code> function works)</p></li>
+<li><p>For tricky questions and funky error messages (there are many of these), and other issues, use Google (include “in R” to the end of your query)</p></li>
+<li><p>We can also use RSeek (<a href="https://rseek.org/" class="uri">https://rseek.org/</a>) - a search engine just for <strong>R</strong></p></li>
+<li><p>StackOverflow (<a href="https://stackoverflow.com/" class="uri">https://stackoverflow.com/</a>) has become a great resource with many questions for many specific packages in <strong>R</strong>, and a rating system for answers</p></li>
+</ol>
+</div>
+<div id="your-turn-1" class="section level3">
+<h3><span class="header-section-number">2.2.6</span> Your turn</h3>
+<ol style="list-style-type: decimal">
+<li>Using the same script that you created earlier, create two new variables <code>age</code> and <code>salary</code> for five persons:</li>
+</ol>
+<ul>
+<li><code>age</code>: 21, 24, 32, 45, 52</li>
+<li><code>salary</code>: 4500, 3500, 4100, 4700, 6000</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Then, type the following code in your script and run it to find the correlation between <code>age</code> and <code>salary</code>:</li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cor</span>(age, salary)</code></pre>
+
+</div>
+</div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
-<div id="ref-xie2015">
-<p>Xie, Yihui. 2015. <em>Dynamic Documents with R and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.name/knitr/" class="uri">http://yihui.name/knitr/</a>.</p>
+<div id="ref-R-lattice">
+<p>Sarkar, Deepayan. 2017. <em>Lattice: Trellis Graphics for R</em>. <a href="https://CRAN.R-project.org/package=lattice">https://CRAN.R-project.org/package=lattice</a>.</p>
 </div>
-<div id="ref-R-bookdown">
-<p>Xie, Yihui. 2019. <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>. <a href="https://CRAN.R-project.org/package=bookdown" class="uri">https://CRAN.R-project.org/package=bookdown</a>.</p>
+<div id="ref-R-ggplot2">
+<p>Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, and Kara Woo. 2018. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.</p>
 </div>
 </div>
             </section>
@@ -368,7 +590,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
