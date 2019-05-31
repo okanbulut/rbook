@@ -1117,7 +1117,7 @@ There are two ways to import a data set into \textbf{R}:
 \KeywordTok{install.packages}\NormalTok{(}\StringTok{"foreign"}\NormalTok{)}
 \KeywordTok{library}\NormalTok{(}\StringTok{"foreign"}\NormalTok{)}
 
-\CommentTok{# Use read.xlsx to import an Excel file}
+\CommentTok{# Use read.spss to import an SPSS file}
 \NormalTok{my_spss_file <-}\StringTok{ }\KeywordTok{read.spss}\NormalTok{(}\StringTok{"path to the file/filename.sav"}\NormalTok{, }\DataTypeTok{to.data.frame =} \OtherTok{TRUE}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
@@ -2229,7 +2229,7 @@ Skim summary statistics
  n obs: 246 
  n variables: 16 
 
--- Variable type:character -----------------------------------------------------------------------------------------------
+-- Variable type:character ---
   variable missing complete   n min max empty n_unique
   homeless       0      246 246   6   8     0        2
       race       0      246 246   5   8     0        4
@@ -2238,7 +2238,7 @@ Skim summary statistics
   suicidal       0      246 246   2   3     0        2
      treat       0      246 246   2   3     0        2
 
--- Variable type:integer -------------------------------------------------------------------------------------------------
+-- Variable type:integer -----
     variable missing complete   n   mean     sd p0   p25   p50    p75 p100
          age       0      246 246  36.31   7.98 20 31     35    41      60
   avg_drinks       0      246 246  17.13  21.22  0  2     12    24     142
@@ -2247,7 +2247,7 @@ Skim summary statistics
           id       0      246 246 216.3  143.8   1 82.5  210.5 346.75  469
   max_drinks       0      246 246  24.11  31.08  0  3     13    32     184
 
--- Variable type:numeric -------------------------------------------------------------------------------------------------
+-- Variable type:numeric -----
   variable missing complete   n  mean    sd    p0   p25   p50   p75  p100
    mental1       0      246 246 31.68 12.49  6.76 21.95 29.15 40.62 60.54
    mental2       0      246 246 40.98 13.8   6.68 30.21 42.44 52.73 69.94
@@ -2267,12 +2267,12 @@ Skim summary statistics
  n obs: 246 
  n variables: 4 
 
--- Variable type:integer -------------------------------------------------------------------------------------------------
+-- Variable type:integer -----
    variable missing complete   n  mean    sd p0 p25 p50 p75 p100
  avg_drinks       0      246 246 17.13 21.22  0   2  12  24  142
  max_drinks       0      246 246 24.11 31.08  0   3  13  32  184
 
--- Variable type:numeric -------------------------------------------------------------------------------------------------
+-- Variable type:numeric -----
  variable missing complete   n  mean    sd   p0   p25   p50   p75  p100
   mental1       0      246 246 31.68 12.49 6.76 21.95 29.15 40.62 60.54
   mental2       0      246 246 40.98 13.8  6.68 30.21 42.44 52.73 69.94
@@ -2294,14 +2294,14 @@ Skim summary statistics
  n variables: 5 
  group variables: sex 
 
--- Variable type:integer -------------------------------------------------------------------------------------------------
+-- Variable type:integer -----
     sex   variable missing complete   n  mean    sd p0 p25 p50 p75 p100
  female avg_drinks       0       57  57 13.67 18.05  0   0   6  19   71
  female max_drinks       0       57  57 20.21 31.7   0   0   8  26  164
    male avg_drinks       0      189 189 18.18 22.02  0   3  13  25  142
    male max_drinks       0      189 189 25.29 30.87  0   4  19  33  184
 
--- Variable type:numeric -------------------------------------------------------------------------------------------------
+-- Variable type:numeric -----
     sex variable missing complete   n  mean    sd   p0   p25   p50   p75
  female  mental1       0       57  57 29.26 13.19 7.04 19.81 26.31 37.44
  female  mental2       0       57  57 38.8  13.05 6.68 29.56 38.27 48.72
@@ -2655,7 +2655,7 @@ Specifically, we can break a graphic into the following three essential componen
   \texttt{aes}: aesthetic attributes of the geometric object. For example, color, shape, and size. Each assigned aesthetic attribute can be mapped to a variable in our data set.
 \end{itemize}
 
-Figure \ref{fig:ggplotmap} shows these three components are laied out in a typical \texttt{ggplot2} function. As we can see, each part (e.g., \texttt{geom\_function}) is added to the plot using a plus sign. That is, each layer like that brings an additional functionality into the plot we are drawing.
+Figure \ref{fig:ggplotmap} shows these three components are laid out in a typical \texttt{ggplot2} function. As we can see, each part (e.g., \texttt{geom\_function}) is added to the plot using a plus sign. That is, each layer like that brings an additional functionality into the plot we are drawing.
 
 \begin{figure}
 
@@ -3452,7 +3452,7 @@ Now you will run several hypothesis tests using the variables in the \texttt{med
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Run an independent-samples \(t\)-test where you will investigate whether the average depression scores at the baseline (i.e., \texttt{depression1}) are the same for suicidal patients (i.e., \texttt{suicial\ ==\ "yes"}) and non-suicidal patients (i.e., \texttt{suicial\ ==\ "no"}).
+  Run an independent-samples \(t\)-test where you will investigate whether the average depression scores at the baseline (i.e., \texttt{depression1}) are the same for suicidal patients (i.e., \texttt{suicidal\ ==\ "yes"}) and non-suicidal patients (i.e., \texttt{suicidal\ ==\ "no"}).
 \item
   You will conduct a paired \(t\)-test to investigate whether patients' average mental scores at the baseline (i.e., \texttt{mental1}) and their mental scores after 6 months (i.e., \texttt{mental2}) are the same.
 \item
@@ -3952,7 +3952,7 @@ Let's expand our model by adding \texttt{sex}. Because \texttt{sex} is a categor
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{# Add physical1 into the previous model}
+\CommentTok{# Add sex into the previous model}
 \NormalTok{model3 <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(mental1 }\OperatorTok{~}\StringTok{ }\NormalTok{depression1 }\OperatorTok{+}\StringTok{ }\NormalTok{physical1 }\OperatorTok{+}\StringTok{ }\NormalTok{sex, }\DataTypeTok{data =}\NormalTok{ medical)}
 
 \CommentTok{# Print detailed summary of the model}

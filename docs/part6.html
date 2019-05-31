@@ -773,7 +773,7 @@ Figure 7.7: Standardized regression coefficients in Model 2
 </div>
 <p>In the plot, the circles in the middle show the location of the standardized slopes (i.e., regression coefficients) for both predictors and the line around the circles represent the confidence interval. We can see from Figure <a href="part6.html#fig:regplot1">7.7</a> that the standardized slope for <code>depression1</code> is much larger (around -8.5) whereas the standardized slope for <code>physical1</code> is smaller (around -2). So, we could say that the <code>depression1</code> is a stronger predictor than <code>physical1</code> in predicting <code>mental1</code>.</p>
 <p>Let’s expand our model by adding <code>sex</code>. Because <code>sex</code> is a categorical variable, <strong>R</strong> will choose one level of this variable as the reference category and give the results for the other category. The default reference category is selected alphabetically. In the context of <code>sex</code>, the values are male and female. Because <strong>f</strong> alphabetically comes first, female will be selected as the reference category and we will see the results for male.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Add physical1 into the previous model</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Add sex into the previous model</span>
 model3 &lt;-<span class="st"> </span><span class="kw">lm</span>(mental1 <span class="op">~</span><span class="st"> </span>depression1 <span class="op">+</span><span class="st"> </span>physical1 <span class="op">+</span><span class="st"> </span>sex, <span class="dt">data =</span> medical)
 
 <span class="co"># Print detailed summary of the model</span>
