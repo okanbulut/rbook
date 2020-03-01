@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>5 Data Visualizations in R | Statistical Analysis and Visualizations Using R</title>
-  <meta name="description" content="This book contains the materials for the R course at Techology Training Centre." />
-  <meta name="generator" content="bookdown 0.10 and GitBook 2.6.7" />
+  <meta name="description" content="This book contains the materials for the R training at the Techology Training Centre." />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
   <meta property="og:title" content="5 Data Visualizations in R | Statistical Analysis and Visualizations Using R" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This book contains the materials for the R course at Techology Training Centre." />
+  <meta property="og:description" content="This book contains the materials for the R training at the Techology Training Centre." />
   <meta name="github-repo" content="okanbulut/rbook" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="5 Data Visualizations in R | Statistical Analysis and Visualizations Using R" />
   
-  <meta name="twitter:description" content="This book contains the materials for the R course at Techology Training Centre." />
+  <meta name="twitter:description" content="This book contains the materials for the R training at the Techology Training Centre." />
   
 
 <meta name="author" content="Okan Bulut" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="part3.html">
-<link rel="next" href="part5.html">
+<link rel="prev" href="part3.html"/>
+<link rel="next" href="part5.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -39,6 +39,9 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -54,7 +57,6 @@ a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
 a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
@@ -146,38 +148,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.1.5" data-path="part1.html"><a href="part1.html#creating-a-new-script"><i class="fa fa-check"></i><b>2.1.5</b> Creating a New Script</a></li>
 <li class="chapter" data-level="2.1.6" data-path="part1.html"><a href="part1.html#working-directory"><i class="fa fa-check"></i><b>2.1.6</b> Working Directory</a></li>
 <li class="chapter" data-level="2.1.7" data-path="part1.html"><a href="part1.html#downloading-and-installing-r-packages"><i class="fa fa-check"></i><b>2.1.7</b> Downloading and Installing <strong>R</strong> Packages</a></li>
-<li class="chapter" data-level="2.1.8" data-path="part1.html"><a href="part1.html#your-turn"><i class="fa fa-check"></i><b>2.1.8</b> Your turn</a></li>
+<li class="chapter" data-level="2.1.8" data-path="part1.html"><a href="part1.html#exercise-1"><i class="fa fa-check"></i><b>2.1.8</b> Exercise 1</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="part1.html"><a href="part1.html#basics-of-the-r-language"><i class="fa fa-check"></i><b>2.2</b> Basics of the R Language</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="part1.html"><a href="part1.html#r-as-a-calculator"><i class="fa fa-check"></i><b>2.2.1</b> R as a Calculator</a></li>
-<li class="chapter" data-level="2.2.2" data-path="part1.html"><a href="part1.html#creating-new-variables"><i class="fa fa-check"></i><b>2.2.2</b> Creating New Variables</a></li>
-<li class="chapter" data-level="2.2.3" data-path="part1.html"><a href="part1.html#important-rules-for-the-r-language"><i class="fa fa-check"></i><b>2.2.3</b> Important Rules for the <strong>R</strong> Language</a></li>
-<li class="chapter" data-level="2.2.4" data-path="part1.html"><a href="part1.html#a-few-shortcuts"><i class="fa fa-check"></i><b>2.2.4</b> A Few Shortcuts</a></li>
-<li class="chapter" data-level="2.2.5" data-path="part1.html"><a href="part1.html#self-help"><i class="fa fa-check"></i><b>2.2.5</b> Self-Help</a></li>
-<li class="chapter" data-level="2.2.6" data-path="part1.html"><a href="part1.html#your-turn-1"><i class="fa fa-check"></i><b>2.2.6</b> Your turn</a></li>
+<li class="chapter" data-level="2.2.1" data-path="part1.html"><a href="part1.html#creating-new-variables"><i class="fa fa-check"></i><b>2.2.1</b> Creating New Variables</a></li>
+<li class="chapter" data-level="2.2.2" data-path="part1.html"><a href="part1.html#important-rules-for-the-r-language"><i class="fa fa-check"></i><b>2.2.2</b> Important Rules for the <strong>R</strong> Language</a></li>
+<li class="chapter" data-level="2.2.3" data-path="part1.html"><a href="part1.html#self-help"><i class="fa fa-check"></i><b>2.2.3</b> Self-Help</a></li>
+<li class="chapter" data-level="2.2.4" data-path="part1.html"><a href="part1.html#exercise-2"><i class="fa fa-check"></i><b>2.2.4</b> Exercise 2</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="part2.html"><a href="part2.html"><i class="fa fa-check"></i><b>3</b> Data Wrangling</a><ul>
-<li class="chapter" data-level="3.1" data-path="part2.html"><a href="part2.html#creating-data-in-r"><i class="fa fa-check"></i><b>3.1</b> Creating Data in <strong>R</strong></a></li>
+<li class="chapter" data-level="3.1" data-path="part2.html"><a href="part2.html#creating-datasets-in-r"><i class="fa fa-check"></i><b>3.1</b> Creating Datasets in <strong>R</strong></a></li>
 <li class="chapter" data-level="3.2" data-path="part2.html"><a href="part2.html#importing-data-into-r"><i class="fa fa-check"></i><b>3.2</b> Importing Data into <strong>R</strong></a><ul>
 <li class="chapter" data-level="3.2.1" data-path="part2.html"><a href="part2.html#method-1-using-rstudio"><i class="fa fa-check"></i><b>3.2.1</b> Method 1: Using <strong>RStudio</strong></a></li>
 <li class="chapter" data-level="3.2.2" data-path="part2.html"><a href="part2.html#method-2-using-r-commands"><i class="fa fa-check"></i><b>3.2.2</b> Method 2: Using <strong>R</strong> Commands</a></li>
-<li class="chapter" data-level="3.2.3" data-path="part2.html"><a href="part2.html#your-turn-2"><i class="fa fa-check"></i><b>3.2.3</b> Your Turn</a></li>
+<li class="chapter" data-level="3.2.3" data-path="part2.html"><a href="part2.html#exercise-3"><i class="fa fa-check"></i><b>3.2.3</b> Exercise 3</a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="part2.html"><a href="part2.html#understanding-the-data"><i class="fa fa-check"></i><b>3.3</b> Understanding the Data</a></li>
 <li class="chapter" data-level="3.4" data-path="part2.html"><a href="part2.html#indexing"><i class="fa fa-check"></i><b>3.4</b> Indexing</a></li>
 <li class="chapter" data-level="3.5" data-path="part2.html"><a href="part2.html#subsetting"><i class="fa fa-check"></i><b>3.5</b> Subsetting</a></li>
 <li class="chapter" data-level="3.6" data-path="part2.html"><a href="part2.html#other-data-manipulation-tools"><i class="fa fa-check"></i><b>3.6</b> Other Data Manipulation Tools</a><ul>
-<li class="chapter" data-level="3.6.1" data-path="part2.html"><a href="part2.html#your-turn-3"><i class="fa fa-check"></i><b>3.6.1</b> Your Turn</a></li>
+<li class="chapter" data-level="3.6.1" data-path="part2.html"><a href="part2.html#exercise-4"><i class="fa fa-check"></i><b>3.6.1</b> Exercise 4</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="part3.html"><a href="part3.html"><i class="fa fa-check"></i><b>4</b> Descriptive Statistics</a><ul>
 <li class="chapter" data-level="4.1" data-path="part3.html"><a href="part3.html#quick-summary"><i class="fa fa-check"></i><b>4.1</b> Quick Summary</a></li>
 <li class="chapter" data-level="4.2" data-path="part3.html"><a href="part3.html#frequency-tables"><i class="fa fa-check"></i><b>4.2</b> Frequency Tables</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="part3.html"><a href="part3.html#your-turn-4"><i class="fa fa-check"></i><b>4.2.1</b> Your Turn</a></li>
+<li class="chapter" data-level="4.2.1" data-path="part3.html"><a href="part3.html#exercise-5"><i class="fa fa-check"></i><b>4.2.1</b> Exercise 5</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="part3.html"><a href="part3.html#central-tendency-and-dispersion"><i class="fa fa-check"></i><b>4.3</b> Central Tendency and Dispersion</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="part3.html"><a href="part3.html#your-turn-5"><i class="fa fa-check"></i><b>4.3.1</b> Your Turn</a></li>
+<li class="chapter" data-level="4.3.1" data-path="part3.html"><a href="part3.html#exercise-6"><i class="fa fa-check"></i><b>4.3.1</b> Exercise 6</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="part4.html"><a href="part4.html"><i class="fa fa-check"></i><b>5</b> Data Visualizations in <strong>R</strong></a><ul>
@@ -189,7 +189,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.1.5" data-path="part4.html"><a href="part4.html#scatterplots-boxplots"><i class="fa fa-check"></i><b>5.1.5</b> Scatterplots + Boxplots</a></li>
 <li class="chapter" data-level="5.1.6" data-path="part4.html"><a href="part4.html#scatterplot-matrix"><i class="fa fa-check"></i><b>5.1.6</b> Scatterplot Matrix</a></li>
 <li class="chapter" data-level="5.1.7" data-path="part4.html"><a href="part4.html#saving-base-r-figures"><i class="fa fa-check"></i><b>5.1.7</b> Saving Base <strong>R</strong> Figures</a></li>
-<li class="chapter" data-level="5.1.8" data-path="part4.html"><a href="part4.html#your-turn-6"><i class="fa fa-check"></i><b>5.1.8</b> Your Turn</a></li>
+<li class="chapter" data-level="5.1.8" data-path="part4.html"><a href="part4.html#exercise-7"><i class="fa fa-check"></i><b>5.1.8</b> Exercise 7</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="part4.html"><a href="part4.html#ggplot2-graphics"><i class="fa fa-check"></i><b>5.2</b> <code>ggplot2</code> Graphics</a><ul>
 <li class="chapter" data-level="5.2.1" data-path="part4.html"><a href="part4.html#what-is-ggplot2"><i class="fa fa-check"></i><b>5.2.1</b> What is <code>ggplot2</code>?</a></li>
@@ -198,7 +198,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2.4" data-path="part4.html"><a href="part4.html#boxplots-1"><i class="fa fa-check"></i><b>5.2.4</b> Boxplots</a></li>
 <li class="chapter" data-level="5.2.5" data-path="part4.html"><a href="part4.html#histograms-1"><i class="fa fa-check"></i><b>5.2.5</b> Histograms</a></li>
 <li class="chapter" data-level="5.2.6" data-path="part4.html"><a href="part4.html#bar-plots"><i class="fa fa-check"></i><b>5.2.6</b> Bar Plots</a></li>
-<li class="chapter" data-level="5.2.7" data-path="part4.html"><a href="part4.html#your-turn-7"><i class="fa fa-check"></i><b>5.2.7</b> Your Turn</a></li>
+<li class="chapter" data-level="5.2.7" data-path="part4.html"><a href="part4.html#exercise-8"><i class="fa fa-check"></i><b>5.2.7</b> Exercise 8</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="part5.html"><a href="part5.html"><i class="fa fa-check"></i><b>6</b> Hypothesis Testing</a><ul>
@@ -215,8 +215,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6.6" data-path="part5.html"><a href="part5.html#analysis-of-variance-anova"><i class="fa fa-check"></i><b>6.6</b> Analysis of Variance (ANOVA)</a><ul>
 <li class="chapter" data-level="6.6.1" data-path="part5.html"><a href="part5.html#example-3"><i class="fa fa-check"></i><b>6.6.1</b> Example</a></li>
-<li class="chapter" data-level="6.6.2" data-path="part5.html"><a href="part5.html#your-turn-8"><i class="fa fa-check"></i><b>6.6.2</b> Your Turn</a></li>
 </ul></li>
+<li class="chapter" data-level="6.7" data-path="part5.html"><a href="part5.html#exercise-9"><i class="fa fa-check"></i><b>6.7</b> Exercise 9</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="part6.html"><a href="part6.html"><i class="fa fa-check"></i><b>7</b> Correlation and Regression</a><ul>
 <li class="chapter" data-level="7.1" data-path="part6.html"><a href="part6.html#correlation"><i class="fa fa-check"></i><b>7.1</b> Correlation</a></li>
@@ -225,8 +225,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="part6.html"><a href="part6.html#multiple-regression"><i class="fa fa-check"></i><b>7.3</b> Multiple Regression</a><ul>
 <li class="chapter" data-level="7.3.1" data-path="part6.html"><a href="part6.html#example-5"><i class="fa fa-check"></i><b>7.3.1</b> Example</a></li>
-<li class="chapter" data-level="7.3.2" data-path="part6.html"><a href="part6.html#your-turn-9"><i class="fa fa-check"></i><b>7.3.2</b> Your Turn</a></li>
 </ul></li>
+<li class="chapter" data-level="7.4" data-path="part6.html"><a href="part6.html#exercise-10"><i class="fa fa-check"></i><b>7.4</b> Exercise 10</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -256,7 +256,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>When it comes to data visualization, <strong>R</strong> is a wonderful software program. We can create a wide range of visualizations, from simple scatterplots and histograms to animated or interactive graphics. Let’s start by drawing a few very simple graphs just to get a feel for what it’s like to draw pictures using base <strong>R</strong> functions. In each plot, there are several elements that we can modify:</p>
 <ul>
 <li><code>main</code>: Title for the figure</li>
-<li><code>sub</code>: Subtitle for the figure</li>
 <li><code>xlab</code>: Label for the x-axis</li>
 <li><code>ylab</code>: Label for the y-axis</li>
 </ul>
@@ -269,9 +268,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div id="boxplots" class="section level3">
 <h3><span class="header-section-number">5.1.1</span> Boxplots</h3>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>(medical<span class="op">$</span>depression1, 
-        <span class="dt">main =</span> <span class="st">&quot;Depression Scores&quot;</span>,
-        <span class="dt">sub =</span> <span class="st">&quot;The measurement was completed at the baseline&quot;</span>)</code></pre>
+<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb138-1" title="1"><span class="kw">boxplot</span>(medical<span class="op">$</span>depression1, </a>
+<a class="sourceLine" id="cb138-2" title="2">        <span class="dt">main =</span> <span class="st">&quot;Depression Scores&quot;</span>)</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:boxplot1a"></span>
 <img src="rbook_files/figure-html/boxplot1a-1.png" alt="A boxplot example" width="768" />
 <p class="caption">
@@ -285,12 +283,12 @@ Figure 5.1: A boxplot example
 Figure 5.2: An annotated boxplot
 </p>
 </div>
-<p>We can also draw multiple boxplots by a grouping variable. The way to do this using the <code>boxplot()</code> function is to input a <code>formula</code> rather than a variable as the input. Let’s create a boxplot separated by sex.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>(<span class="dt">formula =</span> depression1 <span class="op">~</span><span class="st"> </span>sex,
-        <span class="dt">data =</span> medical,
-        <span class="dt">main =</span> <span class="st">&quot;Depression Scores by Sex&quot;</span>,
-        <span class="dt">ylab =</span> <span class="st">&quot;Depression at the baseline&quot;</span>,
-        <span class="dt">names =</span> <span class="kw">c</span>(<span class="st">&quot;Female&quot;</span>, <span class="st">&quot;Male&quot;</span>))</code></pre>
+<p>We can also create the boxplots by a grouping variable. For this, we have to use a <code>formula</code> rather than a single variable. Let’s create a boxplot of depression scores by sex.</p>
+<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb139-1" title="1"><span class="kw">boxplot</span>(<span class="dt">formula =</span> depression1 <span class="op">~</span><span class="st"> </span>sex,</a>
+<a class="sourceLine" id="cb139-2" title="2">        <span class="dt">data =</span> medical,</a>
+<a class="sourceLine" id="cb139-3" title="3">        <span class="dt">main =</span> <span class="st">&quot;Depression Scores by Sex&quot;</span>,</a>
+<a class="sourceLine" id="cb139-4" title="4">        <span class="dt">ylab =</span> <span class="st">&quot;Depression at the baseline&quot;</span>,</a>
+<a class="sourceLine" id="cb139-5" title="5">        <span class="dt">names =</span> <span class="kw">c</span>(<span class="st">&quot;Female&quot;</span>, <span class="st">&quot;Male&quot;</span>))</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:boxplot2"></span>
 <img src="rbook_files/figure-html/boxplot2-1.png" alt="A boxplot by a grouping variable" width="768" />
 <p class="caption">
@@ -300,58 +298,45 @@ Figure 5.3: A boxplot by a grouping variable
 </div>
 <div id="histograms" class="section level3">
 <h3><span class="header-section-number">5.1.2</span> Histograms</h3>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(medical<span class="op">$</span>depression1, 
-     <span class="dt">main =</span> <span class="st">&quot;Depression Scores at the Baseline&quot;</span>, 
-     <span class="dt">xlab =</span> <span class="st">&quot;Depression&quot;</span>)</code></pre>
+<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb140-1" title="1"><span class="kw">hist</span>(medical<span class="op">$</span>depression1, </a>
+<a class="sourceLine" id="cb140-2" title="2">     <span class="dt">main =</span> <span class="st">&quot;Depression Scores at the Baseline&quot;</span>, </a>
+<a class="sourceLine" id="cb140-3" title="3">     <span class="dt">xlab =</span> <span class="st">&quot;Depression&quot;</span>)</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:histogram1"></span>
 <img src="rbook_files/figure-html/histogram1-1.png" alt="A histogram example" width="768" />
 <p class="caption">
 Figure 5.4: A histogram example
 </p>
 </div>
-<p>Let’s see the same histogram with additional changes on the font style and colors:</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(medical<span class="op">$</span>depression1, 
-     <span class="dt">main =</span> <span class="st">&quot;Depression Scores at the Baseline&quot;</span>, 
-     <span class="dt">xlab =</span> <span class="st">&quot;Depression&quot;</span>,
-     <span class="dt">font.main =</span> <span class="dv">1</span>,
-     <span class="dt">cex.main =</span> <span class="dv">1</span>,
-     <span class="dt">font.axis =</span> <span class="dv">2</span>,
-     <span class="dt">col.lab =</span> <span class="st">&quot;gray50&quot;</span>)</code></pre>
-<div class="figure" style="text-align: center"><span id="fig:histogram2"></span>
-<img src="rbook_files/figure-html/histogram2-1.png" alt="A histogram example (Edited)" width="768" />
-<p class="caption">
-Figure 5.5: A histogram example (Edited)
-</p>
-</div>
 </div>
 <div id="bar-graphs" class="section level3">
 <h3><span class="header-section-number">5.1.3</span> Bar Graphs</h3>
-<p>Bar plots are essentially plots for categorical variables (e.g., sex, race, etc.). Before we create a bar plot, we need to make sure that our categorical variables are “factors” – i.e., labels. Otherwise, <strong>R</strong> attempts to treat such variables as quantative and thus fails to return a plot.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Let&#39;s save race as a factor</span>
-medical<span class="op">$</span>race &lt;-<span class="st"> </span><span class="kw">as.factor</span>(medical<span class="op">$</span>race)
-
-<span class="co"># Create a bar graph for race</span>
-<span class="kw">plot</span>(medical<span class="op">$</span>race, 
-     <span class="dt">main =</span> <span class="st">&quot;Race Groups in the medical Dataset&quot;</span>,
-     <span class="dt">xlab =</span> <span class="st">&quot;Race&quot;</span>,
-     <span class="dt">ylab =</span> <span class="st">&quot;Count&quot;</span>)</code></pre>
+<p>Bar plots are essentially histograms for categorical variables (e.g., sex, race, etc.). Before we create a bar plot, we need to make sure that our categorical variables are “factors”. Otherwise, <strong>R</strong> attempts to treat such variables as quantative and thus fails to return a plot.</p>
+<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb141-1" title="1"><span class="co"># Let&#39;s save race as a factor</span></a>
+<a class="sourceLine" id="cb141-2" title="2">medical<span class="op">$</span>race &lt;-<span class="st"> </span><span class="kw">as.factor</span>(medical<span class="op">$</span>race)</a>
+<a class="sourceLine" id="cb141-3" title="3"></a>
+<a class="sourceLine" id="cb141-4" title="4"><span class="co"># Create a bar graph for race</span></a>
+<a class="sourceLine" id="cb141-5" title="5"><span class="kw">plot</span>(medical<span class="op">$</span>race, </a>
+<a class="sourceLine" id="cb141-6" title="6">     <span class="dt">main =</span> <span class="st">&quot;Race Groups in the medical Dataset&quot;</span>,</a>
+<a class="sourceLine" id="cb141-7" title="7">     <span class="dt">xlab =</span> <span class="st">&quot;Race&quot;</span>,</a>
+<a class="sourceLine" id="cb141-8" title="8">     <span class="dt">ylab =</span> <span class="st">&quot;Count&quot;</span>)</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:bar"></span>
 <img src="rbook_files/figure-html/bar-1.png" alt="A bar graph example" width="768" />
 <p class="caption">
-Figure 5.6: A bar graph example
+Figure 5.5: A bar graph example
 </p>
 </div>
 </div>
 <div id="scatterplots" class="section level3">
 <h3><span class="header-section-number">5.1.4</span> Scatterplots</h3>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(medical<span class="op">$</span>depression1, medical<span class="op">$</span>depression2,
-     <span class="dt">xlab =</span> <span class="st">&quot;Depression at the baseline&quot;</span>,
-     <span class="dt">ylab =</span> <span class="st">&quot;Depression after 6 months&quot;</span>,
-     <span class="dt">main =</span> <span class="st">&quot;Scatterplot of Depression Scores&quot;</span>)</code></pre>
+<p>A scatterplot of depression scores at the baseline (<code>depression1</code>) against depression scores after 6 months (<code>depression2</code>):</p>
+<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb142-1" title="1"><span class="kw">plot</span>(medical<span class="op">$</span>depression1, medical<span class="op">$</span>depression2,</a>
+<a class="sourceLine" id="cb142-2" title="2">     <span class="dt">xlab =</span> <span class="st">&quot;Depression at the baseline&quot;</span>,</a>
+<a class="sourceLine" id="cb142-3" title="3">     <span class="dt">ylab =</span> <span class="st">&quot;Depression after 6 months&quot;</span>,</a>
+<a class="sourceLine" id="cb142-4" title="4">     <span class="dt">main =</span> <span class="st">&quot;Scatterplot of Depression Scores&quot;</span>)</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:scatter1"></span>
 <img src="rbook_files/figure-html/scatter1-1.png" alt="A scatterplot example" width="768" />
 <p class="caption">
-Figure 5.7: A scatterplot example
+Figure 5.6: A scatterplot example
 </p>
 </div>
 <p>We can customise the appearance of the actual plot. To start with, let’s look at the single most important options that the <code>plot()</code> function provides for us to use, which is the <code>type</code> argument. The type argument specifies the visual style of the plot. The possible values for this are:</p>
@@ -366,41 +351,41 @@ Figure 5.7: A scatterplot example
 <li><code>type = "c"</code>. Draw only the <strong>c</strong>onnecting lines from the “b” version</li>
 <li><code>type = "n"</code>. Draw nothing</li>
 </ul>
-<p>The simplest way to illustrate what each of these really looks like is just to draw them. Figure <a href="part4.html#fig:simpleplots">5.8</a> shows a scatterplot using six different <code>types</code> of plot. As you can see, by altering the type argument we can get a qualitatively different appearance to our plot.</p>
+<p>The simplest way to illustrate what each of these really looks like is just to draw them. Figure <a href="part4.html#fig:simpleplots">5.7</a> shows a scatterplot using six different <code>types</code> of plot. As you can see, by altering the type argument we can get a qualitatively different appearance to our plot.</p>
 <div class="figure" style="text-align: center"><span id="fig:simpleplots"></span>
 <img src="rbook_files/figure-html/simpleplots-1.png" alt="Changing the `type` of the plot." width="768" />
 <p class="caption">
-Figure 5.8: Changing the <code>type</code> of the plot.
+Figure 5.7: Changing the <code>type</code> of the plot.
 </p>
 </div>
 </div>
 <div id="scatterplots-boxplots" class="section level3">
 <h3><span class="header-section-number">5.1.5</span> Scatterplots + Boxplots</h3>
-<p>The <code>scatterplot</code> function from the <code>car</code> package <span class="citation">(Fox, Weisberg, and Price <a href="#ref-R-car">2018</a>)</span> gives a nice plot that includes boxplots for individual variables and a scatterplot of the two variables together.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Install and activate the car package</span>
-<span class="kw">install.packages</span>(<span class="st">&quot;car&quot;</span>)
-<span class="kw">library</span>(<span class="st">&quot;car&quot;</span>)
-
-<span class="kw">scatterplot</span>(depression1 <span class="op">~</span><span class="st"> </span>depression2, 
-            <span class="dt">data =</span> medical, 
-            <span class="dt">smooth =</span> <span class="ot">FALSE</span>)</code></pre>
+<p>The <code>scatterplot</code> function from the <code>car</code> package <span class="citation">(Fox, Weisberg, and Price <a href="#ref-R-car" role="doc-biblioref">2019</a>)</span> gives a nice plot that includes boxplots for individual variables and a scatterplot of the two variables together.</p>
+<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb143-1" title="1"><span class="co"># Install and activate the car package</span></a>
+<a class="sourceLine" id="cb143-2" title="2"><span class="kw">install.packages</span>(<span class="st">&quot;car&quot;</span>)</a>
+<a class="sourceLine" id="cb143-3" title="3"><span class="kw">library</span>(<span class="st">&quot;car&quot;</span>)</a>
+<a class="sourceLine" id="cb143-4" title="4"></a>
+<a class="sourceLine" id="cb143-5" title="5"><span class="kw">scatterplot</span>(depression1 <span class="op">~</span><span class="st"> </span>depression2, </a>
+<a class="sourceLine" id="cb143-6" title="6">            <span class="dt">data =</span> medical, </a>
+<a class="sourceLine" id="cb143-7" title="7">            <span class="dt">smooth =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:scatter2"></span>
 <img src="rbook_files/figure-html/scatter2-1.png" alt="A scatterplot along with boxplots" width="768" />
 <p class="caption">
-Figure 5.9: A scatterplot along with boxplots
+Figure 5.8: A scatterplot along with boxplots
 </p>
 </div>
 </div>
 <div id="scatterplot-matrix" class="section level3">
 <h3><span class="header-section-number">5.1.6</span> Scatterplot Matrix</h3>
 <p>Often we find yourself wanting to look at the relationships between several variables at once. One useful tool for doing so is to produce a “scatterplot matrix”, analogous to the correlation matrix. We can create a scatterplot matrix using the <code>pairs</code> function in base <strong>R</strong>. Let’s take a look at the following variables: depression1, mental1, and physical1.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pairs</span>(<span class="dt">formula =</span> <span class="op">~</span><span class="st"> </span>depression1 <span class="op">+</span><span class="st"> </span>mental1 <span class="op">+</span><span class="st"> </span>physical1,
-      <span class="dt">data =</span> medical,
-      <span class="dt">main =</span> <span class="st">&quot;Scatterplot Matrix with Three Scores&quot;</span>)</code></pre>
+<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb144-1" title="1"><span class="kw">pairs</span>(<span class="dt">formula =</span> <span class="op">~</span><span class="st"> </span>depression1 <span class="op">+</span><span class="st"> </span>mental1 <span class="op">+</span><span class="st"> </span>physical1,</a>
+<a class="sourceLine" id="cb144-2" title="2">      <span class="dt">data =</span> medical,</a>
+<a class="sourceLine" id="cb144-3" title="3">      <span class="dt">main =</span> <span class="st">&quot;Scatterplot Matrix with Three Scores&quot;</span>)</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:scatter3"></span>
 <img src="rbook_files/figure-html/scatter3-1.png" alt="A scatterplot matrix from the `pairs()` function" width="768" />
 <p class="caption">
-Figure 5.10: A scatterplot matrix from the <code>pairs()</code> function
+Figure 5.9: A scatterplot matrix from the <code>pairs()</code> function
 </p>
 </div>
 </div>
@@ -414,13 +399,13 @@ Figure 5.10: A scatterplot matrix from the <code>pairs()</code> function
 <li><code>tiff("filename.tif")</code></li>
 </ul>
 <p>For example, to save our plot using .jpg format, we would do:</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">jpeg</span>(<span class="st">&quot;myplot.jpg&quot;</span>, <span class="dt">width =</span> <span class="dv">8</span>, <span class="dt">height =</span> <span class="dv">4</span>, <span class="dt">units =</span> <span class="st">&quot;in&quot;</span>, <span class="dt">res =</span> <span class="dv">300</span>)
-<span class="kw">plot</span>(medical<span class="op">$</span>depression1, medical<span class="op">$</span>depression2)
-<span class="kw">dev.off</span>()</code></pre>
+<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb145-1" title="1"><span class="kw">jpeg</span>(<span class="st">&quot;myplot.jpg&quot;</span>, <span class="dt">width =</span> <span class="dv">8</span>, <span class="dt">height =</span> <span class="dv">4</span>, <span class="dt">units =</span> <span class="st">&quot;in&quot;</span>, <span class="dt">res =</span> <span class="dv">300</span>)</a>
+<a class="sourceLine" id="cb145-2" title="2"><span class="kw">plot</span>(medical<span class="op">$</span>depression1, medical<span class="op">$</span>depression2)</a>
+<a class="sourceLine" id="cb145-3" title="3"><span class="kw">dev.off</span>()</a></code></pre></div>
 <p>where <code>width</code> and <code>height</code> are dimensions in inches (<code>units = "in"</code>) and resolution is 300 dpi.</p>
 </div>
-<div id="your-turn-6" class="section level3">
-<h3><span class="header-section-number">5.1.8</span> Your Turn</h3>
+<div id="exercise-7" class="section level3">
+<h3><span class="header-section-number">5.1.8</span> Exercise 7</h3>
 <p>Here you will create two plots:</p>
 <ol style="list-style-type: decimal">
 <li><p>A boxplot of <code>mental1</code> (i.e., mental test scores at the baseline) by <code>substance</code> (i.e., type of substance being used). Do you see any differences between the mental test scores of the three substance groups?</p></li>
@@ -441,18 +426,18 @@ Figure 5.10: A scatterplot matrix from the <code>pairs()</code> function
 </div>
 <div id="how-ggplot2-works" class="section level3">
 <h3><span class="header-section-number">5.2.2</span> How <code>ggplot2</code> works?</h3>
-<p>The <code>ggplot2</code> package <span class="citation">(Wickham et al. <a href="#ref-R-ggplot2">2018</a>)</span> follows data visualization rules known as “The Grammar of Graphics”. The grammar tells us that a statistical graphic is a <strong>mapping</strong> of data variables to <strong>aesthetic</strong> attributes of <strong>geometric</strong> objects.</p>
+<p>The <code>ggplot2</code> package <span class="citation">(Wickham et al. <a href="#ref-R-ggplot2" role="doc-biblioref">2019</a>)</span> follows data visualization rules known as “The Grammar of Graphics”. The grammar tells us that a statistical graphic is a <strong>mapping</strong> of data variables to <strong>aesthetic</strong> attributes of <strong>geometric</strong> objects.</p>
 <p>Specifically, we can break a graphic into the following three essential components:</p>
 <ul>
 <li><code>data</code>: the data set composed of variables that we map.</li>
 <li><code>geom</code>: the geometric object in question. This refers to the type of object we can observe in a plot. For example: points, lines, and bars.</li>
 <li><code>aes</code>: aesthetic attributes of the geometric object. For example, color, shape, and size. Each assigned aesthetic attribute can be mapped to a variable in our data set.</li>
 </ul>
-<p>Figure <a href="part4.html#fig:ggplotmap">5.11</a> shows these three components are laid out in a typical <code>ggplot2</code> function. As we can see, each part (e.g., <code>geom_function</code>) is added to the plot using a plus sign. That is, each layer like that brings an additional functionality into the plot we are drawing.</p>
+<p>Figure <a href="part4.html#fig:ggplotmap">5.10</a> shows these three components are laid out in a typical <code>ggplot2</code> function. As we can see, each part (e.g., <code>geom_function</code>) is added to the plot using a plus sign. That is, each layer like that brings an additional functionality into the plot we are drawing.</p>
 <div class="figure" style="text-align: center"><span id="fig:ggplotmap"></span>
-<img src="figure/ggplot.png" alt="How the elements of `ggplot2` work" width="65%" />
+<img src="figure/ggplot.png" alt="How the elements of `ggplot2` work" width="80%" />
 <p class="caption">
-Figure 5.11: How the elements of <code>ggplot2</code> work
+Figure 5.10: How the elements of <code>ggplot2</code> work
 </p>
 </div>
 <p>In order to keep things simple, we will only take a look at the following types of graphics in <code>ggplot2</code>:</p>
@@ -466,131 +451,131 @@ Figure 5.11: How the elements of <code>ggplot2</code> work
 </div>
 <div id="scatterplots-1" class="section level3">
 <h3><span class="header-section-number">5.2.3</span> Scatterplots</h3>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Activate the package first</span>
-<span class="kw">library</span>(<span class="st">&quot;ggplot2&quot;</span>)
-
-<span class="kw">ggplot</span>(<span class="dt">data =</span> medical, 
-       <span class="dt">mapping =</span> <span class="kw">aes</span>(depression1, depression2)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">3</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Depression (Baseline)&quot;</span>, 
-       <span class="dt">y =</span> <span class="st">&quot;Depression (6 months)&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">theme_bw</span>() <span class="co"># for black &amp; white theme</span></code></pre>
+<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb146-1" title="1"><span class="co"># Activate the package first</span></a>
+<a class="sourceLine" id="cb146-2" title="2"><span class="kw">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</a>
+<a class="sourceLine" id="cb146-3" title="3"></a>
+<a class="sourceLine" id="cb146-4" title="4"><span class="kw">ggplot</span>(<span class="dt">data =</span> medical, </a>
+<a class="sourceLine" id="cb146-5" title="5">       <span class="dt">mapping =</span> <span class="kw">aes</span>(depression1, depression2)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb146-6" title="6"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">3</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb146-7" title="7"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Depression (Baseline)&quot;</span>, </a>
+<a class="sourceLine" id="cb146-8" title="8">       <span class="dt">y =</span> <span class="st">&quot;Depression (6 months)&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb146-9" title="9"><span class="st">  </span><span class="kw">theme_bw</span>() <span class="co"># for black &amp; white theme</span></a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:ggscatter1"></span>
 <img src="rbook_files/figure-html/ggscatter1-1.png" alt="A scatterplot example with `ggplot2`" width="768" />
 <p class="caption">
-Figure 5.12: A scatterplot example with <code>ggplot2</code>
+Figure 5.11: A scatterplot example with <code>ggplot2</code>
 </p>
 </div>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> medical, 
-       <span class="dt">mapping =</span> <span class="kw">aes</span>(depression1, depression2, <span class="dt">colour =</span> sex)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">3</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> lm, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">se =</span> <span class="ot">TRUE</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">labs</span>(<span class="dt">colour =</span> <span class="st">&quot;Sex&quot;</span>, 
-       <span class="dt">x =</span> <span class="st">&quot;Depression (Baseline)&quot;</span>, 
-       <span class="dt">y =</span> <span class="st">&quot;Depression (6 months)&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">theme_bw</span>() <span class="co"># for black &amp; white theme</span></code></pre>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb147-1" title="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> medical, </a>
+<a class="sourceLine" id="cb147-2" title="2">       <span class="dt">mapping =</span> <span class="kw">aes</span>(depression1, depression2, <span class="dt">colour =</span> sex)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb147-3" title="3"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">3</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb147-4" title="4"><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> lm, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">se =</span> <span class="ot">TRUE</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb147-5" title="5"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">colour =</span> <span class="st">&quot;Sex&quot;</span>, </a>
+<a class="sourceLine" id="cb147-6" title="6">       <span class="dt">x =</span> <span class="st">&quot;Depression (Baseline)&quot;</span>, </a>
+<a class="sourceLine" id="cb147-7" title="7">       <span class="dt">y =</span> <span class="st">&quot;Depression (6 months)&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb147-8" title="8"><span class="st">  </span><span class="kw">theme_bw</span>() <span class="co"># for black &amp; white theme</span></a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:ggscatter2"></span>
 <img src="rbook_files/figure-html/ggscatter2-1.png" alt="A scatterplot example with `ggplot2` (With regression line)" width="768" />
 <p class="caption">
-Figure 5.13: A scatterplot example with <code>ggplot2</code> (With regression line)
+Figure 5.12: A scatterplot example with <code>ggplot2</code> (With regression line)
 </p>
 </div>
 </div>
 <div id="boxplots-1" class="section level3">
 <h3><span class="header-section-number">5.2.4</span> Boxplots</h3>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> medical, 
-       <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> sex, <span class="dt">y =</span> depression1, <span class="dt">fill =</span> race)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Sex&quot;</span>, 
-       <span class="dt">y =</span> <span class="st">&quot;Depression at the baseline&quot;</span>, 
-       <span class="dt">fill =</span> <span class="st">&quot;Race&quot;</span>) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_boxplot</span>() <span class="op">+</span>
-<span class="st">  </span><span class="kw">theme_bw</span>()</code></pre>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb148-1" title="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> medical, </a>
+<a class="sourceLine" id="cb148-2" title="2">       <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> sex, <span class="dt">y =</span> depression1, <span class="dt">fill =</span> race)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb148-3" title="3"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Sex&quot;</span>, </a>
+<a class="sourceLine" id="cb148-4" title="4">       <span class="dt">y =</span> <span class="st">&quot;Depression at the baseline&quot;</span>, </a>
+<a class="sourceLine" id="cb148-5" title="5">       <span class="dt">fill =</span> <span class="st">&quot;Race&quot;</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb148-6" title="6"><span class="st">  </span><span class="kw">geom_boxplot</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb148-7" title="7"><span class="st">  </span><span class="kw">theme_bw</span>()</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:ggboxplot"></span>
 <img src="rbook_files/figure-html/ggboxplot-1.png" alt="A boxplot example with `ggplot2`" width="768" />
 <p class="caption">
-Figure 5.14: A boxplot example with <code>ggplot2</code>
+Figure 5.13: A boxplot example with <code>ggplot2</code>
 </p>
 </div>
 </div>
 <div id="histograms-1" class="section level3">
 <h3><span class="header-section-number">5.2.5</span> Histograms</h3>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> medical, 
-       <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> depression1)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Depression at the baseline&quot;</span>,
-       <span class="dt">y =</span> <span class="st">&quot;Frequency&quot;</span>,
-       <span class="dt">title =</span> <span class="st">&quot;Depression Scores at the the Baseline&quot;</span>) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="co"># color of bar lines</span>
-                 <span class="dt">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="co"># filling color</span>
-                 <span class="dt">bins =</span> <span class="dv">40</span>) <span class="op">+</span><span class="st"> </span><span class="co"># number of bins</span>
-<span class="st">  </span><span class="kw">theme_bw</span>()</code></pre>
+<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb149-1" title="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> medical, </a>
+<a class="sourceLine" id="cb149-2" title="2">       <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> depression1)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb149-3" title="3"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Depression at the baseline&quot;</span>,</a>
+<a class="sourceLine" id="cb149-4" title="4">       <span class="dt">y =</span> <span class="st">&quot;Frequency&quot;</span>,</a>
+<a class="sourceLine" id="cb149-5" title="5">       <span class="dt">title =</span> <span class="st">&quot;Depression Scores at the the Baseline&quot;</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb149-6" title="6"><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="co"># color of bar lines</span></a>
+<a class="sourceLine" id="cb149-7" title="7">                 <span class="dt">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="co"># filling color</span></a>
+<a class="sourceLine" id="cb149-8" title="8">                 <span class="dt">bins =</span> <span class="dv">40</span>) <span class="op">+</span><span class="st"> </span><span class="co"># number of bins</span></a>
+<a class="sourceLine" id="cb149-9" title="9"><span class="st">  </span><span class="kw">theme_bw</span>()</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:gghistogram"></span>
 <img src="rbook_files/figure-html/gghistogram-1.png" alt="A histogram example with `ggplot2`" width="768" />
 <p class="caption">
-Figure 5.15: A histogram example with <code>ggplot2</code>
+Figure 5.14: A histogram example with <code>ggplot2</code>
 </p>
 </div>
 </div>
 <div id="bar-plots" class="section level3">
 <h3><span class="header-section-number">5.2.6</span> Bar Plots</h3>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> medical, 
-       <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> race)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Race&quot;</span>,
-       <span class="dt">y =</span> <span class="st">&quot;Frequency&quot;</span>) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>,
-           <span class="dt">fill =</span> <span class="st">&quot;orange&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">theme_bw</span>()</code></pre>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb150-1" title="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> medical, </a>
+<a class="sourceLine" id="cb150-2" title="2">       <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> race)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb150-3" title="3"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Race&quot;</span>,</a>
+<a class="sourceLine" id="cb150-4" title="4">       <span class="dt">y =</span> <span class="st">&quot;Frequency&quot;</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb150-5" title="5"><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>,</a>
+<a class="sourceLine" id="cb150-6" title="6">           <span class="dt">fill =</span> <span class="st">&quot;orange&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb150-7" title="7"><span class="st">  </span><span class="kw">theme_bw</span>()</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:ggbar1"></span>
 <img src="rbook_files/figure-html/ggbar1-1.png" alt="A bar plot example with `ggplot2`" width="768" />
 <p class="caption">
-Figure 5.16: A bar plot example with <code>ggplot2</code>
+Figure 5.15: A bar plot example with <code>ggplot2</code>
 </p>
 </div>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> medical, 
-       <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> race, <span class="dt">fill =</span> sex)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Race&quot;</span>,
-       <span class="dt">y =</span> <span class="st">&quot;Frequency&quot;</span>) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_bar</span>() <span class="op">+</span>
-<span class="st">  </span><span class="kw">theme_bw</span>()</code></pre>
+<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb151-1" title="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> medical, </a>
+<a class="sourceLine" id="cb151-2" title="2">       <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> race, <span class="dt">fill =</span> sex)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb151-3" title="3"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Race&quot;</span>,</a>
+<a class="sourceLine" id="cb151-4" title="4">       <span class="dt">y =</span> <span class="st">&quot;Frequency&quot;</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb151-5" title="5"><span class="st">  </span><span class="kw">geom_bar</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb151-6" title="6"><span class="st">  </span><span class="kw">theme_bw</span>()</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:ggbar2"></span>
 <img src="rbook_files/figure-html/ggbar2-1.png" alt="A bar plot example with `ggplot2` (stacked bar chart)" width="768" />
 <p class="caption">
-Figure 5.17: A bar plot example with <code>ggplot2</code> (stacked bar chart)
+Figure 5.16: A bar plot example with <code>ggplot2</code> (stacked bar chart)
 </p>
 </div>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> medical, 
-       <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> race, <span class="dt">fill =</span> sex)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Race&quot;</span>,
-       <span class="dt">y =</span> <span class="st">&quot;Frequency&quot;</span>) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">theme_bw</span>()</code></pre>
+<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb152-1" title="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> medical, </a>
+<a class="sourceLine" id="cb152-2" title="2">       <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> race, <span class="dt">fill =</span> sex)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb152-3" title="3"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Race&quot;</span>,</a>
+<a class="sourceLine" id="cb152-4" title="4">       <span class="dt">y =</span> <span class="st">&quot;Frequency&quot;</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb152-5" title="5"><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb152-6" title="6"><span class="st">  </span><span class="kw">theme_bw</span>()</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:ggbar3"></span>
 <img src="rbook_files/figure-html/ggbar3-1.png" alt="A bar plot example with `ggplot2` (side-by-side bars)" width="768" />
 <p class="caption">
-Figure 5.18: A bar plot example with <code>ggplot2</code> (side-by-side bars)
+Figure 5.17: A bar plot example with <code>ggplot2</code> (side-by-side bars)
 </p>
 </div>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> medical, 
-       <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> race, <span class="dt">fill =</span> sex)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Race&quot;</span>,
-       <span class="dt">y =</span> <span class="st">&quot;Frequency&quot;</span>) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span><span class="st"> </span>sex, <span class="dt">ncol =</span> <span class="dv">1</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">theme_bw</span>()</code></pre>
+<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb153-1" title="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> medical, </a>
+<a class="sourceLine" id="cb153-2" title="2">       <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> race, <span class="dt">fill =</span> sex)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb153-3" title="3"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Race&quot;</span>,</a>
+<a class="sourceLine" id="cb153-4" title="4">       <span class="dt">y =</span> <span class="st">&quot;Frequency&quot;</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb153-5" title="5"><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb153-6" title="6"><span class="st">  </span><span class="kw">facet_wrap</span>(. <span class="op">~</span><span class="st"> </span>sex) <span class="op">+</span></a>
+<a class="sourceLine" id="cb153-7" title="7"><span class="st">  </span><span class="kw">theme_bw</span>()</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:ggbar4"></span>
 <img src="rbook_files/figure-html/ggbar4-1.png" alt="A bar plot example with `ggplot2` (faceted)" width="768" />
 <p class="caption">
-Figure 5.19: A bar plot example with <code>ggplot2</code> (faceted)
+Figure 5.18: A bar plot example with <code>ggplot2</code> (faceted)
 </p>
 </div>
 </div>
-<div id="your-turn-7" class="section level3">
-<h3><span class="header-section-number">5.2.7</span> Your Turn</h3>
+<div id="exercise-8" class="section level3">
+<h3><span class="header-section-number">5.2.7</span> Exercise 8</h3>
 <p>Here you will create a scatterplot of <code>depression1</code> and <code>mental1</code> using <code>geom_point()</code>, with</p>
 <ul>
 <li>point colours set by <code>sex</code> (i.e., <code>colour = sex</code>)</li>
-<li>faceted by <code>substance</code> (i.e., <code>facet_wrap(~ substance, ncol = 1)</code>)</li>
+<li>faceted by <code>substance</code> (i.e., <code>facet_wrap(. ~ substance)</code>)</li>
 </ul>
-<p>Do either <code>sex</code> or <code>substance</code> seem to differentiate the relationship between <code>depression1</code> and <code>mental1</code>?</p>
+<p>Do <code>sex</code> or <code>substance</code> seem to affect the relationship between <code>depression1</code> and <code>mental1</code>?</p>
 
 </div>
 </div>
@@ -598,10 +583,10 @@ Figure 5.19: A bar plot example with <code>ggplot2</code> (faceted)
 <h3>References</h3>
 <div id="refs" class="references">
 <div id="ref-R-car">
-<p>Fox, John, Sanford Weisberg, and Brad Price. 2018. <em>Car: Companion to Applied Regression</em>. <a href="https://CRAN.R-project.org/package=car">https://CRAN.R-project.org/package=car</a>.</p>
+<p>Fox, John, Sanford Weisberg, and Brad Price. 2019. <em>Car: Companion to Applied Regression</em>. <a href="https://CRAN.R-project.org/package=car">https://CRAN.R-project.org/package=car</a>.</p>
 </div>
 <div id="ref-R-ggplot2">
-<p>Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, and Kara Woo. 2018. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.</p>
+<p>Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, and Hiroaki Yutani. 2019. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.</p>
 </div>
 </div>
             </section>
@@ -615,11 +600,13 @@ Figure 5.19: A bar plot example with <code>ggplot2</code> (faceted)
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -627,12 +614,11 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -647,7 +633,11 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["rbook.pdf", "rbook.epub"],
+"view": {
+"link": null,
+"text": null
+},
+"download": ["rbook.pdf"],
 "toc": {
 "collapse": "subsection"
 }
@@ -662,8 +652,9 @@ gitbook.start({
     script.type = "text/javascript";
     var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();

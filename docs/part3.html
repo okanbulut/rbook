@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 Descriptive Statistics | Statistical Analysis and Visualizations Using R</title>
-  <meta name="description" content="This book contains the materials for the R course at Techology Training Centre." />
-  <meta name="generator" content="bookdown 0.10 and GitBook 2.6.7" />
+  <meta name="description" content="This book contains the materials for the R training at the Techology Training Centre." />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 Descriptive Statistics | Statistical Analysis and Visualizations Using R" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This book contains the materials for the R course at Techology Training Centre." />
+  <meta property="og:description" content="This book contains the materials for the R training at the Techology Training Centre." />
   <meta name="github-repo" content="okanbulut/rbook" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="4 Descriptive Statistics | Statistical Analysis and Visualizations Using R" />
   
-  <meta name="twitter:description" content="This book contains the materials for the R course at Techology Training Centre." />
+  <meta name="twitter:description" content="This book contains the materials for the R training at the Techology Training Centre." />
   
 
 <meta name="author" content="Okan Bulut" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="part2.html">
-<link rel="next" href="part4.html">
+<link rel="prev" href="part2.html"/>
+<link rel="next" href="part4.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -39,6 +39,9 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -54,7 +57,6 @@ a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
 a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
@@ -146,38 +148,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.1.5" data-path="part1.html"><a href="part1.html#creating-a-new-script"><i class="fa fa-check"></i><b>2.1.5</b> Creating a New Script</a></li>
 <li class="chapter" data-level="2.1.6" data-path="part1.html"><a href="part1.html#working-directory"><i class="fa fa-check"></i><b>2.1.6</b> Working Directory</a></li>
 <li class="chapter" data-level="2.1.7" data-path="part1.html"><a href="part1.html#downloading-and-installing-r-packages"><i class="fa fa-check"></i><b>2.1.7</b> Downloading and Installing <strong>R</strong> Packages</a></li>
-<li class="chapter" data-level="2.1.8" data-path="part1.html"><a href="part1.html#your-turn"><i class="fa fa-check"></i><b>2.1.8</b> Your turn</a></li>
+<li class="chapter" data-level="2.1.8" data-path="part1.html"><a href="part1.html#exercise-1"><i class="fa fa-check"></i><b>2.1.8</b> Exercise 1</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="part1.html"><a href="part1.html#basics-of-the-r-language"><i class="fa fa-check"></i><b>2.2</b> Basics of the R Language</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="part1.html"><a href="part1.html#r-as-a-calculator"><i class="fa fa-check"></i><b>2.2.1</b> R as a Calculator</a></li>
-<li class="chapter" data-level="2.2.2" data-path="part1.html"><a href="part1.html#creating-new-variables"><i class="fa fa-check"></i><b>2.2.2</b> Creating New Variables</a></li>
-<li class="chapter" data-level="2.2.3" data-path="part1.html"><a href="part1.html#important-rules-for-the-r-language"><i class="fa fa-check"></i><b>2.2.3</b> Important Rules for the <strong>R</strong> Language</a></li>
-<li class="chapter" data-level="2.2.4" data-path="part1.html"><a href="part1.html#a-few-shortcuts"><i class="fa fa-check"></i><b>2.2.4</b> A Few Shortcuts</a></li>
-<li class="chapter" data-level="2.2.5" data-path="part1.html"><a href="part1.html#self-help"><i class="fa fa-check"></i><b>2.2.5</b> Self-Help</a></li>
-<li class="chapter" data-level="2.2.6" data-path="part1.html"><a href="part1.html#your-turn-1"><i class="fa fa-check"></i><b>2.2.6</b> Your turn</a></li>
+<li class="chapter" data-level="2.2.1" data-path="part1.html"><a href="part1.html#creating-new-variables"><i class="fa fa-check"></i><b>2.2.1</b> Creating New Variables</a></li>
+<li class="chapter" data-level="2.2.2" data-path="part1.html"><a href="part1.html#important-rules-for-the-r-language"><i class="fa fa-check"></i><b>2.2.2</b> Important Rules for the <strong>R</strong> Language</a></li>
+<li class="chapter" data-level="2.2.3" data-path="part1.html"><a href="part1.html#self-help"><i class="fa fa-check"></i><b>2.2.3</b> Self-Help</a></li>
+<li class="chapter" data-level="2.2.4" data-path="part1.html"><a href="part1.html#exercise-2"><i class="fa fa-check"></i><b>2.2.4</b> Exercise 2</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="part2.html"><a href="part2.html"><i class="fa fa-check"></i><b>3</b> Data Wrangling</a><ul>
-<li class="chapter" data-level="3.1" data-path="part2.html"><a href="part2.html#creating-data-in-r"><i class="fa fa-check"></i><b>3.1</b> Creating Data in <strong>R</strong></a></li>
+<li class="chapter" data-level="3.1" data-path="part2.html"><a href="part2.html#creating-datasets-in-r"><i class="fa fa-check"></i><b>3.1</b> Creating Datasets in <strong>R</strong></a></li>
 <li class="chapter" data-level="3.2" data-path="part2.html"><a href="part2.html#importing-data-into-r"><i class="fa fa-check"></i><b>3.2</b> Importing Data into <strong>R</strong></a><ul>
 <li class="chapter" data-level="3.2.1" data-path="part2.html"><a href="part2.html#method-1-using-rstudio"><i class="fa fa-check"></i><b>3.2.1</b> Method 1: Using <strong>RStudio</strong></a></li>
 <li class="chapter" data-level="3.2.2" data-path="part2.html"><a href="part2.html#method-2-using-r-commands"><i class="fa fa-check"></i><b>3.2.2</b> Method 2: Using <strong>R</strong> Commands</a></li>
-<li class="chapter" data-level="3.2.3" data-path="part2.html"><a href="part2.html#your-turn-2"><i class="fa fa-check"></i><b>3.2.3</b> Your Turn</a></li>
+<li class="chapter" data-level="3.2.3" data-path="part2.html"><a href="part2.html#exercise-3"><i class="fa fa-check"></i><b>3.2.3</b> Exercise 3</a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="part2.html"><a href="part2.html#understanding-the-data"><i class="fa fa-check"></i><b>3.3</b> Understanding the Data</a></li>
 <li class="chapter" data-level="3.4" data-path="part2.html"><a href="part2.html#indexing"><i class="fa fa-check"></i><b>3.4</b> Indexing</a></li>
 <li class="chapter" data-level="3.5" data-path="part2.html"><a href="part2.html#subsetting"><i class="fa fa-check"></i><b>3.5</b> Subsetting</a></li>
 <li class="chapter" data-level="3.6" data-path="part2.html"><a href="part2.html#other-data-manipulation-tools"><i class="fa fa-check"></i><b>3.6</b> Other Data Manipulation Tools</a><ul>
-<li class="chapter" data-level="3.6.1" data-path="part2.html"><a href="part2.html#your-turn-3"><i class="fa fa-check"></i><b>3.6.1</b> Your Turn</a></li>
+<li class="chapter" data-level="3.6.1" data-path="part2.html"><a href="part2.html#exercise-4"><i class="fa fa-check"></i><b>3.6.1</b> Exercise 4</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="part3.html"><a href="part3.html"><i class="fa fa-check"></i><b>4</b> Descriptive Statistics</a><ul>
 <li class="chapter" data-level="4.1" data-path="part3.html"><a href="part3.html#quick-summary"><i class="fa fa-check"></i><b>4.1</b> Quick Summary</a></li>
 <li class="chapter" data-level="4.2" data-path="part3.html"><a href="part3.html#frequency-tables"><i class="fa fa-check"></i><b>4.2</b> Frequency Tables</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="part3.html"><a href="part3.html#your-turn-4"><i class="fa fa-check"></i><b>4.2.1</b> Your Turn</a></li>
+<li class="chapter" data-level="4.2.1" data-path="part3.html"><a href="part3.html#exercise-5"><i class="fa fa-check"></i><b>4.2.1</b> Exercise 5</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="part3.html"><a href="part3.html#central-tendency-and-dispersion"><i class="fa fa-check"></i><b>4.3</b> Central Tendency and Dispersion</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="part3.html"><a href="part3.html#your-turn-5"><i class="fa fa-check"></i><b>4.3.1</b> Your Turn</a></li>
+<li class="chapter" data-level="4.3.1" data-path="part3.html"><a href="part3.html#exercise-6"><i class="fa fa-check"></i><b>4.3.1</b> Exercise 6</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="part4.html"><a href="part4.html"><i class="fa fa-check"></i><b>5</b> Data Visualizations in <strong>R</strong></a><ul>
@@ -189,7 +189,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.1.5" data-path="part4.html"><a href="part4.html#scatterplots-boxplots"><i class="fa fa-check"></i><b>5.1.5</b> Scatterplots + Boxplots</a></li>
 <li class="chapter" data-level="5.1.6" data-path="part4.html"><a href="part4.html#scatterplot-matrix"><i class="fa fa-check"></i><b>5.1.6</b> Scatterplot Matrix</a></li>
 <li class="chapter" data-level="5.1.7" data-path="part4.html"><a href="part4.html#saving-base-r-figures"><i class="fa fa-check"></i><b>5.1.7</b> Saving Base <strong>R</strong> Figures</a></li>
-<li class="chapter" data-level="5.1.8" data-path="part4.html"><a href="part4.html#your-turn-6"><i class="fa fa-check"></i><b>5.1.8</b> Your Turn</a></li>
+<li class="chapter" data-level="5.1.8" data-path="part4.html"><a href="part4.html#exercise-7"><i class="fa fa-check"></i><b>5.1.8</b> Exercise 7</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="part4.html"><a href="part4.html#ggplot2-graphics"><i class="fa fa-check"></i><b>5.2</b> <code>ggplot2</code> Graphics</a><ul>
 <li class="chapter" data-level="5.2.1" data-path="part4.html"><a href="part4.html#what-is-ggplot2"><i class="fa fa-check"></i><b>5.2.1</b> What is <code>ggplot2</code>?</a></li>
@@ -198,7 +198,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2.4" data-path="part4.html"><a href="part4.html#boxplots-1"><i class="fa fa-check"></i><b>5.2.4</b> Boxplots</a></li>
 <li class="chapter" data-level="5.2.5" data-path="part4.html"><a href="part4.html#histograms-1"><i class="fa fa-check"></i><b>5.2.5</b> Histograms</a></li>
 <li class="chapter" data-level="5.2.6" data-path="part4.html"><a href="part4.html#bar-plots"><i class="fa fa-check"></i><b>5.2.6</b> Bar Plots</a></li>
-<li class="chapter" data-level="5.2.7" data-path="part4.html"><a href="part4.html#your-turn-7"><i class="fa fa-check"></i><b>5.2.7</b> Your Turn</a></li>
+<li class="chapter" data-level="5.2.7" data-path="part4.html"><a href="part4.html#exercise-8"><i class="fa fa-check"></i><b>5.2.7</b> Exercise 8</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="part5.html"><a href="part5.html"><i class="fa fa-check"></i><b>6</b> Hypothesis Testing</a><ul>
@@ -215,8 +215,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6.6" data-path="part5.html"><a href="part5.html#analysis-of-variance-anova"><i class="fa fa-check"></i><b>6.6</b> Analysis of Variance (ANOVA)</a><ul>
 <li class="chapter" data-level="6.6.1" data-path="part5.html"><a href="part5.html#example-3"><i class="fa fa-check"></i><b>6.6.1</b> Example</a></li>
-<li class="chapter" data-level="6.6.2" data-path="part5.html"><a href="part5.html#your-turn-8"><i class="fa fa-check"></i><b>6.6.2</b> Your Turn</a></li>
 </ul></li>
+<li class="chapter" data-level="6.7" data-path="part5.html"><a href="part5.html#exercise-9"><i class="fa fa-check"></i><b>6.7</b> Exercise 9</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="part6.html"><a href="part6.html"><i class="fa fa-check"></i><b>7</b> Correlation and Regression</a><ul>
 <li class="chapter" data-level="7.1" data-path="part6.html"><a href="part6.html#correlation"><i class="fa fa-check"></i><b>7.1</b> Correlation</a></li>
@@ -225,8 +225,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="part6.html"><a href="part6.html#multiple-regression"><i class="fa fa-check"></i><b>7.3</b> Multiple Regression</a><ul>
 <li class="chapter" data-level="7.3.1" data-path="part6.html"><a href="part6.html#example-5"><i class="fa fa-check"></i><b>7.3.1</b> Example</a></li>
-<li class="chapter" data-level="7.3.2" data-path="part6.html"><a href="part6.html#your-turn-9"><i class="fa fa-check"></i><b>7.3.2</b> Your Turn</a></li>
 </ul></li>
+<li class="chapter" data-level="7.4" data-path="part6.html"><a href="part6.html#exercise-10"><i class="fa fa-check"></i><b>7.4</b> Exercise 10</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -253,74 +253,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">4</span> Descriptive Statistics</h1>
 <div id="quick-summary" class="section level2">
 <h2><span class="header-section-number">4.1</span> Quick Summary</h2>
-<p>The easiest way to get a quick summary of a dataset in <strong>R</strong> is to the <code>summary( )</code> function. This function provides the min and max, mean, median, and first and third quartiles for the entire dataset or variables that we select. Let’s take a look at the summary table for the <code>medical</code> dataset.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(medical)</code></pre>
-<pre><code>       id             age           sex                race          
- Min.   :  1.0   Min.   :20.0   Length:246         Length:246        
- 1st Qu.: 82.5   1st Qu.:31.0   Class :character   Class :character  
- Median :210.5   Median :35.0   Mode  :character   Mode  :character  
- Mean   :216.3   Mean   :36.3                                        
- 3rd Qu.:346.8   3rd Qu.:41.0                                        
- Max.   :469.0   Max.   :60.0                                        
-   homeless          substance           avg_drinks      max_drinks   
- Length:246         Length:246         Min.   :  0.0   Min.   :  0.0  
- Class :character   Class :character   1st Qu.:  2.0   1st Qu.:  3.0  
- Mode  :character   Mode  :character   Median : 12.0   Median : 13.0  
-                                       Mean   : 17.1   Mean   : 24.1  
-                                       3rd Qu.: 24.0   3rd Qu.: 32.0  
-                                       Max.   :142.0   Max.   :184.0  
-   suicidal            treat             physical1       mental1     
- Length:246         Length:246         Min.   :14.1   Min.   : 6.76  
- Class :character   Class :character   1st Qu.:38.3   1st Qu.:21.95  
- Mode  :character   Mode  :character   Median :48.9   Median :29.15  
-                                       Mean   :47.5   Mean   :31.68  
-                                       3rd Qu.:56.5   3rd Qu.:40.62  
-                                       Max.   :74.8   Max.   :60.54  
-  depression1     physical2       mental2       depression2  
- Min.   : 1.0   Min.   :19.7   Min.   : 6.68   Min.   : 0.0  
- 1st Qu.:25.2   1st Qu.:42.8   1st Qu.:30.21   1st Qu.:11.0  
- Median :34.0   Median :53.3   Median :42.44   Median :22.0  
- Mean   :32.6   Mean   :50.2   Mean   :40.98   Mean   :22.7  
- 3rd Qu.:41.0   3rd Qu.:58.2   3rd Qu.:52.73   3rd Qu.:34.8  
- Max.   :57.0   Max.   :71.4   Max.   :69.94   Max.   :56.0  </code></pre>
-<p><strong>R</strong> often knows which variables are numerical (i.e., quantitative) and which variables are characters (i.e., qualitative). In the output above, we see a bunch of summary statistics for each variable – though some don’t make sense such as the id variable. For character variables, we only see the length value – which is the number of rows for these variables.</p>
-<p>We can also select either a single variable or a set of variables and see the summary table only for the selected variables:</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Summary for age</span>
-<span class="kw">summary</span>(medical<span class="op">$</span>age)</code></pre>
-<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-   20.0    31.0    35.0    36.3    41.0    60.0 </code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Summary for age, average drinks, and maximum drinks</span>
-<span class="kw">summary</span>(medical[,<span class="kw">c</span>(<span class="st">&quot;age&quot;</span>, <span class="st">&quot;avg_drinks&quot;</span>, <span class="st">&quot;max_drinks&quot;</span>)])</code></pre>
-<pre><code>      age         avg_drinks      max_drinks   
- Min.   :20.0   Min.   :  0.0   Min.   :  0.0  
- 1st Qu.:31.0   1st Qu.:  2.0   1st Qu.:  3.0  
- Median :35.0   Median : 12.0   Median : 13.0  
- Mean   :36.3   Mean   : 17.1   Mean   : 24.1  
- 3rd Qu.:41.0   3rd Qu.: 24.0   3rd Qu.: 32.0  
- Max.   :60.0   Max.   :142.0   Max.   :184.0  </code></pre>
+<p>The easiest way to get a quick summary of a dataset in <strong>R</strong> is to the <code>summary( )</code> function. This function provides the min and max, mean, median, and first and third quartiles for the entire dataset or variables that we select. Let’s take a look at the summary table for the <code>medical</code> dataset for a few variables.</p>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb79-1" title="1"><span class="kw">summary</span>(medical[,<span class="kw">c</span>(<span class="st">&quot;sex&quot;</span>, <span class="st">&quot;race&quot;</span>, <span class="st">&quot;age&quot;</span>, <span class="st">&quot;avg_drinks&quot;</span>)])</a></code></pre></div>
+<pre><code>     sex                race                age         avg_drinks   
+ Length:246         Length:246         Min.   :20.0   Min.   :  0.0  
+ Class :character   Class :character   1st Qu.:31.0   1st Qu.:  2.0  
+ Mode  :character   Mode  :character   Median :35.0   Median : 12.0  
+                                       Mean   :36.3   Mean   : 17.1  
+                                       3rd Qu.:41.0   3rd Qu.: 24.0  
+                                       Max.   :60.0   Max.   :142.0  </code></pre>
+<p><strong>R</strong> often knows which variables are numerical (i.e., quantitative) and which variables are characters (i.e., qualitative). In the output above, we see a bunch of summary statistics for each variable. For character variables, we only see the length value – which is the number of rows for these variables.</p>
+<p>We can see the summary table for the entire dataset using:</p>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb81-1" title="1"><span class="kw">summary</span>(medical)</a></code></pre></div>
 </div>
 <div id="frequency-tables" class="section level2">
 <h2><span class="header-section-number">4.2</span> Frequency Tables</h2>
-<p>Another handy function in base <strong>R</strong> is <code>table</code> which tabulates the data and creates frequency tables for variables. If he variable is character, it will show the frequency of each level; if the variable is numerical, it will show the frequency of each value.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Frequency tables for homeless status and sex</span>
-<span class="kw">table</span>(medical<span class="op">$</span>homeless)</code></pre>
+<p>Another handy function in base <strong>R</strong> is <code>table</code> which tabulates the data and creates frequency tables for variables. If the variable is a character, it will show the frequency of each level; if the variable is numerical, it will show the frequency of each value.</p>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb82-1" title="1"><span class="co"># Frequency tables for homeless status and sex</span></a>
+<a class="sourceLine" id="cb82-2" title="2"><span class="kw">table</span>(medical<span class="op">$</span>homeless)</a></code></pre></div>
 <pre><code>
 homeless   housed 
      118      128 </code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(medical<span class="op">$</span>sex)</code></pre>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb84-1" title="1"><span class="kw">table</span>(medical<span class="op">$</span>sex)</a></code></pre></div>
 <pre><code>
 female   male 
     57    189 </code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Frequency table for age</span>
-<span class="kw">table</span>(medical<span class="op">$</span>age)</code></pre>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb86-1" title="1"><span class="co"># Frequency table for age</span></a>
+<a class="sourceLine" id="cb86-2" title="2"><span class="kw">table</span>(medical<span class="op">$</span>age)</a></code></pre></div>
 <pre><code>
-20 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 
- 2  7  3  4  2  6  8  9  4 12  7 19 14 11 16 11 16  6 16  5  8  7 10  3  6 
-46 47 48 49 50 51 53 54 55 56 57 58 60 
- 2 10  5  4  2  1  2  1  2  1  1  2  1 </code></pre>
+20 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 
+ 2  7  3  4  2  6  8  9  4 12  7 19 14 11 16 11 16  6 16  5  8  7 10  3  6  2 
+47 48 49 50 51 53 54 55 56 57 58 60 
+10  5  4  2  1  2  1  2  1  1  2  1 </code></pre>
 <p>The output is kind of messy. The first row shows the age values and the second row shows how many times those values appear in the dataset. Let’s reformat our frequency table into a more readable format.</p>
-<pre class="sourceCode r"><code class="sourceCode r">age_table &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">table</span>(medical<span class="op">$</span>age))
-<span class="kw">head</span>(age_table)</code></pre>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb88-1" title="1">age_table &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">table</span>(medical<span class="op">$</span>age))</a>
+<a class="sourceLine" id="cb88-2" title="2"><span class="kw">head</span>(age_table)</a></code></pre></div>
 <pre><code>  Var1 Freq
 1   20    2
 2   22    7
@@ -329,8 +296,8 @@ female   male
 5   25    2
 6   26    6</code></pre>
 <p>We can rename the columns with better names using the <code>colnames( )</code> function.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">colnames</span>(age_table) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Age&quot;</span>, <span class="st">&quot;Frequency&quot;</span>)
-<span class="kw">head</span>(age_table)</code></pre>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb90-1" title="1"><span class="kw">colnames</span>(age_table) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Age&quot;</span>, <span class="st">&quot;Frequency&quot;</span>)</a>
+<a class="sourceLine" id="cb90-2" title="2"><span class="kw">head</span>(age_table)</a></code></pre></div>
 <pre><code>  Age Frequency
 1  20         2
 2  22         7
@@ -339,49 +306,49 @@ female   male
 5  25         2
 6  26         6</code></pre>
 <p>Sometimes these raw freqency values are hard to interpret. Therefore, we may prefer to have proportions or percentages rather than actual frequency values. For this task, we need to use <code>prop.table</code>. Let’s see the proportion of male and female participants in the data.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Proportions</span>
-<span class="kw">prop.table</span>(<span class="kw">table</span>(medical<span class="op">$</span>sex))</code></pre>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb92-1" title="1"><span class="co"># Proportions</span></a>
+<a class="sourceLine" id="cb92-2" title="2"><span class="kw">prop.table</span>(<span class="kw">table</span>(medical<span class="op">$</span>sex))</a></code></pre></div>
 <pre><code>
 female   male 
 0.2317 0.7683 </code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Percentages</span>
-<span class="kw">prop.table</span>(<span class="kw">table</span>(medical<span class="op">$</span>sex))<span class="op">*</span><span class="dv">100</span></code></pre>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb94-1" title="1"><span class="co"># Percentages</span></a>
+<a class="sourceLine" id="cb94-2" title="2"><span class="kw">prop.table</span>(<span class="kw">table</span>(medical<span class="op">$</span>sex))<span class="op">*</span><span class="dv">100</span></a></code></pre></div>
 <pre><code>
 female   male 
  23.17  76.83 </code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Percentages rounded (no decimal points)</span>
-<span class="kw">round</span>(<span class="kw">prop.table</span>(<span class="kw">table</span>(medical<span class="op">$</span>sex))<span class="op">*</span><span class="dv">100</span>, <span class="dv">0</span>)</code></pre>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb96-1" title="1"><span class="co"># Percentages rounded (no decimal points)</span></a>
+<a class="sourceLine" id="cb96-2" title="2"><span class="kw">round</span>(<span class="kw">prop.table</span>(<span class="kw">table</span>(medical<span class="op">$</span>sex))<span class="op">*</span><span class="dv">100</span>, <span class="dv">0</span>)</a></code></pre></div>
 <pre><code>
 female   male 
     23     77 </code></pre>
 <p>We can also use the <code>table</code> function for cross-tabulation. For example, if we want to see the number of homeless and housed patients by sex:</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Frequencies</span>
-<span class="kw">table</span>(medical<span class="op">$</span>homeless, medical<span class="op">$</span>sex)</code></pre>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb98-1" title="1"><span class="co"># Frequencies</span></a>
+<a class="sourceLine" id="cb98-2" title="2"><span class="kw">table</span>(medical<span class="op">$</span>homeless, medical<span class="op">$</span>sex)</a></code></pre></div>
 <pre><code>          
            female male
   homeless     22   96
   housed       35   93</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Proportions</span>
-<span class="kw">prop.table</span>(<span class="kw">table</span>(medical<span class="op">$</span>homeless, medical<span class="op">$</span>sex))</code></pre>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb100-1" title="1"><span class="co"># Proportions</span></a>
+<a class="sourceLine" id="cb100-2" title="2"><span class="kw">prop.table</span>(<span class="kw">table</span>(medical<span class="op">$</span>homeless, medical<span class="op">$</span>sex))</a></code></pre></div>
 <pre><code>          
             female    male
   homeless 0.08943 0.39024
   housed   0.14228 0.37805</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Percentages</span>
-<span class="kw">prop.table</span>(<span class="kw">table</span>(medical<span class="op">$</span>homeless, medical<span class="op">$</span>sex))<span class="op">*</span><span class="dv">100</span></code></pre>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb102-1" title="1"><span class="co"># Percentages</span></a>
+<a class="sourceLine" id="cb102-2" title="2"><span class="kw">prop.table</span>(<span class="kw">table</span>(medical<span class="op">$</span>homeless, medical<span class="op">$</span>sex))<span class="op">*</span><span class="dv">100</span></a></code></pre></div>
 <pre><code>          
            female   male
   homeless  8.943 39.024
   housed   14.228 37.805</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Percentages rounded to the 2nd decimal point</span>
-<span class="kw">round</span>(<span class="kw">prop.table</span>(<span class="kw">table</span>(medical<span class="op">$</span>homeless, medical<span class="op">$</span>sex))<span class="op">*</span><span class="dv">100</span>, <span class="dv">2</span>)</code></pre>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb104-1" title="1"><span class="co"># Percentages rounded to the 2nd decimal point</span></a>
+<a class="sourceLine" id="cb104-2" title="2"><span class="kw">round</span>(<span class="kw">prop.table</span>(<span class="kw">table</span>(medical<span class="op">$</span>homeless, medical<span class="op">$</span>sex))<span class="op">*</span><span class="dv">100</span>, <span class="dv">2</span>)</a></code></pre></div>
 <pre><code>          
            female  male
   homeless   8.94 39.02
   housed    14.23 37.80</code></pre>
-<div id="your-turn-4" class="section level3">
-<h3><span class="header-section-number">4.2.1</span> Your Turn</h3>
-<p>Use the <code>table</code> function to create a cross tabulation for <code>race</code> and <code>substance</code>. We want to see the percentages with no decimal points. Which group is the largest and which group is the smallest based on their percentages?</p>
+<div id="exercise-5" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> Exercise 5</h3>
+<p>Use the <code>table</code> and <code>prop.table</code> functions to create a cross-tabulation for <code>race</code> and <code>substance</code>. We want to see the percentages. Which group is the largest and which group is the smallest based on their percentages?</p>
 </div>
 </div>
 <div id="central-tendency-and-dispersion" class="section level2">
@@ -405,146 +372,99 @@ female   male
 <li><p><strong>Range</strong>: Difference between the biggest value and the smallest value of a variable.</p></li>
 <li><p><strong>Interquartile range (IQR)</strong>: Like the range, but instead of calculating the difference between the biggest and smallest values, it calculates the difference between the 25th quantile and the 75th quantile.</p></li>
 </ul>
-<p>In <strong>R</strong>, we can calculate all of these statistics quite simply. A critical point is that if the variable has missing values, then these statistics cannot be computed. Therefore, we need to add <code>na.rm = TRUE</code> inside the functions. Let’s try the variable <code>age</code>.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Mean</span>
-<span class="kw">mean</span>(medical<span class="op">$</span>age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</code></pre>
+<p>In <strong>R</strong>, we can calculate all of these statistics very easily. A critical point is that if the variable has missing values, then these statistics cannot be computed. Therefore, we need to add <code>na.rm = TRUE</code> inside the functions to remove missing values before calculations begin. Let’s try the variable <code>age</code>.</p>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb106-1" title="1"><span class="co"># Mean</span></a>
+<a class="sourceLine" id="cb106-2" title="2"><span class="kw">mean</span>(medical<span class="op">$</span>age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre><code>[1] 36.31</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Median</span>
-<span class="kw">median</span>(medical<span class="op">$</span>age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</code></pre>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb108-1" title="1"><span class="co"># Median</span></a>
+<a class="sourceLine" id="cb108-2" title="2"><span class="kw">median</span>(medical<span class="op">$</span>age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre><code>[1] 35</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Standard deviation</span>
-<span class="kw">sd</span>(medical<span class="op">$</span>age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</code></pre>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb110-1" title="1"><span class="co"># Standard deviation</span></a>
+<a class="sourceLine" id="cb110-2" title="2"><span class="kw">sd</span>(medical<span class="op">$</span>age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre><code>[1] 7.984</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Variance</span>
-<span class="kw">var</span>(medical<span class="op">$</span>age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</code></pre>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb112-1" title="1"><span class="co"># Variance</span></a>
+<a class="sourceLine" id="cb112-2" title="2"><span class="kw">var</span>(medical<span class="op">$</span>age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre><code>[1] 63.75</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Quantile</span>
-<span class="kw">quantile</span>(medical<span class="op">$</span>age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</code></pre>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb114-1" title="1"><span class="co"># Quantile</span></a>
+<a class="sourceLine" id="cb114-2" title="2"><span class="kw">quantile</span>(medical<span class="op">$</span>age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre><code>  0%  25%  50%  75% 100% 
   20   31   35   41   60 </code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># A particular Quantile - for example, 95th percentile</span>
-<span class="kw">quantile</span>(medical<span class="op">$</span>age, <span class="fl">0.95</span>)</code></pre>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb116-1" title="1"><span class="co"># 95th percentile</span></a>
+<a class="sourceLine" id="cb116-2" title="2"><span class="kw">quantile</span>(medical<span class="op">$</span>age, <span class="fl">0.95</span>)</a></code></pre></div>
 <pre><code>  95% 
 49.75 </code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Range</span>
-<span class="kw">range</span>(medical<span class="op">$</span>age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</code></pre>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb118-1" title="1"><span class="co"># Range</span></a>
+<a class="sourceLine" id="cb118-2" title="2"><span class="kw">range</span>(medical<span class="op">$</span>age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre><code>[1] 20 60</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Interquartile range (IQR)</span>
-<span class="kw">IQR</span>(medical<span class="op">$</span>age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</code></pre>
-<pre><code>[1] 10</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Min and max values</span>
-<span class="kw">min</span>(medical<span class="op">$</span>age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</code></pre>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb120-1" title="1"><span class="co"># Min and max values</span></a>
+<a class="sourceLine" id="cb120-2" title="2"><span class="kw">min</span>(medical<span class="op">$</span>age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre><code>[1] 20</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">max</span>(medical<span class="op">$</span>age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</code></pre>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb122-1" title="1"><span class="kw">max</span>(medical<span class="op">$</span>age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre><code>[1] 60</code></pre>
 <p>We can also calculate central tendency and dispersion by grouping variables, using the <code>tapply</code> function. Let’s take a look at average and median age by sex.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tapply</span>(medical<span class="op">$</span>age, medical<span class="op">$</span>sex, mean)</code></pre>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb124-1" title="1"><span class="kw">tapply</span>(medical<span class="op">$</span>age, medical<span class="op">$</span>sex, mean)</a></code></pre></div>
 <pre><code>female   male 
  37.07  36.08 </code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tapply</span>(medical<span class="op">$</span>age, medical<span class="op">$</span>sex, median)</code></pre>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb126-1" title="1"><span class="kw">tapply</span>(medical<span class="op">$</span>age, medical<span class="op">$</span>sex, median)</a></code></pre></div>
 <pre><code>female   male 
     35     36 </code></pre>
-<p>We can combine these functions with the <code>summarise</code> function from the <code>dplyr</code> package.</p>
-<pre class="sourceCode r"><code class="sourceCode r">medical <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">mean_age =</span> <span class="kw">mean</span>(age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),
-            <span class="dt">median_age =</span> <span class="kw">median</span>(age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),
-            <span class="dt">sd_age =</span> <span class="kw">sd</span>(age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),
-            <span class="dt">var_age =</span> <span class="kw">var</span>(age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>))</code></pre>
+<p>We can combine these functions using the <code>summarise</code> function from the <code>dplyr</code> package.</p>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb128-1" title="1">medical <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb128-2" title="2"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">mean_age =</span> <span class="kw">mean</span>(age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb128-3" title="3">            <span class="dt">median_age =</span> <span class="kw">median</span>(age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb128-4" title="4">            <span class="dt">sd_age =</span> <span class="kw">sd</span>(age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb128-5" title="5">            <span class="dt">var_age =</span> <span class="kw">var</span>(age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>))</a></code></pre></div>
 <pre><code>  mean_age median_age sd_age var_age
 1    36.31         35  7.984   63.75</code></pre>
 <p>We can also create summaries by grouping variables using the <code>group_by</code> function from the <code>dplyr</code> package. Let’s take a look at the summary of age by sex.</p>
-<pre class="sourceCode r"><code class="sourceCode r">medical <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">n</span>(), <span class="co"># Count by sex</span>
-            <span class="dt">mean_age =</span> <span class="kw">mean</span>(age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), <span class="co"># Mean</span>
-            <span class="dt">median_age =</span> <span class="kw">median</span>(age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), <span class="co"># Median</span>
-            <span class="dt">sd_age =</span> <span class="kw">sd</span>(age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), <span class="co"># Standard deviation</span>
-            <span class="dt">var_age =</span> <span class="kw">var</span>(age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)) <span class="co"># Variance</span></code></pre>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb130-1" title="1">medical <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb130-2" title="2"><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb130-3" title="3"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">n</span>(), <span class="co"># Count by sex</span></a>
+<a class="sourceLine" id="cb130-4" title="4">            <span class="dt">mean_age =</span> <span class="kw">mean</span>(age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), <span class="co"># Mean</span></a>
+<a class="sourceLine" id="cb130-5" title="5">            <span class="dt">median_age =</span> <span class="kw">median</span>(age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), <span class="co"># Median</span></a>
+<a class="sourceLine" id="cb130-6" title="6">            <span class="dt">sd_age =</span> <span class="kw">sd</span>(age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), <span class="co"># Standard deviation</span></a>
+<a class="sourceLine" id="cb130-7" title="7">            <span class="dt">var_age =</span> <span class="kw">var</span>(age, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)) <span class="co"># Variance</span></a></code></pre></div>
 <pre><code># A tibble: 2 x 6
   sex        n mean_age median_age sd_age var_age
   &lt;chr&gt;  &lt;int&gt;    &lt;dbl&gt;      &lt;int&gt;  &lt;dbl&gt;   &lt;dbl&gt;
 1 female    57     37.1         35   8.51    72.4
 2 male     189     36.1         36   7.83    61.3</code></pre>
-<p>Another conventient way to summarize a dataset descriptively is to use the <code>skim</code> function from the <code>skimr</code> package <span class="citation">(McNamara et al. <a href="#ref-R-skimr">2019</a>)</span>. Let’s try it with our medical dataset.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Let&#39;s install and activate the package</span>
-<span class="kw">install.packages</span>(<span class="st">&quot;skimr&quot;</span>)
-<span class="kw">library</span>(<span class="st">&quot;skimr&quot;</span>)</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Summary for the entire data</span>
-<span class="kw">skim</span>(medical)</code></pre>
-<pre><code>Skim summary statistics
- n obs: 246 
- n variables: 16 
-
--- Variable type:character ---
-  variable missing complete   n min max empty n_unique
-  homeless       0      246 246   6   8     0        2
-      race       0      246 246   5   8     0        4
-       sex       0      246 246   4   6     0        2
- substance       0      246 246   6   7     0        3
-  suicidal       0      246 246   2   3     0        2
-     treat       0      246 246   2   3     0        2
-
--- Variable type:integer -----
-    variable missing complete   n   mean     sd p0   p25   p50    p75 p100
-         age       0      246 246  36.31   7.98 20 31     35    41      60
-  avg_drinks       0      246 246  17.13  21.22  0  2     12    24     142
- depression1       0      246 246  32.59  12.11  1 25.25  34    41      57
- depression2       0      246 246  22.72  14.29  0 11     22    34.75   56
-          id       0      246 246 216.3  143.8   1 82.5  210.5 346.75  469
-  max_drinks       0      246 246  24.11  31.08  0  3     13    32     184
-
--- Variable type:numeric -----
-  variable missing complete   n  mean    sd    p0   p25   p50   p75  p100
-   mental1       0      246 246 31.68 12.49  6.76 21.95 29.15 40.62 60.54
-   mental2       0      246 246 40.98 13.8   6.68 30.21 42.44 52.73 69.94
- physical1       0      246 246 47.5  11.24 14.07 38.3  48.85 56.49 74.81
- physical2       0      246 246 50.16 10.35 19.7  42.84 53.32 58.17 71.44</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Summary for some variables</span>
-<span class="kw">skim</span>(medical[,<span class="kw">c</span>(<span class="st">&quot;mental1&quot;</span>, <span class="st">&quot;mental2&quot;</span>, <span class="st">&quot;avg_drinks&quot;</span>, <span class="st">&quot;max_drinks&quot;</span>)])</code></pre>
-<pre><code>Skim summary statistics
- n obs: 246 
- n variables: 4 
-
--- Variable type:integer -----
-   variable missing complete   n  mean    sd p0 p25 p50 p75 p100
- avg_drinks       0      246 246 17.13 21.22  0   2  12  24  142
- max_drinks       0      246 246 24.11 31.08  0   3  13  32  184
-
--- Variable type:numeric -----
- variable missing complete   n  mean    sd   p0   p25   p50   p75  p100
-  mental1       0      246 246 31.68 12.49 6.76 21.95 29.15 40.62 60.54
-  mental2       0      246 246 40.98 13.8  6.68 30.21 42.44 52.73 69.94</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Summary by grouping variables</span>
-medical <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">select</span>(sex, mental1, mental2, avg_drinks, max_drinks) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">skim</span>()</code></pre>
-<pre><code>Skim summary statistics
- n obs: 246 
- n variables: 5 
- group variables: sex 
-
--- Variable type:integer -----
-    sex   variable missing complete   n  mean    sd p0 p25 p50 p75 p100
- female avg_drinks       0       57  57 13.67 18.05  0   0   6  19   71
- female max_drinks       0       57  57 20.21 31.7   0   0   8  26  164
-   male avg_drinks       0      189 189 18.18 22.02  0   3  13  25  142
-   male max_drinks       0      189 189 25.29 30.87  0   4  19  33  184
-
--- Variable type:numeric -----
-    sex variable missing complete   n  mean    sd   p0   p25   p50   p75
- female  mental1       0       57  57 29.26 13.19 7.04 19.81 26.31 37.44
- female  mental2       0       57  57 38.8  13.05 6.68 29.56 38.27 48.72
-   male  mental1       0      189 189 32.41 12.21 6.76 22.94 30.07 41.59
-   male  mental2       0      189 189 41.64 13.98 7.09 30.5  43.57 53.48
-  p100
- 60.54
- 64.3 
- 59.45
- 69.94</code></pre>
-<div id="your-turn-5" class="section level3">
-<h3><span class="header-section-number">4.3.1</span> Your Turn</h3>
-<p>Using the <code>summarise</code> function, create a summary of the variable <code>depression1</code> by <code>race</code>. The summary should include count, mean, standard deviation, minimum, and maximum values.</p>
+<p>Another conventient way to summarize a dataset descriptively is to use the <code>skim</code> function from the <code>skimr</code> package <span class="citation">(Waring et al. <a href="#ref-R-skimr" role="doc-biblioref">2020</a>)</span>. Let’s try it with our medical dataset.</p>
+<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb132-1" title="1"><span class="co"># Let&#39;s install and activate the package</span></a>
+<a class="sourceLine" id="cb132-2" title="2"><span class="kw">install.packages</span>(<span class="st">&quot;skimr&quot;</span>)</a>
+<a class="sourceLine" id="cb132-3" title="3"><span class="kw">library</span>(<span class="st">&quot;skimr&quot;</span>)</a></code></pre></div>
+<p>To summarize the entire dataset:</p>
+<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb133-1" title="1"><span class="kw">skim</span>(medical)</a></code></pre></div>
+<p>To summarize some variables:</p>
+<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb134-1" title="1"><span class="kw">skim</span>(medical, mental1, mental2, avg_drinks, max_drinks)</a></code></pre></div>
+<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb135-1" title="1"><span class="op">--</span><span class="st"> </span>Variable type<span class="op">:</span><span class="st"> </span>numeric <span class="op">--------------------------------------------------------------------</span></a>
+<a class="sourceLine" id="cb135-2" title="2"><span class="co"># A tibble: 4 x 10</span></a>
+<a class="sourceLine" id="cb135-3" title="3"><span class="st">  </span>skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100</a>
+<a class="sourceLine" id="cb135-4" title="4"><span class="op">*</span><span class="st"> </span><span class="er">&lt;</span>chr<span class="op">&gt;</span><span class="st">             </span><span class="er">&lt;</span>int<span class="op">&gt;</span><span class="st">         </span><span class="er">&lt;</span>dbl<span class="op">&gt;</span><span class="st"> </span><span class="er">&lt;</span>dbl<span class="op">&gt;</span><span class="st"> </span><span class="er">&lt;</span>dbl<span class="op">&gt;</span><span class="st"> </span><span class="er">&lt;</span>dbl<span class="op">&gt;</span><span class="st"> </span><span class="er">&lt;</span>dbl<span class="op">&gt;</span><span class="st"> </span><span class="er">&lt;</span>dbl<span class="op">&gt;</span><span class="st"> </span><span class="er">&lt;</span>dbl<span class="op">&gt;</span><span class="st"> </span><span class="er">&lt;</span>dbl<span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb135-5" title="5"><span class="dv">1</span> mental1               <span class="dv">0</span>             <span class="dv">1</span>  <span class="fl">31.7</span>  <span class="fl">12.5</span>  <span class="fl">6.76</span>  <span class="fl">22.0</span>  <span class="fl">29.1</span>  <span class="fl">40.6</span>  <span class="fl">60.5</span></a>
+<a class="sourceLine" id="cb135-6" title="6"><span class="dv">2</span> mental2               <span class="dv">0</span>             <span class="dv">1</span>  <span class="fl">41.0</span>  <span class="fl">13.8</span>  <span class="fl">6.68</span>  <span class="fl">30.2</span>  <span class="fl">42.4</span>  <span class="fl">52.7</span>  <span class="fl">69.9</span></a>
+<a class="sourceLine" id="cb135-7" title="7"><span class="dv">3</span> avg_drinks            <span class="dv">0</span>             <span class="dv">1</span>  <span class="fl">17.1</span>  <span class="fl">21.2</span>  <span class="dv">0</span>      <span class="dv">2</span>    <span class="dv">12</span>    <span class="dv">24</span>   <span class="dv">142</span></a>
+<a class="sourceLine" id="cb135-8" title="8"><span class="dv">4</span> max_drinks            <span class="dv">0</span>             <span class="dv">1</span>  <span class="fl">24.1</span>  <span class="fl">31.1</span>  <span class="dv">0</span>      <span class="dv">3</span>    <span class="dv">13</span>    <span class="dv">32</span>   <span class="dv">184</span></a></code></pre></div>
+<p>To summarize the dataset by grouping variables:</p>
+<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb136-1" title="1">medical <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb136-2" title="2"><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb136-3" title="3"><span class="st">  </span><span class="kw">select</span>(sex, mental1, mental2, avg_drinks, max_drinks) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb136-4" title="4"><span class="st">  </span><span class="kw">skim</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb137-1" title="1"><span class="op">--</span><span class="st"> </span>Variable type<span class="op">:</span><span class="st"> </span>numeric <span class="op">--------------------------------------------------------------------</span></a>
+<a class="sourceLine" id="cb137-2" title="2"><span class="co"># A tibble: 8 x 11</span></a>
+<a class="sourceLine" id="cb137-3" title="3"><span class="st">  </span>skim_variable sex    n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100</a>
+<a class="sourceLine" id="cb137-4" title="4"><span class="op">*</span><span class="st"> </span><span class="er">&lt;</span>chr<span class="op">&gt;</span><span class="st">         </span><span class="er">&lt;</span>chr<span class="op">&gt;</span><span class="st">      </span><span class="er">&lt;</span>int<span class="op">&gt;</span><span class="st">         </span><span class="er">&lt;</span>dbl<span class="op">&gt;</span><span class="st"> </span><span class="er">&lt;</span>dbl<span class="op">&gt;</span><span class="st"> </span><span class="er">&lt;</span>dbl<span class="op">&gt;</span><span class="st"> </span><span class="er">&lt;</span>dbl<span class="op">&gt;</span><span class="st"> </span><span class="er">&lt;</span>dbl<span class="op">&gt;</span><span class="st"> </span><span class="er">&lt;</span>dbl<span class="op">&gt;</span><span class="st"> </span><span class="er">&lt;</span>dbl<span class="op">&gt;</span><span class="st"> </span><span class="er">&lt;</span>dbl<span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb137-5" title="5"><span class="dv">1</span> mental1       female         <span class="dv">0</span>             <span class="dv">1</span>  <span class="fl">29.3</span>  <span class="fl">13.2</span>  <span class="fl">7.04</span>  <span class="fl">19.8</span>  <span class="fl">26.3</span>  <span class="fl">37.4</span>  <span class="fl">60.5</span></a>
+<a class="sourceLine" id="cb137-6" title="6"><span class="dv">2</span> mental1       male           <span class="dv">0</span>             <span class="dv">1</span>  <span class="fl">32.4</span>  <span class="fl">12.2</span>  <span class="fl">6.76</span>  <span class="fl">22.9</span>  <span class="fl">30.1</span>  <span class="fl">41.6</span>  <span class="fl">59.5</span></a>
+<a class="sourceLine" id="cb137-7" title="7"><span class="dv">3</span> mental2       female         <span class="dv">0</span>             <span class="dv">1</span>  <span class="fl">38.8</span>  <span class="fl">13.0</span>  <span class="fl">6.68</span>  <span class="fl">29.6</span>  <span class="fl">38.3</span>  <span class="fl">48.7</span>  <span class="fl">64.3</span></a>
+<a class="sourceLine" id="cb137-8" title="8"><span class="dv">4</span> mental2       male           <span class="dv">0</span>             <span class="dv">1</span>  <span class="fl">41.6</span>  <span class="fl">14.0</span>  <span class="fl">7.09</span>  <span class="fl">30.5</span>  <span class="fl">43.6</span>  <span class="fl">53.5</span>  <span class="fl">69.9</span></a>
+<a class="sourceLine" id="cb137-9" title="9"><span class="dv">5</span> avg_drinks    female         <span class="dv">0</span>             <span class="dv">1</span>  <span class="fl">13.7</span>  <span class="fl">18.1</span>  <span class="dv">0</span>      <span class="dv">0</span>     <span class="dv">6</span>    <span class="dv">19</span>    <span class="dv">71</span>  </a>
+<a class="sourceLine" id="cb137-10" title="10"><span class="dv">6</span> avg_drinks    male           <span class="dv">0</span>             <span class="dv">1</span>  <span class="fl">18.2</span>  <span class="fl">22.0</span>  <span class="dv">0</span>      <span class="dv">3</span>    <span class="dv">13</span>    <span class="dv">25</span>   <span class="dv">142</span>  </a>
+<a class="sourceLine" id="cb137-11" title="11"><span class="dv">7</span> max_drinks    female         <span class="dv">0</span>             <span class="dv">1</span>  <span class="fl">20.2</span>  <span class="fl">31.7</span>  <span class="dv">0</span>      <span class="dv">0</span>     <span class="dv">8</span>    <span class="dv">26</span>   <span class="dv">164</span>  </a>
+<a class="sourceLine" id="cb137-12" title="12"><span class="dv">8</span> max_drinks    male           <span class="dv">0</span>             <span class="dv">1</span>  <span class="fl">25.3</span>  <span class="fl">30.9</span>  <span class="dv">0</span>      <span class="dv">4</span>    <span class="dv">19</span>    <span class="dv">33</span>   <span class="dv">184</span>  </a></code></pre></div>
+<div id="exercise-6" class="section level3">
+<h3><span class="header-section-number">4.3.1</span> Exercise 6</h3>
+<p>Using the <code>summarise</code> function from the <code>dplyr</code> package or the <code>skim</code> function from the <code>skimr</code> package, create a summary of the variable <code>depression1</code> by <code>race</code>. If you decide to use <code>summarise</code>, you need to include count, mean, standard deviation, minimum, and maximum values.</p>
 
 </div>
 </div>
@@ -552,7 +472,7 @@ medical <span class="op">%&gt;%</span>
 <h3>References</h3>
 <div id="refs" class="references">
 <div id="ref-R-skimr">
-<p>McNamara, Amelia, Eduardo Arino de la Rubia, Hao Zhu, Shannon Ellis, and Michael Quinn. 2019. <em>Skimr: Compact and Flexible Summaries of Data</em>. <a href="https://CRAN.R-project.org/package=skimr">https://CRAN.R-project.org/package=skimr</a>.</p>
+<p>Waring, Elin, Michael Quinn, Amelia McNamara, Eduardo Arino de la Rubia, Hao Zhu, and Shannon Ellis. 2020. <em>Skimr: Compact and Flexible Summaries of Data</em>. <a href="https://CRAN.R-project.org/package=skimr">https://CRAN.R-project.org/package=skimr</a>.</p>
 </div>
 </div>
             </section>
@@ -566,11 +486,13 @@ medical <span class="op">%&gt;%</span>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -578,12 +500,11 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -598,7 +519,11 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["rbook.pdf", "rbook.epub"],
+"view": {
+"link": null,
+"text": null
+},
+"download": ["rbook.pdf"],
 "toc": {
 "collapse": "subsection"
 }
@@ -613,8 +538,9 @@ gitbook.start({
     script.type = "text/javascript";
     var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();

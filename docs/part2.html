@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3 Data Wrangling | Statistical Analysis and Visualizations Using R</title>
-  <meta name="description" content="This book contains the materials for the R course at Techology Training Centre." />
-  <meta name="generator" content="bookdown 0.10 and GitBook 2.6.7" />
+  <meta name="description" content="This book contains the materials for the R training at the Techology Training Centre." />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3 Data Wrangling | Statistical Analysis and Visualizations Using R" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This book contains the materials for the R course at Techology Training Centre." />
+  <meta property="og:description" content="This book contains the materials for the R training at the Techology Training Centre." />
   <meta name="github-repo" content="okanbulut/rbook" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="3 Data Wrangling | Statistical Analysis and Visualizations Using R" />
   
-  <meta name="twitter:description" content="This book contains the materials for the R course at Techology Training Centre." />
+  <meta name="twitter:description" content="This book contains the materials for the R training at the Techology Training Centre." />
   
 
 <meta name="author" content="Okan Bulut" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="part1.html">
-<link rel="next" href="part3.html">
+<link rel="prev" href="part1.html"/>
+<link rel="next" href="part3.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -39,6 +39,9 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -54,7 +57,6 @@ a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
 a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
@@ -146,38 +148,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.1.5" data-path="part1.html"><a href="part1.html#creating-a-new-script"><i class="fa fa-check"></i><b>2.1.5</b> Creating a New Script</a></li>
 <li class="chapter" data-level="2.1.6" data-path="part1.html"><a href="part1.html#working-directory"><i class="fa fa-check"></i><b>2.1.6</b> Working Directory</a></li>
 <li class="chapter" data-level="2.1.7" data-path="part1.html"><a href="part1.html#downloading-and-installing-r-packages"><i class="fa fa-check"></i><b>2.1.7</b> Downloading and Installing <strong>R</strong> Packages</a></li>
-<li class="chapter" data-level="2.1.8" data-path="part1.html"><a href="part1.html#your-turn"><i class="fa fa-check"></i><b>2.1.8</b> Your turn</a></li>
+<li class="chapter" data-level="2.1.8" data-path="part1.html"><a href="part1.html#exercise-1"><i class="fa fa-check"></i><b>2.1.8</b> Exercise 1</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="part1.html"><a href="part1.html#basics-of-the-r-language"><i class="fa fa-check"></i><b>2.2</b> Basics of the R Language</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="part1.html"><a href="part1.html#r-as-a-calculator"><i class="fa fa-check"></i><b>2.2.1</b> R as a Calculator</a></li>
-<li class="chapter" data-level="2.2.2" data-path="part1.html"><a href="part1.html#creating-new-variables"><i class="fa fa-check"></i><b>2.2.2</b> Creating New Variables</a></li>
-<li class="chapter" data-level="2.2.3" data-path="part1.html"><a href="part1.html#important-rules-for-the-r-language"><i class="fa fa-check"></i><b>2.2.3</b> Important Rules for the <strong>R</strong> Language</a></li>
-<li class="chapter" data-level="2.2.4" data-path="part1.html"><a href="part1.html#a-few-shortcuts"><i class="fa fa-check"></i><b>2.2.4</b> A Few Shortcuts</a></li>
-<li class="chapter" data-level="2.2.5" data-path="part1.html"><a href="part1.html#self-help"><i class="fa fa-check"></i><b>2.2.5</b> Self-Help</a></li>
-<li class="chapter" data-level="2.2.6" data-path="part1.html"><a href="part1.html#your-turn-1"><i class="fa fa-check"></i><b>2.2.6</b> Your turn</a></li>
+<li class="chapter" data-level="2.2.1" data-path="part1.html"><a href="part1.html#creating-new-variables"><i class="fa fa-check"></i><b>2.2.1</b> Creating New Variables</a></li>
+<li class="chapter" data-level="2.2.2" data-path="part1.html"><a href="part1.html#important-rules-for-the-r-language"><i class="fa fa-check"></i><b>2.2.2</b> Important Rules for the <strong>R</strong> Language</a></li>
+<li class="chapter" data-level="2.2.3" data-path="part1.html"><a href="part1.html#self-help"><i class="fa fa-check"></i><b>2.2.3</b> Self-Help</a></li>
+<li class="chapter" data-level="2.2.4" data-path="part1.html"><a href="part1.html#exercise-2"><i class="fa fa-check"></i><b>2.2.4</b> Exercise 2</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="part2.html"><a href="part2.html"><i class="fa fa-check"></i><b>3</b> Data Wrangling</a><ul>
-<li class="chapter" data-level="3.1" data-path="part2.html"><a href="part2.html#creating-data-in-r"><i class="fa fa-check"></i><b>3.1</b> Creating Data in <strong>R</strong></a></li>
+<li class="chapter" data-level="3.1" data-path="part2.html"><a href="part2.html#creating-datasets-in-r"><i class="fa fa-check"></i><b>3.1</b> Creating Datasets in <strong>R</strong></a></li>
 <li class="chapter" data-level="3.2" data-path="part2.html"><a href="part2.html#importing-data-into-r"><i class="fa fa-check"></i><b>3.2</b> Importing Data into <strong>R</strong></a><ul>
 <li class="chapter" data-level="3.2.1" data-path="part2.html"><a href="part2.html#method-1-using-rstudio"><i class="fa fa-check"></i><b>3.2.1</b> Method 1: Using <strong>RStudio</strong></a></li>
 <li class="chapter" data-level="3.2.2" data-path="part2.html"><a href="part2.html#method-2-using-r-commands"><i class="fa fa-check"></i><b>3.2.2</b> Method 2: Using <strong>R</strong> Commands</a></li>
-<li class="chapter" data-level="3.2.3" data-path="part2.html"><a href="part2.html#your-turn-2"><i class="fa fa-check"></i><b>3.2.3</b> Your Turn</a></li>
+<li class="chapter" data-level="3.2.3" data-path="part2.html"><a href="part2.html#exercise-3"><i class="fa fa-check"></i><b>3.2.3</b> Exercise 3</a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="part2.html"><a href="part2.html#understanding-the-data"><i class="fa fa-check"></i><b>3.3</b> Understanding the Data</a></li>
 <li class="chapter" data-level="3.4" data-path="part2.html"><a href="part2.html#indexing"><i class="fa fa-check"></i><b>3.4</b> Indexing</a></li>
 <li class="chapter" data-level="3.5" data-path="part2.html"><a href="part2.html#subsetting"><i class="fa fa-check"></i><b>3.5</b> Subsetting</a></li>
 <li class="chapter" data-level="3.6" data-path="part2.html"><a href="part2.html#other-data-manipulation-tools"><i class="fa fa-check"></i><b>3.6</b> Other Data Manipulation Tools</a><ul>
-<li class="chapter" data-level="3.6.1" data-path="part2.html"><a href="part2.html#your-turn-3"><i class="fa fa-check"></i><b>3.6.1</b> Your Turn</a></li>
+<li class="chapter" data-level="3.6.1" data-path="part2.html"><a href="part2.html#exercise-4"><i class="fa fa-check"></i><b>3.6.1</b> Exercise 4</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="part3.html"><a href="part3.html"><i class="fa fa-check"></i><b>4</b> Descriptive Statistics</a><ul>
 <li class="chapter" data-level="4.1" data-path="part3.html"><a href="part3.html#quick-summary"><i class="fa fa-check"></i><b>4.1</b> Quick Summary</a></li>
 <li class="chapter" data-level="4.2" data-path="part3.html"><a href="part3.html#frequency-tables"><i class="fa fa-check"></i><b>4.2</b> Frequency Tables</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="part3.html"><a href="part3.html#your-turn-4"><i class="fa fa-check"></i><b>4.2.1</b> Your Turn</a></li>
+<li class="chapter" data-level="4.2.1" data-path="part3.html"><a href="part3.html#exercise-5"><i class="fa fa-check"></i><b>4.2.1</b> Exercise 5</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="part3.html"><a href="part3.html#central-tendency-and-dispersion"><i class="fa fa-check"></i><b>4.3</b> Central Tendency and Dispersion</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="part3.html"><a href="part3.html#your-turn-5"><i class="fa fa-check"></i><b>4.3.1</b> Your Turn</a></li>
+<li class="chapter" data-level="4.3.1" data-path="part3.html"><a href="part3.html#exercise-6"><i class="fa fa-check"></i><b>4.3.1</b> Exercise 6</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="part4.html"><a href="part4.html"><i class="fa fa-check"></i><b>5</b> Data Visualizations in <strong>R</strong></a><ul>
@@ -189,7 +189,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.1.5" data-path="part4.html"><a href="part4.html#scatterplots-boxplots"><i class="fa fa-check"></i><b>5.1.5</b> Scatterplots + Boxplots</a></li>
 <li class="chapter" data-level="5.1.6" data-path="part4.html"><a href="part4.html#scatterplot-matrix"><i class="fa fa-check"></i><b>5.1.6</b> Scatterplot Matrix</a></li>
 <li class="chapter" data-level="5.1.7" data-path="part4.html"><a href="part4.html#saving-base-r-figures"><i class="fa fa-check"></i><b>5.1.7</b> Saving Base <strong>R</strong> Figures</a></li>
-<li class="chapter" data-level="5.1.8" data-path="part4.html"><a href="part4.html#your-turn-6"><i class="fa fa-check"></i><b>5.1.8</b> Your Turn</a></li>
+<li class="chapter" data-level="5.1.8" data-path="part4.html"><a href="part4.html#exercise-7"><i class="fa fa-check"></i><b>5.1.8</b> Exercise 7</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="part4.html"><a href="part4.html#ggplot2-graphics"><i class="fa fa-check"></i><b>5.2</b> <code>ggplot2</code> Graphics</a><ul>
 <li class="chapter" data-level="5.2.1" data-path="part4.html"><a href="part4.html#what-is-ggplot2"><i class="fa fa-check"></i><b>5.2.1</b> What is <code>ggplot2</code>?</a></li>
@@ -198,7 +198,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2.4" data-path="part4.html"><a href="part4.html#boxplots-1"><i class="fa fa-check"></i><b>5.2.4</b> Boxplots</a></li>
 <li class="chapter" data-level="5.2.5" data-path="part4.html"><a href="part4.html#histograms-1"><i class="fa fa-check"></i><b>5.2.5</b> Histograms</a></li>
 <li class="chapter" data-level="5.2.6" data-path="part4.html"><a href="part4.html#bar-plots"><i class="fa fa-check"></i><b>5.2.6</b> Bar Plots</a></li>
-<li class="chapter" data-level="5.2.7" data-path="part4.html"><a href="part4.html#your-turn-7"><i class="fa fa-check"></i><b>5.2.7</b> Your Turn</a></li>
+<li class="chapter" data-level="5.2.7" data-path="part4.html"><a href="part4.html#exercise-8"><i class="fa fa-check"></i><b>5.2.7</b> Exercise 8</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="part5.html"><a href="part5.html"><i class="fa fa-check"></i><b>6</b> Hypothesis Testing</a><ul>
@@ -215,8 +215,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6.6" data-path="part5.html"><a href="part5.html#analysis-of-variance-anova"><i class="fa fa-check"></i><b>6.6</b> Analysis of Variance (ANOVA)</a><ul>
 <li class="chapter" data-level="6.6.1" data-path="part5.html"><a href="part5.html#example-3"><i class="fa fa-check"></i><b>6.6.1</b> Example</a></li>
-<li class="chapter" data-level="6.6.2" data-path="part5.html"><a href="part5.html#your-turn-8"><i class="fa fa-check"></i><b>6.6.2</b> Your Turn</a></li>
 </ul></li>
+<li class="chapter" data-level="6.7" data-path="part5.html"><a href="part5.html#exercise-9"><i class="fa fa-check"></i><b>6.7</b> Exercise 9</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="part6.html"><a href="part6.html"><i class="fa fa-check"></i><b>7</b> Correlation and Regression</a><ul>
 <li class="chapter" data-level="7.1" data-path="part6.html"><a href="part6.html#correlation"><i class="fa fa-check"></i><b>7.1</b> Correlation</a></li>
@@ -225,8 +225,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="part6.html"><a href="part6.html#multiple-regression"><i class="fa fa-check"></i><b>7.3</b> Multiple Regression</a><ul>
 <li class="chapter" data-level="7.3.1" data-path="part6.html"><a href="part6.html#example-5"><i class="fa fa-check"></i><b>7.3.1</b> Example</a></li>
-<li class="chapter" data-level="7.3.2" data-path="part6.html"><a href="part6.html#your-turn-9"><i class="fa fa-check"></i><b>7.3.2</b> Your Turn</a></li>
 </ul></li>
+<li class="chapter" data-level="7.4" data-path="part6.html"><a href="part6.html#exercise-10"><i class="fa fa-check"></i><b>7.4</b> Exercise 10</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -251,34 +251,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="part2" class="section level1">
 <h1><span class="header-section-number">3</span> Data Wrangling</h1>
-<p>Nearly all datasets require some initial procedures (e.g., cleaning, reformatting, reshaping) to be applied before we start running any statistical analysis or creating visualizations. These procedures are often referred to as “data wrangling”. Here is a nice summary of the data wrangling process:</p>
+<p>Nearly all datasets require some initial procedures (e.g., cleaning, reformatting, reshaping) to be applied before we start running any statistical analysis or creating visualizations. These procedures are often referred to as <strong>data wrangling</strong>. Here is a nice summary of the data wrangling process:</p>
 <div class="figure">
 <img src="figure/data-science-wrangle.png" alt="Data wrangling process [Source: Grolemund and Wickham (2018)]" />
 <p class="caption">Data wrangling process [<strong>Source:</strong> <a href="https://r4ds.had.co.nz/wrangle-intro.html">Grolemund and Wickham (2018)</a>]</p>
 </div>
 <p>In this section, we will follow the steps of data wrangling as shown above.</p>
-<div id="creating-data-in-r" class="section level2">
-<h2><span class="header-section-number">3.1</span> Creating Data in <strong>R</strong></h2>
+<div id="creating-datasets-in-r" class="section level2">
+<h2><span class="header-section-number">3.1</span> Creating Datasets in <strong>R</strong></h2>
 <p>There are multiple ways of creating datasets in R. We can create individual variables and combine them using the <code>cbind</code> (column bind) command:</p>
-<pre class="sourceCode r"><code class="sourceCode r">age &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">21</span>, <span class="dv">24</span>, <span class="dv">32</span>, <span class="dv">45</span>, <span class="dv">52</span>)
-salary &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">4500</span>, <span class="dv">3500</span>, <span class="dv">4100</span>, <span class="dv">4700</span>, <span class="dv">6000</span>)
-mydata &lt;-<span class="st"> </span><span class="kw">cbind</span>(age, salary)
-mydata</code></pre>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" title="1">age &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">21</span>, <span class="dv">24</span>, <span class="dv">32</span>, <span class="dv">45</span>, <span class="dv">52</span>)</a>
+<a class="sourceLine" id="cb29-2" title="2">salary &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">4500</span>, <span class="dv">3500</span>, <span class="dv">4100</span>, <span class="dv">4700</span>, <span class="dv">6000</span>)</a>
+<a class="sourceLine" id="cb29-3" title="3">mydata &lt;-<span class="st"> </span><span class="kw">cbind</span>(age, salary)</a>
+<a class="sourceLine" id="cb29-4" title="4">mydata</a></code></pre></div>
 <pre><code>     age salary
 [1,]  21   4500
 [2,]  24   3500
 [3,]  32   4100
 [4,]  45   4700
 [5,]  52   6000</code></pre>
-<p>We can also create individual rows and combine them using the <code>rbind</code> (row bind) command (not practical if there are many rows):</p>
-<pre class="sourceCode r"><code class="sourceCode r">person1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">21</span>, <span class="dv">4500</span>)
-person2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">24</span>, <span class="dv">3500</span>)
-person3 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">32</span>, <span class="dv">4100</span>)
-person4 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">45</span>, <span class="dv">4700</span>)
-person5 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">52</span>, <span class="dv">6000</span>)
-
-mydata &lt;-<span class="st"> </span><span class="kw">rbind</span>(person1, person2, person3, person4, person5)
-mydata</code></pre>
+<p>We can also create individual rows and combine them using the <code>rbind</code> (row bind) command (though this is not practical if there are many rows):</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" title="1">person1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">21</span>, <span class="dv">4500</span>)</a>
+<a class="sourceLine" id="cb31-2" title="2">person2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">24</span>, <span class="dv">3500</span>)</a>
+<a class="sourceLine" id="cb31-3" title="3">person3 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">32</span>, <span class="dv">4100</span>)</a>
+<a class="sourceLine" id="cb31-4" title="4">person4 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">45</span>, <span class="dv">4700</span>)</a>
+<a class="sourceLine" id="cb31-5" title="5">person5 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">52</span>, <span class="dv">6000</span>)</a>
+<a class="sourceLine" id="cb31-6" title="6"></a>
+<a class="sourceLine" id="cb31-7" title="7">mydata &lt;-<span class="st"> </span><span class="kw">rbind</span>(person1, person2, person3, person4, person5)</a>
+<a class="sourceLine" id="cb31-8" title="8">mydata</a></code></pre></div>
 <pre><code>        [,1] [,2]
 person1   21 4500
 person2   24 3500
@@ -286,9 +286,9 @@ person3   32 4100
 person4   45 4700
 person5   52 6000</code></pre>
 <p>A better way to create datasets in <strong>R</strong> is to define variables within a data frame using the <code>data.frame</code> command.</p>
-<pre class="sourceCode r"><code class="sourceCode r">mydata &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">age =</span> <span class="kw">c</span>(<span class="dv">21</span>, <span class="dv">24</span>, <span class="dv">32</span>, <span class="dv">45</span>, <span class="dv">52</span>), 
-                     <span class="dt">salary =</span> <span class="kw">c</span>(<span class="dv">4500</span>, <span class="dv">3500</span>, <span class="dv">4100</span>, <span class="dv">4700</span>, <span class="dv">6000</span>))
-mydata</code></pre>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" title="1">mydata &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">age =</span> <span class="kw">c</span>(<span class="dv">21</span>, <span class="dv">24</span>, <span class="dv">32</span>, <span class="dv">45</span>, <span class="dv">52</span>), </a>
+<a class="sourceLine" id="cb33-2" title="2">                     <span class="dt">salary =</span> <span class="kw">c</span>(<span class="dv">4500</span>, <span class="dv">3500</span>, <span class="dv">4100</span>, <span class="dv">4700</span>, <span class="dv">6000</span>))</a>
+<a class="sourceLine" id="cb33-3" title="3">mydata</a></code></pre></div>
 <pre><code>  age salary
 1  21   4500
 2  24   3500
@@ -296,11 +296,11 @@ mydata</code></pre>
 4  45   4700
 5  52   6000</code></pre>
 <p>Data frames in <strong>R</strong> are very convenient because many mathematical operations can be directly applied to a data frame or some columns (or rows) of a data frame. Once a data frame is defined in <strong>R</strong>, we can see its content using the <code>View</code> command (which open the data window) or the <code>head</code> command (which prints the first six rows of the data):</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># To print the first six rows of a data frame</span>
-<span class="kw">head</span>(mydata)
-
-<span class="co"># To see the entire data in the view window</span>
-<span class="kw">View</span>(mydata)</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" title="1"><span class="co"># To print the first six rows of a data frame</span></a>
+<a class="sourceLine" id="cb35-2" title="2"><span class="kw">head</span>(mydata)</a>
+<a class="sourceLine" id="cb35-3" title="3"></a>
+<a class="sourceLine" id="cb35-4" title="4"><span class="co"># To see the entire data in the view window</span></a>
+<a class="sourceLine" id="cb35-5" title="5"><span class="kw">View</span>(mydata)</a></code></pre></div>
 </div>
 <div id="importing-data-into-r" class="section level2">
 <h2><span class="header-section-number">3.2</span> Importing Data into <strong>R</strong></h2>
@@ -346,58 +346,60 @@ mydata</code></pre>
 <h3><span class="header-section-number">3.2.2</span> Method 2: Using <strong>R</strong> Commands</h3>
 <p><strong>R</strong> has some built-in functions, such as <code>read.csv</code> and <code>read.table</code>. Also, there are <strong>R</strong> packages for importing specific data formats. For example, <code>foreign</code> for SPSS files and <code>xlsx</code> for Excel files. Here are some examples:</p>
 <p><strong>Excel Files:</strong></p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Install and activate the package first</span>
-<span class="kw">install.packages</span>(<span class="st">&quot;xlsx&quot;</span>)
-<span class="kw">library</span>(<span class="st">&quot;xlsx&quot;</span>)
-
-<span class="co"># Use read.xlsx to import an Excel file</span>
-my_excel_file &lt;-<span class="st"> </span><span class="kw">read.xlsx</span>(<span class="st">&quot;path to the file/filename.xlsx&quot;</span>, <span class="dt">sheetName =</span> <span class="st">&quot;sheetname&quot;</span>)</code></pre>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" title="1"><span class="co"># Install and activate the package first</span></a>
+<a class="sourceLine" id="cb36-2" title="2"><span class="kw">install.packages</span>(<span class="st">&quot;xlsx&quot;</span>)</a>
+<a class="sourceLine" id="cb36-3" title="3"><span class="kw">library</span>(<span class="st">&quot;xlsx&quot;</span>)</a>
+<a class="sourceLine" id="cb36-4" title="4"></a>
+<a class="sourceLine" id="cb36-5" title="5"><span class="co"># Use read.xlsx to import an Excel file</span></a>
+<a class="sourceLine" id="cb36-6" title="6">my_excel_file &lt;-<span class="st"> </span><span class="kw">read.xlsx</span>(<span class="st">&quot;path to the file/filename.xlsx&quot;</span>, <span class="dt">sheetName =</span> <span class="st">&quot;sheetname&quot;</span>)</a></code></pre></div>
 <p><strong>SPSS Files:</strong></p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Install and activate the package first</span>
-<span class="kw">install.packages</span>(<span class="st">&quot;foreign&quot;</span>)
-<span class="kw">library</span>(<span class="st">&quot;foreign&quot;</span>)
-
-<span class="co"># Use read.spss to import an SPSS file</span>
-my_spss_file &lt;-<span class="st"> </span><span class="kw">read.spss</span>(<span class="st">&quot;path to the file/filename.sav&quot;</span>, <span class="dt">to.data.frame =</span> <span class="ot">TRUE</span>)</code></pre>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" title="1"><span class="co"># Install and activate the package first</span></a>
+<a class="sourceLine" id="cb37-2" title="2"><span class="kw">install.packages</span>(<span class="st">&quot;foreign&quot;</span>)</a>
+<a class="sourceLine" id="cb37-3" title="3"><span class="kw">library</span>(<span class="st">&quot;foreign&quot;</span>)</a>
+<a class="sourceLine" id="cb37-4" title="4"></a>
+<a class="sourceLine" id="cb37-5" title="5"><span class="co"># Use read.spss to import an SPSS file</span></a>
+<a class="sourceLine" id="cb37-6" title="6">my_spss_file &lt;-<span class="st"> </span><span class="kw">read.spss</span>(<span class="st">&quot;path to the file/filename.sav&quot;</span>, <span class="dt">to.data.frame =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><strong>Text Files:</strong></p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># No need to install any packages</span>
-<span class="co"># R has many built-in functions already</span>
-
-<span class="co"># A comma-separated-values file with a .csv extension</span>
-my_csv_file &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;path to the file/filename.csv&quot;</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>)
-
-<span class="co"># A tab delimited text file with .txt extension</span>
-my_txt_file &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;path to the file/filename.txt&quot;</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>, <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" title="1"><span class="co"># No need to install any packages</span></a>
+<a class="sourceLine" id="cb38-2" title="2"><span class="co"># R has many built-in functions already</span></a>
+<a class="sourceLine" id="cb38-3" title="3"></a>
+<a class="sourceLine" id="cb38-4" title="4"><span class="co"># A comma-separated-values file with a .csv extension</span></a>
+<a class="sourceLine" id="cb38-5" title="5">my_csv_file &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;path to the file/filename.csv&quot;</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb38-6" title="6"></a>
+<a class="sourceLine" id="cb38-7" title="7"><span class="co"># A tab delimited text file with .txt extension</span></a>
+<a class="sourceLine" id="cb38-8" title="8">my_txt_file &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;path to the file/filename.txt&quot;</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>, <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</a></code></pre></div>
 <p>Here we should note that:</p>
 <ul>
 <li><code>header = TRUE</code> if the variable names are in the first row; otherwise, use <code>header = FALSE</code></li>
 <li><code>sep="\t"</code> for tab-separated files; <code>sep=","</code> for comma-separated files</li>
 </ul>
 </div>
-<div id="your-turn-2" class="section level3">
-<h3><span class="header-section-number">3.2.3</span> Your Turn</h3>
-<p>Now we will import the <code>medical</code> dataset into <strong>R</strong>. The dataset comes from a clinical study. Patients with no primary care physician were randomized to receive a multidisciplinary assessment and a brief motivational intervention, with the goal of linking them to primary medical care. You can find the details in “Codebook for the medical Dataset” in your folder.</p>
-<p>We have both Excel and text (with .csv extension) versions of the same file.</p>
+<div id="exercise-3" class="section level3">
+<h3><span class="header-section-number">3.2.3</span> Exercise 3</h3>
+<p>Now we will import the <code>medical</code> dataset into <strong>R</strong>. The dataset comes from a clinical study. Patients with no primary care physician were randomized to receive a multidisciplinary assessment and a brief motivational intervention, with the goal of linking them to primary medical care. You can find the details in “Codebook for the medical Dataset” in your folder. Our dataset is in a .csv format (<code>medical.csv</code>).</p>
 <ol style="list-style-type: decimal">
-<li><p>Import the file <code>medical_EXCEL</code> by using the “Import Dataset” menu option and name it as <code>medical</code> or import the file <code>medical_CSV</code> by using the <code>read.csv</code> command and name it as <code>medical</code></p></li>
-<li><p>Once the data file is successfully important, run the following code to see the first six rows of the data:</p></li>
+<li>Import the file <code>medical.csv</code> by using the <code>read.csv</code> command and save it as <code>medical</code> using the following code (assuming that the file is in your working directory):</li>
 </ol>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(medical)</code></pre>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" title="1">medical &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;medical.csv&quot;</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Once the data file is successfully imported, run the following to see the first six rows of the data:</li>
+</ol>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb40-1" title="1"><span class="kw">head</span>(medical)</a></code></pre></div>
 <p>You should be able to see the output below:</p>
-<pre><code>  id age    sex  race homeless substance avg_drinks max_drinks suicidal
-1  1  37   male black   housed   cocaine         13         26      yes
-2  2  37   male white homeless   alcohol         56         62      yes
-3  3  26   male black   housed    heroin          0          0       no
-4  4  39 female white   housed    heroin          5          5       no
-5  5  32   male black homeless   cocaine         10         13       no
-6  6  47 female black   housed   cocaine          4          4       no
-  treat physical1 mental1 depression1 physical2 mental2 depression2
-1   yes     58.41  25.112          49     54.23   52.23           7
-2   yes     36.04  26.670          30     59.56   41.73          11
-3    no     74.81   6.763          39     58.46   56.77          14
-4    no     61.93  43.968          15     46.61   14.66          44
-5    no     37.35  21.676          39     31.42   40.67          26
-6   yes     46.48  55.509           6     43.20   50.06          23</code></pre>
+<pre><code>  id age    sex  race homeless substance avg_drinks max_drinks suicidal treat
+1  1  37   male black   housed   cocaine         13         26      yes   yes
+2  2  37   male white homeless   alcohol         56         62      yes   yes
+3  3  26   male black   housed    heroin          0          0       no    no
+4  4  39 female white   housed    heroin          5          5       no    no
+5  5  32   male black homeless   cocaine         10         13       no    no
+6  6  47 female black   housed   cocaine          4          4       no   yes
+  physical1 mental1 depression1 physical2 mental2 depression2
+1     58.41  25.112          49     54.23   52.23           7
+2     36.04  26.670          30     59.56   41.73          11
+3     74.81   6.763          39     58.46   56.77          14
+4     61.93  43.968          15     46.61   14.66          44
+5     37.35  21.676          39     31.42   40.67          26
+6     46.48  55.509           6     43.20   50.06          23</code></pre>
 </div>
 </div>
 <div id="understanding-the-data" class="section level2">
@@ -406,22 +408,22 @@ my_txt_file &lt;-<span class="st"> </span><span class="kw">read.table</span>(<sp
 <ul>
 <li>To see the number of rows in the data:</li>
 </ul>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">nrow</span>(medical)</code></pre>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" title="1"><span class="kw">nrow</span>(medical)</a></code></pre></div>
 <pre><code>[1] 246</code></pre>
 <ul>
 <li>To see the number of columns in the data:</li>
 </ul>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ncol</span>(medical)</code></pre>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb44-1" title="1"><span class="kw">ncol</span>(medical)</a></code></pre></div>
 <pre><code>[1] 16</code></pre>
 <ul>
 <li>To see its dimensions all together:</li>
 </ul>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dim</span>(medical)</code></pre>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb46-1" title="1"><span class="kw">dim</span>(medical)</a></code></pre></div>
 <pre><code>[1] 246  16</code></pre>
 <ul>
 <li>To see all of the variable names in the data:</li>
 </ul>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">names</span>(medical)</code></pre>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb48-1" title="1"><span class="kw">names</span>(medical)</a></code></pre></div>
 <pre><code> [1] &quot;id&quot;          &quot;age&quot;         &quot;sex&quot;         &quot;race&quot;        &quot;homeless&quot;   
  [6] &quot;substance&quot;   &quot;avg_drinks&quot;  &quot;max_drinks&quot;  &quot;suicidal&quot;    &quot;treat&quot;      
 [11] &quot;physical1&quot;   &quot;mental1&quot;     &quot;depression1&quot; &quot;physical2&quot;   &quot;mental2&quot;    
@@ -429,7 +431,7 @@ my_txt_file &lt;-<span class="st"> </span><span class="kw">read.table</span>(<sp
 <ul>
 <li>To see the structure of the entire dataset:</li>
 </ul>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(medical)</code></pre>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" title="1"><span class="kw">str</span>(medical)</a></code></pre></div>
 <pre><code>&#39;data.frame&#39;:   246 obs. of  16 variables:
  $ id         : int  1 2 3 4 5 6 8 9 10 12 ...
  $ age        : int  37 37 26 39 32 47 28 50 39 58 ...
@@ -452,10 +454,10 @@ my_txt_file &lt;-<span class="st"> </span><span class="kw">read.table</span>(<sp
 <h2><span class="header-section-number">3.4</span> Indexing</h2>
 <p>In <strong>R</strong>, each row and column is indexed by the position they appear in the data. <strong>R</strong> uses square brackets for indexing. Within the square brackets, the first number shows the row number(s) and the second number shows the column(s). To call a particular column (i.e., variables) or a particular row (i.e., persons), we can use the following structure: <code>data[row, col]</code></p>
 <p>For example, if we want to see the second variable for the fifth person in the <code>medical</code> dataset:</p>
-<pre class="sourceCode r"><code class="sourceCode r">medical[<span class="dv">5</span>, <span class="dv">2</span>]</code></pre>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" title="1">medical[<span class="dv">5</span>, <span class="dv">2</span>]</a></code></pre></div>
 <pre><code>[1] 32</code></pre>
 <p>Or, if we want to see the first three variables for the first five persons:</p>
-<pre class="sourceCode r"><code class="sourceCode r">medical[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>]</code></pre>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb54-1" title="1">medical[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>]</a></code></pre></div>
 <pre><code>  id age    sex
 1  1  37   male
 2  2  37   male
@@ -463,7 +465,7 @@ my_txt_file &lt;-<span class="st"> </span><span class="kw">read.table</span>(<sp
 4  4  39 female
 5  5  32   male</code></pre>
 <p>Instead of <code>medical[1:5, 1:3]</code>, we could also do:</p>
-<pre class="sourceCode r"><code class="sourceCode r">medical[<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>), <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)]</code></pre>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb56-1" title="1">medical[<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>), <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)]</a></code></pre></div>
 <pre><code>  id age    sex
 1  1  37   male
 2  2  37   male
@@ -471,7 +473,7 @@ my_txt_file &lt;-<span class="st"> </span><span class="kw">read.table</span>(<sp
 4  4  39 female
 5  5  32   male</code></pre>
 <p>or</p>
-<pre class="sourceCode r"><code class="sourceCode r">medical[<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>), <span class="kw">c</span>(<span class="st">&quot;id&quot;</span>, <span class="st">&quot;age&quot;</span>, <span class="st">&quot;sex&quot;</span>)]</code></pre>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb58-1" title="1">medical[<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>), <span class="kw">c</span>(<span class="st">&quot;id&quot;</span>, <span class="st">&quot;age&quot;</span>, <span class="st">&quot;sex&quot;</span>)]</a></code></pre></div>
 <pre><code>  id age    sex
 1  1  37   male
 2  2  37   male
@@ -479,86 +481,61 @@ my_txt_file &lt;-<span class="st"> </span><span class="kw">read.table</span>(<sp
 4  4  39 female
 5  5  32   male</code></pre>
 <p>A common way of indexing variables (i.e., columns) in <strong>R</strong> is to use the dollar sign with a variable name from a data frame. For example, we can select the age variable as follows:</p>
-<pre class="sourceCode r"><code class="sourceCode r">medical<span class="op">$</span>age</code></pre>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb60-1" title="1">medical<span class="op">$</span>age</a></code></pre></div>
 <p>This would print all the values for age in the <code>medical</code> dataset. We can also preview a particular variable using the <code>head</code> function.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(medical<span class="op">$</span>age)</code></pre>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb61-1" title="1"><span class="kw">head</span>(medical<span class="op">$</span>age)</a></code></pre></div>
 <pre><code>[1] 37 37 26 39 32 47</code></pre>
 <p>Using a particular variable, we can also see the values for some rows in the data. For example, let’s print the age variable for the 10th to 15th rows in the <code>medical</code> dataset.</p>
-<pre class="sourceCode r"><code class="sourceCode r">medical<span class="op">$</span>age[<span class="dv">10</span><span class="op">:</span><span class="dv">15</span>]
-
-<span class="co">#or</span>
-
-medical<span class="op">$</span>age[<span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="dv">14</span>, <span class="dv">15</span>)]</code></pre>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb63-1" title="1">medical<span class="op">$</span>age[<span class="dv">10</span><span class="op">:</span><span class="dv">15</span>]</a>
+<a class="sourceLine" id="cb63-2" title="2"></a>
+<a class="sourceLine" id="cb63-3" title="3"><span class="co"># or</span></a>
+<a class="sourceLine" id="cb63-4" title="4"></a>
+<a class="sourceLine" id="cb63-5" title="5">medical<span class="op">$</span>age[<span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="dv">14</span>, <span class="dv">15</span>)]</a></code></pre></div>
 <p>Note that now the brackets don’t need a comma inside as we had before. This is because we have already selected a variable (age) and so <strong>R</strong> knows that we now refer to rows when we type any values inside the brackets.</p>
 </div>
 <div id="subsetting" class="section level2">
 <h2><span class="header-section-number">3.5</span> Subsetting</h2>
-<p>Now assume that we want to create a new dataset with only females from the <code>medical</code> dataset. Although we can take this subset in many ways, the following three are the easiest ways:</p>
+<p>Now assume that we want to create a new dataset with only females from the <code>medical</code> dataset. Although we can subset the data in many ways, the following two are the easiest:</p>
 <ol style="list-style-type: decimal">
-<li>Using the indexing idea to refer to certain variables:</li>
-</ol>
-<pre class="sourceCode r"><code class="sourceCode r">medical_female &lt;-<span class="st"> </span>medical[medical<span class="op">$</span>sex <span class="op">==</span><span class="st"> &quot;female&quot;</span>, ]
-<span class="kw">head</span>(medical_female)</code></pre>
-<pre><code>   id age    sex     race homeless substance avg_drinks max_drinks
-4   4  39 female    white   housed    heroin          5          5
-6   6  47 female    black   housed   cocaine          4          4
-8   9  50 female    white homeless   alcohol         71        129
-10 12  58 female    black   housed   alcohol         13         13
-14 17  28 female hispanic homeless    heroin          0          0
-17 20  27 female    white   housed    heroin          9         24
-   suicidal treat physical1 mental1 depression1 physical2 mental2
-4        no    no     61.93   43.97          15     46.61   14.66
-6        no   yes     46.48   55.51           6     43.20   50.06
-8        no    no     38.27   22.03          50     45.56   28.88
-10       no    no     41.93   13.38          49     52.96   51.45
-14      yes   yes     44.78   29.80          35     52.69   46.59
-17      yes   yes     37.45   15.46          52     61.40   41.53
-   depression2
-4           44
-6           23
-8           33
-10           8
-14          19
-17          15</code></pre>
-<p>We set the criterion <code>medical$sex == "female"</code> before the comma to make a selection for rows and there is nothing after comma in the bracket because we want to keep all the variables in the dataset. This method is handy for simple selections but it gets complicated when we have multiple subsetting criteria. See the example below with two criteria:</p>
-<pre class="sourceCode r"><code class="sourceCode r">medical_female_<span class="dv">40</span> &lt;-<span class="st"> </span>medical[medical<span class="op">$</span>sex <span class="op">==</span><span class="st"> &quot;female&quot;</span> <span class="op">&amp;</span><span class="st"> </span>medical<span class="op">$</span>age <span class="op">&gt;</span><span class="st"> </span><span class="dv">40</span>, ]</code></pre>
-<ol start="2" style="list-style-type: decimal">
 <li>Using the <code>subset</code> function in base <strong>R</strong>:</li>
 </ol>
-<pre class="sourceCode r"><code class="sourceCode r">medical_female &lt;-<span class="st"> </span><span class="kw">subset</span>(medical, sex <span class="op">==</span><span class="st"> &quot;female&quot;</span>)
-<span class="kw">head</span>(medical_female)</code></pre>
-<pre><code>   id age    sex     race homeless substance avg_drinks max_drinks
-4   4  39 female    white   housed    heroin          5          5
-6   6  47 female    black   housed   cocaine          4          4
-8   9  50 female    white homeless   alcohol         71        129
-10 12  58 female    black   housed   alcohol         13         13
-14 17  28 female hispanic homeless    heroin          0          0
-17 20  27 female    white   housed    heroin          9         24
-   suicidal treat physical1 mental1 depression1 physical2 mental2
-4        no    no     61.93   43.97          15     46.61   14.66
-6        no   yes     46.48   55.51           6     43.20   50.06
-8        no    no     38.27   22.03          50     45.56   28.88
-10       no    no     41.93   13.38          49     52.96   51.45
-14      yes   yes     44.78   29.80          35     52.69   46.59
-17      yes   yes     37.45   15.46          52     61.40   41.53
-   depression2
-4           44
-6           23
-8           33
-10           8
-14          19
-17          15</code></pre>
-<ol start="3" style="list-style-type: decimal">
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb64-1" title="1">medical_female &lt;-<span class="st"> </span><span class="kw">subset</span>(medical, sex <span class="op">==</span><span class="st"> &quot;female&quot;</span>)</a>
+<a class="sourceLine" id="cb64-2" title="2"><span class="kw">head</span>(medical_female)</a></code></pre></div>
+<pre><code>   id age    sex     race homeless substance avg_drinks max_drinks suicidal
+4   4  39 female    white   housed    heroin          5          5       no
+6   6  47 female    black   housed   cocaine          4          4       no
+8   9  50 female    white homeless   alcohol         71        129       no
+10 12  58 female    black   housed   alcohol         13         13       no
+14 17  28 female hispanic homeless    heroin          0          0      yes
+17 20  27 female    white   housed    heroin          9         24      yes
+   treat physical1 mental1 depression1 physical2 mental2 depression2
+4     no     61.93   43.97          15     46.61   14.66          44
+6    yes     46.48   55.51           6     43.20   50.06          23
+8     no     38.27   22.03          50     45.56   28.88          33
+10    no     41.93   13.38          49     52.96   51.45           8
+14   yes     44.78   29.80          35     52.69   46.59          19
+17   yes     37.45   15.46          52     61.40   41.53          15</code></pre>
+<p>Here we use a single selection criterion as <code>sex == "female"</code>. We can also subset the data based on multiple criteria and select only some variables from our original data. Let’s assume that we want to select participants who are female and 40 years old or older. Also, we only want to keep the following variables in the dataset: id, age, sex, substance. Using the <code>subset</code> function, we can do this selection as follows:</p>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb66-1" title="1">medical_f40 &lt;-<span class="st"> </span><span class="kw">subset</span>(medical, sex <span class="op">==</span><span class="st"> &quot;female&quot;</span> <span class="op">&amp;</span><span class="st"> </span>age <span class="op">&gt;=</span><span class="st"> </span><span class="dv">40</span>, </a>
+<a class="sourceLine" id="cb66-2" title="2">                      <span class="dt">select =</span> <span class="kw">c</span>(<span class="st">&quot;id&quot;</span>, <span class="st">&quot;age&quot;</span>, <span class="st">&quot;sex&quot;</span>, <span class="st">&quot;substance&quot;</span>))</a>
+<a class="sourceLine" id="cb66-3" title="3"></a>
+<a class="sourceLine" id="cb66-4" title="4"><span class="kw">head</span>(medical_f40)</a></code></pre></div>
+<pre><code>   id age    sex substance
+6   6  47 female   cocaine
+8   9  50 female   alcohol
+10 12  58 female   alcohol
+21 27  48 female   cocaine
+51 65  41 female   alcohol
+56 71  40 female   alcohol</code></pre>
+<ol start="2" style="list-style-type: decimal">
 <li>Using the <code>filter</code> function from the <code>dplyr</code> package (an amazing package for data wrangling):</li>
 </ol>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Install and activate the package first</span>
-<span class="kw">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>)
-<span class="kw">library</span>(<span class="st">&quot;dplyr&quot;</span>)
-
-medical_female &lt;-<span class="st"> </span><span class="kw">filter</span>(medical, sex <span class="op">==</span><span class="st"> &quot;female&quot;</span>)
-
-<span class="kw">head</span>(medical_female)</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(medical_female)</code></pre>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb68-1" title="1"><span class="co"># Install and activate the package first</span></a>
+<a class="sourceLine" id="cb68-2" title="2"><span class="kw">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>)</a>
+<a class="sourceLine" id="cb68-3" title="3"><span class="kw">library</span>(<span class="st">&quot;dplyr&quot;</span>)</a>
+<a class="sourceLine" id="cb68-4" title="4"></a>
+<a class="sourceLine" id="cb68-5" title="5">medical_female &lt;-<span class="st"> </span><span class="kw">filter</span>(medical, sex <span class="op">==</span><span class="st"> &quot;female&quot;</span>)</a>
+<a class="sourceLine" id="cb68-6" title="6"><span class="kw">head</span>(medical_female)</a></code></pre></div>
 <pre><code>  id age    sex     race homeless substance avg_drinks max_drinks suicidal
 1  4  39 female    white   housed    heroin          5          5       no
 2  6  47 female    black   housed   cocaine          4          4       no
@@ -573,29 +550,22 @@ medical_female &lt;-<span class="st"> </span><span class="kw">filter</span>(medi
 4    no     41.93   13.38          49     52.96   51.45           8
 5   yes     44.78   29.80          35     52.69   46.59          19
 6   yes     37.45   15.46          52     61.40   41.53          15</code></pre>
-<p>We can also create a new dataset by subsetting based on multiple criteria and selecting only some variables from our original data. Let’s assume that we want to select participants who are female and 40 years old or older. Also, we only want to keep the following variables in the dataset: id, age, sex, substance.</p>
-<ol style="list-style-type: decimal">
-<li>Using the <code>subset</code> function in base <strong>R</strong>:</li>
-</ol>
-<pre class="sourceCode r"><code class="sourceCode r">medical_f40 &lt;-<span class="st"> </span><span class="kw">subset</span>(medical, sex <span class="op">==</span><span class="st"> &quot;female&quot;</span> <span class="op">&amp;</span><span class="st"> </span>age <span class="op">&gt;=</span><span class="st"> </span><span class="dv">40</span>, 
-                      <span class="dt">select =</span> <span class="kw">c</span>(<span class="st">&quot;id&quot;</span>, <span class="st">&quot;age&quot;</span>, <span class="st">&quot;sex&quot;</span>, <span class="st">&quot;substance&quot;</span>))
-
-<span class="kw">head</span>(medical_f40)</code></pre>
-<pre><code>   id age    sex substance
-6   6  47 female   cocaine
-8   9  50 female   alcohol
-10 12  58 female   alcohol
-21 27  48 female   cocaine
-51 65  41 female   alcohol
-56 71  40 female   alcohol</code></pre>
-<ol start="2" style="list-style-type: decimal">
-<li>Using the <code>filter</code> and <code>select</code> functions from the <code>dplyr</code> package</li>
-</ol>
-<pre class="sourceCode r"><code class="sourceCode r">medical_f40 &lt;-<span class="st"> </span>medical <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;female&quot;</span>, age <span class="op">&gt;=</span><span class="st"> </span><span class="dv">40</span>) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">select</span>(id, age, sex, substance)
-
-<span class="kw">head</span>(medical_f40)</code></pre>
+<p>Using the <code>filter</code> and <code>select</code> functions from the <code>dplyr</code> package, we can also subset the dataset based on multiple criteria and select some variables from the dataset:</p>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb70-1" title="1"><span class="co"># Filter the data first</span></a>
+<a class="sourceLine" id="cb70-2" title="2">medical_f40 &lt;-<span class="st"> </span><span class="kw">filter</span>(medical, sex <span class="op">==</span><span class="st"> &quot;female&quot;</span>, age <span class="op">&gt;=</span><span class="st"> </span><span class="dv">40</span>)</a>
+<a class="sourceLine" id="cb70-3" title="3"></a>
+<a class="sourceLine" id="cb70-4" title="4"><span class="co"># Select the variables to be keep</span></a>
+<a class="sourceLine" id="cb70-5" title="5">medical_f40 &lt;-<span class="st"> </span><span class="kw">select</span>(medical_f40, id, age, sex, substance)</a>
+<a class="sourceLine" id="cb70-6" title="6"></a>
+<a class="sourceLine" id="cb70-7" title="7"><span class="co"># Preview the data</span></a>
+<a class="sourceLine" id="cb70-8" title="8"><span class="kw">head</span>(medical_f40)</a></code></pre></div>
+<p>There is also a more practical way to accomplish the same task. Here I will demonstrate <code>%&gt;%</code>, which is called the <strong>pipe</strong> operator. This operator forwards the result of a function to the next function. This way we can simplify the code without creating many intermediate datasets (see <a href="https://uc-r.github.io/pipe" class="uri">https://uc-r.github.io/pipe</a> for more details on the pipe).</p>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb71-1" title="1">medical_f40 &lt;-<span class="st"> </span>medical <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Send the medical data to filter</span></a>
+<a class="sourceLine" id="cb71-2" title="2"><span class="st">  </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;female&quot;</span>, age <span class="op">&gt;=</span><span class="st"> </span><span class="dv">40</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Filter the data and send it to select</span></a>
+<a class="sourceLine" id="cb71-3" title="3"><span class="st">  </span><span class="kw">select</span>(id, age, sex, substance) <span class="co"># Finally select the data</span></a>
+<a class="sourceLine" id="cb71-4" title="4"></a>
+<a class="sourceLine" id="cb71-5" title="5"><span class="co"># Preview the data</span></a>
+<a class="sourceLine" id="cb71-6" title="6"><span class="kw">head</span>(medical_f40)</a></code></pre></div>
 <pre><code>  id age    sex substance
 1  6  47 female   cocaine
 2  9  50 female   alcohol
@@ -603,7 +573,6 @@ medical_female &lt;-<span class="st"> </span><span class="kw">filter</span>(medi
 4 27  48 female   cocaine
 5 65  41 female   alcohol
 6 71  40 female   alcohol</code></pre>
-<p>Here I demonstrate the <code>%&gt;%</code> operator called the pipe. This operator forwards a value, or the result of an expression, into the next function call/expression. This way we can simplify the code without creating many intermediate datasets (see <a href="https://uc-r.github.io/pipe" class="uri">https://uc-r.github.io/pipe</a> for more details on the pipe).</p>
 <p>Here are most common operators for subsetting:</p>
 <ul>
 <li><code>&lt;</code> Less than</li>
@@ -628,11 +597,11 @@ medical_female &lt;-<span class="st"> </span><span class="kw">filter</span>(medi
 <li><code>summarise</code>: Summarize data by functions of choice</li>
 </ul>
 <p><strong>Arrange:</strong></p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Reorder the data by age</span>
-medical_f40 &lt;-<span class="st"> </span><span class="kw">arrange</span>(medical_f40, age)
-
-<span class="co"># Let&#39;s see if the ordering worked</span>
-<span class="kw">head</span>(medical_f40)</code></pre>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb73-1" title="1"><span class="co"># Reorder the data by age</span></a>
+<a class="sourceLine" id="cb73-2" title="2">medical_f40 &lt;-<span class="st"> </span><span class="kw">arrange</span>(medical_f40, age)</a>
+<a class="sourceLine" id="cb73-3" title="3"></a>
+<a class="sourceLine" id="cb73-4" title="4"><span class="co"># Let&#39;s see if the ordering worked</span></a>
+<a class="sourceLine" id="cb73-5" title="5"><span class="kw">head</span>(medical_f40)</a></code></pre></div>
 <pre><code>   id age    sex substance
 1  71  40 female   alcohol
 2  65  41 female   alcohol
@@ -640,11 +609,11 @@ medical_f40 &lt;-<span class="st"> </span><span class="kw">arrange</span>(medica
 4 121  42 female   cocaine
 5 465  42 female   alcohol
 6 364  43 female    heroin</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Reorder the data by age in descending order</span>
-medical_f40 &lt;-<span class="st"> </span><span class="kw">arrange</span>(medical_f40, <span class="kw">desc</span>(age))
-
-<span class="co"># Let&#39;s see if the ordering worked</span>
-<span class="kw">head</span>(medical_f40)</code></pre>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb75-1" title="1"><span class="co"># Reorder the data by age in descending order</span></a>
+<a class="sourceLine" id="cb75-2" title="2">medical_f40 &lt;-<span class="st"> </span><span class="kw">arrange</span>(medical_f40, <span class="kw">desc</span>(age))</a>
+<a class="sourceLine" id="cb75-3" title="3"></a>
+<a class="sourceLine" id="cb75-4" title="4"><span class="co"># Let&#39;s see if the ordering worked</span></a>
+<a class="sourceLine" id="cb75-5" title="5"><span class="kw">head</span>(medical_f40)</a></code></pre></div>
 <pre><code>   id age    sex substance
 1  12  58 female   alcohol
 2 181  57 female   alcohol
@@ -653,12 +622,12 @@ medical_f40 &lt;-<span class="st"> </span><span class="kw">arrange</span>(medica
 5 134  50 female   alcohol
 6  27  48 female   cocaine</code></pre>
 <p><strong>Mutate:</strong></p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Create a new variable based on age</span>
-medical_f40 &lt;-<span class="st"> </span>medical_f40 <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">age2 =</span> <span class="kw">ifelse</span>(age <span class="op">&lt;</span><span class="st"> </span><span class="dv">45</span>, <span class="st">&quot;Younger than 45&quot;</span>, <span class="st">&quot;45 or older&quot;</span>))
-
-<span class="co"># Let&#39;s see if the ordering worked</span>
-<span class="kw">head</span>(medical_f40)</code></pre>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb77-1" title="1"><span class="co"># Create a new variable based on age</span></a>
+<a class="sourceLine" id="cb77-2" title="2">medical_f40 &lt;-<span class="st"> </span>medical_f40 <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb77-3" title="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">age2 =</span> <span class="kw">ifelse</span>(age <span class="op">&lt;</span><span class="st"> </span><span class="dv">45</span>, <span class="st">&quot;Younger than 45&quot;</span>, <span class="st">&quot;45 or older&quot;</span>))</a>
+<a class="sourceLine" id="cb77-4" title="4"></a>
+<a class="sourceLine" id="cb77-5" title="5"><span class="co"># Let&#39;s see if the ordering worked</span></a>
+<a class="sourceLine" id="cb77-6" title="6"><span class="kw">head</span>(medical_f40)</a></code></pre></div>
 <pre><code>   id age    sex substance        age2
 1  12  58 female   alcohol 45 or older
 2 181  57 female   alcohol 45 or older
@@ -667,10 +636,10 @@ medical_f40 &lt;-<span class="st"> </span>medical_f40 <span class="op">%&gt;%</s
 5 134  50 female   alcohol 45 or older
 6  27  48 female   cocaine 45 or older</code></pre>
 <p>We will use the <code>summarise</code> function in the next section.</p>
-<div id="your-turn-3" class="section level3">
-<h3><span class="header-section-number">3.6.1</span> Your Turn</h3>
+<div id="exercise-4" class="section level3">
+<h3><span class="header-section-number">3.6.1</span> Exercise 4</h3>
 <ol style="list-style-type: decimal">
-<li><p>Using the medical data, create a subset where the patients:</p>
+<li><p>Using the medical dataset, create a subset where the patients:</p>
 <ul>
 <li>are older than 30 years old: <code>age &gt; 30</code></li>
 <li>are female: <code>sex == "female"</code></li>
@@ -698,11 +667,13 @@ medical_f40 &lt;-<span class="st"> </span>medical_f40 <span class="op">%&gt;%</s
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -710,12 +681,11 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -730,7 +700,11 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["rbook.pdf", "rbook.epub"],
+"view": {
+"link": null,
+"text": null
+},
+"download": ["rbook.pdf"],
 "toc": {
 "collapse": "subsection"
 }
@@ -745,8 +719,9 @@ gitbook.start({
     script.type = "text/javascript";
     var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
